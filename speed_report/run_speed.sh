@@ -1,16 +1,21 @@
 #!/bin/bash
+source ~/.bashrc
+time=$(date +"%T")
+day=$(date +"%D")
+echo "$day:$time Attempting speed test" >> event.log
 # check for internet connection
 if ping -q -c 1 -W 1 google.com >/dev/null; then
   :
 else
-  exit 1
+	echo "$day:$time Internet connection down" >> event.log
+	echo "$day,$time,0,0,none,none" >> speed_data.csv
+  exit 1 
 fi
 FILE=result.txt
-/usr/local/bin/speedtest-cli > $FILE
-day=$(date +"%D")
-time=$(date +"%T")
+speedtest-cli > $FILE
 download=`grep 'Download' $FILE | awk '{print $2}'`
 upload=`grep 'Upload' $FILE | awk '{print $2}'`
 host=`grep 'Hosted' $FILE | awk '{print $3,$4,$5}'`
 provider=`grep 'Testing from' $FILE | awk '{print $3}'`
 echo $day,$time,$download,$upload,$host,$provider >> speed_data.csv
+echo "$day:$time Speed test completed" >> event.log
