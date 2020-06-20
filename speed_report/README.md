@@ -9,3 +9,4 @@ I made these bash scripts to run speed tests every hour to collect data about th
 * The bash script run_speed.sh performs the speed test and is run three times by generate_report.sh 
 * The results are put in a spreadsheet speed_data.csv and the events logged in event.log
 * See crontab for cronjob entry to run the scrip every hour.
+* See `speed_data.csv` for example data.
