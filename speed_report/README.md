@@ -10,3 +10,15 @@ I made these bash scripts to run speed tests every hour to collect data about th
 * The results are put in a spreadsheet speed_data.csv and the events logged in event.log
 * See crontab for cronjob entry to run the scrip every hour.
 * See `speed_data.csv` for example data.
+
+## Results
+After letting the cronjobs run for a few days, the results were as expected.
+* Spontaneous downtime and very low download speeds. 
+* Download speed very unstable and produces wave as opposed to a linear or constant speed (on average)
+* Upload speeds averaged about 8 Mbps and is more stable.
+
+![alt text](./download.png)
+
+![alt text](./upload.png)
+
+* I basically need Virgin Fibre Optic Broadband in my life
