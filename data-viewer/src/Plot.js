@@ -1,23 +1,47 @@
 import React, { Component } from 'react';
-import { XYPlot, XAxis, YAxis, HorizontalGridLines, LineMarkSeries } from 'react-vis';
+import { XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeriesCanvas, VerticalGridLines } from 'react-vis';
+import '../node_modules/react-vis/dist/style.css';
 
-class Plot extends Component{
+
+const axisStyle = {
+    ticks: {
+        color: '#333'
+    },
+    title: {
+        color: '#333'
+    }
+};
+
+class Plot extends Component {
+
     render() {
         return (
-        <XYPlot width={500} height={300}>
-            <HorizontalGridLines />
-            <LineMarkSeries
-                color="red"
-                data={[
-                {x: 1, y: 5},
-                {x: 2, y: 10},
-                {x: 3, y: 15}
-                ]}/>
-            <XAxis title="Date-Time" />
-            <YAxis title="Speed (Mbps)"/>
-        </XYPlot>
-    )
-}
+            <XYPlot
+                animation
+                width={900}
+                height={500}
+                xType={"ordinal"}
+                margin={{ bottom: 100 }}
+            >
+                <HorizontalGridLines />
+                <VerticalGridLines />
+                <XAxis
+                    hideLine
+                    title="Time"
+                    tickLabelAngle={-30}
+                    tickFormat={tick => tick}
+                    style={axisStyle}
+                />
+                <YAxis />
+                <LineSeriesCanvas
+                    animation
+                    style={{ strokeWidth: 5 }}
+                    curve={'curveBasis'}
+                    data={this.props.download}
+                />
+            </XYPlot>
+        )
+    }
 }
 
 export default Plot;
