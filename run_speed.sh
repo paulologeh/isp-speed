@@ -19,3 +19,4 @@ host=`grep 'Hosted' $FILE | awk '{print $3,$4,$5}'`
 provider=`grep 'Testing from' $FILE | awk '{print $3}'`
 echo $day,$time,$download,$upload,$host,$provider >> speed_data.csv
 echo "$day:$time Speed test completed" >> event.log
+cp speed_data.csv data-viewer/public/

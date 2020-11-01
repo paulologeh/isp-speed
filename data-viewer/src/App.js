@@ -4,6 +4,7 @@ import Papa from 'papaparse';
 import Plot from './Plot';
 import './App.css';
 
+
 const print = (text) => {
   console.log(text)
 }
@@ -43,7 +44,13 @@ const ISPBanner = () => {
 
 class App extends Component {
 
-  state = { activeTab: 'All', csvData: null, upload: null, download: null };
+  state = {
+    activeTab: 'All',
+    csvData: null,
+    upload: null,
+    download: null,
+    lastTime: null
+  };
 
   componentDidMount() {
     console.clear()
@@ -53,6 +60,11 @@ class App extends Component {
   async GetData() {
     const data = Papa.parse(await this.fetchCsv());
     this.setState({ csvData: data })
+    this.filterData('All', data.data)
+    let N = data.data.length - 2;
+    let temp = data.data[N]
+    let lastUpdate = `${temp[0]} ${temp[1]}`;
+    this.setState({ lastTime: lastUpdate })
     return data;
   }
 
@@ -65,53 +77,88 @@ class App extends Component {
     return csv;
   }
 
-  filterISPData = (name) => {
-    let upload = [];
-    let download = [];
-    let downloadSpeed = 0;
-    let uploadSpeed = 0;
-    let N = this.state.csvData.data.length - 1;
+  filterData = (name, rawData) => {
+    let uploads = [];
+    let downloads = [];
+    let avgDownload = 0;
+    let avgUpload = 0;
+    const Data = (rawData !== null) ? [...rawData] : this.state.csvData.data;
+    let N = Data.length - 1;
     let count = 0;
-    for (let i = N; i > 0; i--) {
-      if (name === 'All') {
-        let datapoint = this.state.csvData.data[i];
-        datapoint[2] = (isNaN(datapoint[2]) || datapoint[2] === '') ? 0 : datapoint[2];
-        datapoint[3] = (isNaN(datapoint[3]) || datapoint[3] === '') ? 0 : datapoint[3];
-        downloadSpeed += parseFloat(datapoint[2]);
-        uploadSpeed += parseFloat(datapoint[3]);
-        let time = datapoint[0] + " " + datapoint[1];
-        if (i % 3 === 0 && i !== 0) {
-          downloadSpeed = downloadSpeed / 3;
-          uploadSpeed = uploadSpeed / 3;
-          download.unshift({ x: time, y: downloadSpeed });
-          upload.unshift({ x: time, y: uploadSpeed });
-          downloadSpeed = 0;
-          uploadSpeed = 0;
+    let noneCount = 0;
+
+    for (let i = N - 1; i > 0; i--) {
+      let datapoint = Data[i];
+      if (datapoint[5] === 'none') {
+        noneCount++;
+        if (noneCount === 3) {
+          noneCount = 0;
+          continue;
         }
-        count++;
       }
+      if (datapoint[5] === 'none' && !(i % 3 === 0)) {
+        continue;
+      }
+      if (name === 'EE' && datapoint[5] !== 'EE') {
+        continue;
+      }
+      if (name === 'TalkTalk' && datapoint[5] !== 'TalkTalk') {
+        continue;
+      }
+      if (name === 'Three' && datapoint[5] !== 'Three') {
+        continue;
+      }
+      if (name === 'Vodafone' && datapoint[5] !== 'Vodafone') {
+        continue;
+      }
+      let All = ['EE', 'TalkTalk', 'Three', 'Vodafone']
+      if (name === 'VPN' && All.includes(datapoint[5])) {
+        continue;
+      }
+
+      datapoint[2] = (isNaN(datapoint[2]) || datapoint[2] === '') ? 0 : datapoint[2];
+      datapoint[3] = (isNaN(datapoint[3]) || datapoint[3] === '') ? 0 : datapoint[3];
+      avgDownload += parseFloat(datapoint[2]);
+      avgUpload += parseFloat(datapoint[3]);
+      let time = datapoint[0] + " " + datapoint[1];
+
+      if (i % 3 === 0 && i !== 0) {
+        avgDownload = avgDownload / 3;
+        avgUpload = avgUpload / 3;
+        downloads.unshift({ x: time, y: avgDownload });
+        uploads.unshift({ x: time, y: avgUpload });
+        avgDownload = 0;
+        avgUpload = 0;
+      }
+      count++;
+
       if (count > 24 * 3) {
         break;
       }
     }
-    return [download, upload];
+
+    this.setState({ download: downloads, upload: uploads });
+    print('updated state')
   }
 
   handleTabClick = (e, { name }) => {
+    print(`clicked ${name}`)
+    this.filterData(name, null);
     this.setState({ activeTab: name });
-    let data = this.filterISPData(name);
-    this.setState({ download: data[0], upload: data[1] });
   }
 
   render() {
+    print(this.state)
     const { activeTab } = this.state;
-
     return (
       <div className="App" style={{ flex: 1 }} >
         <br></br>
-        <Header as='h1' size={"huge"}>What is Paul's ISP doing?</Header>
+        <Header as='h1' size='large' >What is Paul's ISP doing?</Header>
+        <br></br>
         <br></br>
         <ISPBanner />
+        <br></br>
+        <br></br>
         <br></br>
         <Container>
           <Menu color={tabColors[activeTab]} inverted attached="top" tabular>
@@ -147,11 +194,13 @@ class App extends Component {
               onClick={this.handleTabClick}
             />
 
+            <Menu.Item position='right'> Last Updated on : {this.state.lastTime}</Menu.Item>
+
           </Menu>
 
           <Segment attached='bottom'>
             <Container>
-              <Plot upload={this.state.upload} download={this.state.download} />
+              <Plot parentColor={tabColors[activeTab]} upload={this.state.upload} download={this.state.download} />
             </Container>
 
           </Segment>
