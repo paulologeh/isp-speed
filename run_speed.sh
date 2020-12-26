@@ -9,7 +9,7 @@ if ping -q -c 1 -W 1 google.co.uk >/dev/null; then
 else
 	echo "$day:$time Internet connection down" >> event.log
 	echo "$day,$time,0,0,none,none" >> speed_data.csv
-  cp speed_data.csv data-viewer
+  cp speed_data.csv ./data-viewer/public/speed_data.csv
   exit 1 
 fi
 FILE=result.txt

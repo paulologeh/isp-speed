@@ -59,6 +59,9 @@ function WhatIsThis() {
           This tool tracks the speed of my internet service provider.
           It runs an internet speed test every hour and stores this data.
           I have had multiple ISPs and wanted to compare their performance and figure out who the best is.
+          I have used Three, EE, Vodafone and TalkTalk at different times. I have even had one or two at the same time and would
+          switch between them daily. The VPN tab is for when I am using a VPN so the speed test will not recognise the ISP.
+          You switch between tabs to see data for each respective ISP. You can also filter by time frame.
         </Modal.Description>
       </Modal.Content>
       <Modal.Actions>
