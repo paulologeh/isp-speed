@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeriesCanvas, VerticalGridLines } from 'react-vis';
 import '../node_modules/react-vis/dist/style.css';
-import { Button, Dropdown } from 'semantic-ui-react';
+import { Button, Dropdown, Statistic } from 'semantic-ui-react';
 
-
-const print = (text) => {
-    console.log(text)
-}
 
 const axisStyle = {
     ticks: {
@@ -17,21 +13,25 @@ const axisStyle = {
     }
 };
 
-
 class Plot extends Component {
 
     state = {
         view: 'Download',
-        tickCount: 7
+        tickCount: Infinity,
+        // data: null
     }
 
     toggleView = (e, data) => {
         if (this.state.view === 'Download') {
-            this.setState({ view: 'Upload' });
+            this.setState({ view: 'Upload', data: this.props.upload });
         }
         else {
-            this.setState({ view: 'Download' });
+            this.setState({ view: 'Download', data: this.props.download  });
         }
+    }
+
+    setTickCount = (e, data) => {
+        this.setState({tickCount: data.value})
     }
 
     OptionPanel = () => {
@@ -39,7 +39,7 @@ class Plot extends Component {
             <div>
                 <Button onClick={this.toggleView} color={this.props.parentColor}>Show {this.state.view === 'Download' ? 'Upload' : 'Download'}</Button>
                 <Dropdown
-                    text='Filter By Date'
+                    text='Data Filter'
                     icon='filter'
                     floating
                     labeled
@@ -47,50 +47,73 @@ class Plot extends Component {
                     className='icon'
                 >
                     <Dropdown.Menu>
-                        <Dropdown.Header icon='tags' content='Filter Dates' />
+                        <Dropdown.Header icon='tags' content='Filter By Days' />
                         <Dropdown.Divider />
                         <Dropdown.Item
                             label={{ color: 'red', empty: true, circular: true }}
                             text='Last 24 hours'
+                            value={24+1}
+                            onClick={this.setTickCount}
                         />
                         <Dropdown.Item
                             label={{ color: 'blue', empty: true, circular: true }}
                             text='Last 7 days'
+                            value={7*(24+1)}
+                            onClick={this.setTickCount}
                         />
                         <Dropdown.Item
                             label={{ color: 'black', empty: true, circular: true }}
                             text='Last 30 days'
-                        />
-                        <Dropdown.Item
-                            label={{ color: 'green', empty: true, circular: true }}
-                            text='Custom Dates'
+                            value={30*(24+1)}
+                            onClick={this.setTickCount}
                         />
                     </Dropdown.Menu>
                 </Dropdown>
+                <Statistic size={'mini'}>
+                    <Statistic.Value>Average: {this.average(this.dataReducer())} Mbps</Statistic.Value>
+                </Statistic>
             </div >
         )
     }
 
+    dataReducer = () => {
+        if (this.state.tickCount === Infinity){
+            return this.state.view === 'Upload' ? this.props.upload : this.props.download
+        }
+        else{
+            let length = this.props.download.length;
+            return this.state.view === 'Download' ? this.props.download.slice(length - this.state.tickCount,length) : this.props.upload.slice(length - this.state.tickCount,length)
+        }
+    }
+
+    average = (data) => {
+        if (data === null){
+            return null
+        }
+        let avg = 0;
+        for (let i = 0; i < data.length; i++){
+            avg += data[i].y;
+        }
+        avg = avg / (data.length - 1)
+        return Math.round(avg * 100) / 100
+    }
 
     render() {
 
         return (
             <>
                 {this.OptionPanel()}
-                <XYPlot
-                    animation
-                    width={900}
-                    height={500}
-                    xType={"ordinal"}
-                    margin={{ bottom: 100 }}
+                <XYPlot 
+                width={900}
+                height={500}
+                xType={"time"}
+                margin={{ bottom: 100 }}
                 >
                     <HorizontalGridLines />
                     <VerticalGridLines />
                     <XAxis
                         hideLine
-                        title="Time"
                         tickLabelAngle={-30}
-                        tickFormat={tick => tick}
                         style={axisStyle}
                     />
                     <YAxis
@@ -99,10 +122,9 @@ class Plot extends Component {
                         style={axisStyle}
                     />
                     <LineSeriesCanvas
-                        animation
                         style={{ strokeWidth: 5 }}
                         curve={'curveBasis'}
-                        data={this.state.view === 'Upload' ? this.props.upload : this.props.download}
+                        data={this.dataReducer()}
                     />
                 </XYPlot>
             </>

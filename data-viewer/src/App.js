@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container, Header, Menu, Segment, Image, Grid } from 'semantic-ui-react';
+import { Container, Modal, Button, Header, Menu, Segment, Image, Grid, Icon } from 'semantic-ui-react';
 import Papa from 'papaparse';
 import Plot from './Plot';
 import './App.css';
@@ -42,6 +42,32 @@ const ISPBanner = () => {
 }
 
 
+function WhatIsThis() {
+  const [open, setOpen] = React.useState(false)
+
+  return (
+    <Modal
+      centered={false}
+      open={open}
+      onClose={() => setOpen(false)}
+      onOpen={() => setOpen(true)}
+      trigger={<Button>About</Button>}
+    >
+      <Modal.Header>What Is This?</Modal.Header>
+      <Modal.Content>
+        <Modal.Description>
+          This tool tracks the speed of my internet service provider.
+          It runs an internet speed test every hour and stores this data.
+          I have had multiple ISPs and wanted to compare their performance and figure out who the best is.
+        </Modal.Description>
+      </Modal.Content>
+      <Modal.Actions>
+        <Button onClick={() => setOpen(false)}>OK</Button>
+      </Modal.Actions>
+    </Modal>
+  )
+}
+
 class App extends Component {
 
   state = {
@@ -55,6 +81,7 @@ class App extends Component {
   componentDidMount() {
     console.clear()
     this.GetData();
+    print('Fetched and filtered data')
   }
 
   async GetData() {
@@ -84,7 +111,7 @@ class App extends Component {
     let avgUpload = 0;
     const Data = (rawData !== null) ? [...rawData] : this.state.csvData.data;
     let N = Data.length - 1;
-    let count = 0;
+    // let count = 0;
     let noneCount = 0;
 
     for (let i = N - 1; i > 0; i--) {
@@ -121,6 +148,7 @@ class App extends Component {
       avgDownload += parseFloat(datapoint[2]);
       avgUpload += parseFloat(datapoint[3]);
       let time = datapoint[0] + " " + datapoint[1];
+      time = new Date(time)
 
       if (i % 3 === 0 && i !== 0) {
         avgDownload = avgDownload / 3;
@@ -130,15 +158,15 @@ class App extends Component {
         avgDownload = 0;
         avgUpload = 0;
       }
-      count++;
+      // count++;
 
-      if (count > 24 * 3) {
-        break;
-      }
+      // if (count < 24*3) {
+      //   // break;
+      // }
     }
 
+
     this.setState({ download: downloads, upload: uploads });
-    print('updated state')
   }
 
   handleTabClick = (e, { name }) => {
@@ -148,12 +176,12 @@ class App extends Component {
   }
 
   render() {
-    print(this.state)
+
     const { activeTab } = this.state;
     return (
       <div className="App" style={{ flex: 1 }} >
         <br></br>
-        <Header as='h1' size='large' >What is Paul's ISP doing?</Header>
+        <Header as='h1' size='large' >Paul's ISP Speed Tracker</Header>
         <br></br>
         <br></br>
         <ISPBanner />
@@ -193,6 +221,9 @@ class App extends Component {
               active={activeTab === 'VPN'}
               onClick={this.handleTabClick}
             />
+            <Menu.Item>
+              <WhatIsThis parentColor={tabColors[activeTab]}/>
+            </Menu.Item>
 
             <Menu.Item position='right'> Last Updated on : {this.state.lastTime}</Menu.Item>
 
