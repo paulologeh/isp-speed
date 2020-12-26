@@ -4,7 +4,7 @@ time=$(date +"%T")
 day=$(date +"%D")
 echo "$day:$time Attempting speed test" >> event.log
 # check for internet connection
-if ping -q -c 1 -W 1 google.com >/dev/null; then
+if ping -q -c 1 -W 1 google.co.uk >/dev/null; then
   :
 else
 	echo "$day:$time Internet connection down" >> event.log
@@ -19,4 +19,3 @@ host=`grep 'Hosted' $FILE | awk '{print $3,$4,$5}'`
 provider=`grep 'Testing from' $FILE | awk '{print $3}'`
 echo $day,$time,$download,$upload,$host,$provider >> speed_data.csv
 echo "$day:$time Speed test completed" >> event.log
-cp speed_data.csv data-viewer/public/
