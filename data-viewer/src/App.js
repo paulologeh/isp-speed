@@ -24,16 +24,16 @@ const ISPBanner = () => {
       <Grid columns={4}>
         <Grid.Row centered>
           <Grid.Column>
-            <Image src='EE.jpg' size='tiny' />
+            <Image src={process.env.PUBLIC_URL + '/EE.jpg'} size='tiny' />
           </Grid.Column>
           <Grid.Column>
-            <Image src='Three.png' size='tiny' />
+            <Image src={process.env.PUBLIC_URL + '/Three.png'} size='tiny' />
           </Grid.Column>
           <Grid.Column>
-            <Image src='Vodafone.png' size='tiny' />
+            <Image src={process.env.PUBLIC_URL + '/Vodafone.png'} size='tiny' />
           </Grid.Column>
           <Grid.Column>
-            <Image src='TalkTalk.jpg' size='tiny' />
+            <Image src={process.env.PUBLIC_URL + '/TalkTalk.jpg'} size='tiny' />
           </Grid.Column>
         </Grid.Row>
       </Grid>
@@ -82,6 +82,7 @@ class App extends Component {
     console.clear()
     this.GetData();
     print('Fetched and filtered data')
+    print(this.state.csvData)
   }
 
   async GetData() {
@@ -96,7 +97,7 @@ class App extends Component {
   }
 
   async fetchCsv() {
-    const response = await fetch('speed_data.csv');
+    const response = await fetch(process.env.PUBLIC_URL + '/speed_data.csv');
     const reader = response.body.getReader();
     const result = await reader.read();
     const decoder = new TextDecoder('utf-8');
