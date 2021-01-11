@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { XYPlot, XAxis, YAxis, HorizontalGridLines, LineSeriesCanvas, VerticalGridLines } from 'react-vis';
 import '../node_modules/react-vis/dist/style.css';
 import { Button, Dropdown, Statistic } from 'semantic-ui-react';
+import { getHeight, getWidth} from './helpers'
 
 
 const axisStyle = {
@@ -108,7 +109,12 @@ class Plot extends Component {
     }
 
     handleWidth = () =>{
-        if (isMobile()){
+        if (isMobile()) {
+            let pct_90 = Math.ceil(getWidth() * 0.9);
+            console.log(pct_90)
+            // debugger;
+            // return pct_90
+          
             return 350
         }
         else{

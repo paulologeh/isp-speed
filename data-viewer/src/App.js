@@ -26,8 +26,18 @@ const tabColors = {
   VPN: 'purple'
 }
 
-const menuStyle = { flexGrow: 1, width: '75%', height: '80%' };
-const bannerStyle = { flexGrow: 1, width: '75%'}
+// var width1 = isMobile() ? '90%' : '65%';
+
+const menuStyle = {
+  flexGrow: 1,
+  width: isMobile() ? '90%' : '65%',
+  height: '80%'
+};
+
+const bannerStyle = {
+  flexGrow: 1,
+  width: '75%'
+}
 
 const ISPBanner = () => {
   return (
