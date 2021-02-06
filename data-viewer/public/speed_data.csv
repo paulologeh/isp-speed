@@ -8343,3 +8343,1386 @@ Date,Time,Download,Upload,Host,Provider
 01/11/21,23:00:00,7.78,15.99,GMCHosting LLC (London),Three
 01/11/21,23:00:31,25.63,17.41,Redraw Internet (London),Three
 01/11/21,23:00:58,11.30,17.51,Community Fibre Limited,Three
+01/12/21,00:00:00,26.67,17.30,Redraw Internet (London),Three
+01/12/21,00:00:32,32.59,16.93,Community Fibre Limited,Three
+01/12/21,00:01:02,29.55,17.13,toob Ltd (London),Three
+01/12/21,01:00:00,16.50,17.39,Redraw Internet (London),Three
+01/12/21,01:00:27,13.40,17.07,Community Fibre Limited,Three
+01/12/21,01:00:54,16.26,17.54,Structured Communications (London),Three
+01/12/21,02:00:00,21.83,17.97,toob Ltd (London),Three
+01/12/21,02:00:28,19.50,17.81,Redraw Internet (London),Three
+01/12/21,02:00:55,20.90,18.20,toob Ltd (London),Three
+01/12/21,03:00:01,24.25,18.77,Redraw Internet (London),Three
+01/12/21,03:00:27,12.89,17.39,Redraw Internet (London),Three
+01/12/21,03:00:55,13.88,16.20,Redraw Internet (London),Three
+01/12/21,10:00:00,9.27,18.62,GMCHosting LLC (London),EE
+01/12/21,10:01:56,10.00,14.88,toob Ltd (London),EE
+01/12/21,10:03:51,12.09,18.83,toob Ltd (London),EE
+01/12/21,11:00:00,13.39,21.40,toob Ltd (London),EE
+01/12/21,11:01:56,11.80,25.87,Inovedia Outsourcing (London),EE
+01/12/21,11:03:53,7.95,18.57,Inovedia Outsourcing (London),EE
+01/12/21,12:00:00,11.90,20.60,toob Ltd (London),EE
+01/12/21,12:01:56,13.21,26.34,toob Ltd (London),EE
+01/12/21,12:03:52,14.09,36.20,toob Ltd (London),EE
+01/12/21,13:00:00,8.91,19.80,toob Ltd (London),EE
+01/12/21,13:01:58,13.67,27.01,Inovedia Outsourcing (London),EE
+01/12/21,13:03:53,7.75,26.56,Inovedia Outsourcing (London),EE
+01/12/21,14:00:00,14.39,14.42,toob Ltd (London),EE
+01/12/21,14:01:58,7.48,17.30,Inovedia Outsourcing (London),EE
+01/12/21,14:03:58,11.35,24.85,Inovedia Outsourcing (London),EE
+01/12/21,15:00:01,9.42,14.38,toob Ltd (London),EE
+01/12/21,15:01:58,8.22,16.27,toob Ltd (London),EE
+01/12/21,15:03:54,6.12,13.40,Inovedia Outsourcing (London),EE
+01/12/21,16:00:00,9.86,20.67,toob Ltd (London),EE
+01/12/21,16:02:01,7.40,14.52,Inovedia Outsourcing (London),EE
+01/12/21,16:04:05,12.62,17.05,toob Ltd (London),EE
+01/12/21,17:00:01,13.50,11.93,Inovedia Outsourcing (London),EE
+01/12/21,17:01:59,13.93,16.58,Inovedia Outsourcing (London),EE
+01/12/21,17:03:57,14.81,18.16,Inovedia Outsourcing (London),EE
+01/12/21,18:00:00,14.64,17.66,GMCHosting LLC (London),EE
+01/12/21,18:01:57,11.82,16.57,toob Ltd (London),EE
+01/12/21,18:03:53,9.60,10.20,toob Ltd (London),EE
+01/12/21,19:00:00,17.63,16.60,toob Ltd (London),EE
+01/12/21,19:01:55,11.43,14.00,Inovedia Outsourcing (London),EE
+01/12/21,19:03:50,12.41,18.04,toob Ltd (London),EE
+01/12/21,20:00:00,11.88,18.11,toob Ltd (London),EE
+01/12/21,20:01:56,10.19,14.15,Inovedia Outsourcing (London),EE
+01/12/21,20:03:52,15.68,12.25,Inovedia Outsourcing (London),EE
+01/12/21,21:00:00,18.12,26.62,toob Ltd (London),EE
+01/12/21,21:01:56,6.92,17.07,Inovedia Outsourcing (London),EE
+01/12/21,21:03:53,21.37,21.50,toob Ltd (London),EE
+01/12/21,22:00:00,10.32,12.73,toob Ltd (London),EE
+01/12/21,22:01:57,0,0,none,none
+01/12/21,22:01:59,11.18,12.21,toob Ltd (London),EE
+01/12/21,23:00:00,16.92,15.86,Inovedia Outsourcing (London),EE
+01/12/21,23:01:56,13.63,13.63,Inovedia Outsourcing (London),EE
+01/12/21,23:03:51,17.05,16.51,Inovedia Outsourcing (London),EE
+01/13/21,10:00:00,13.43,9.70,Inovedia Outsourcing (London),EE
+01/13/21,10:02:00,5.65,10.54,Inovedia Outsourcing (London),EE
+01/13/21,10:03:59,9.58,17.28,toob Ltd (London),EE
+01/13/21,11:00:00,13.49,20.70,toob Ltd (London),EE
+01/13/21,11:01:58,10.72,21.68,Inovedia Outsourcing (London),EE
+01/13/21,11:03:56,10.37,14.94,Inovedia Outsourcing (London),EE
+01/13/21,12:00:00,12.91,19.49,Inovedia Outsourcing (London),EE
+01/13/21,12:01:57,17.00,22.27,toob Ltd (London),EE
+01/13/21,12:03:51,16.01,20.76,toob Ltd (London),EE
+01/13/21,13:00:00,12.01,10.06,GMCHosting LLC (London),EE
+01/13/21,13:01:57,10.91,17.71,toob Ltd (London),EE
+01/13/21,13:03:52,10.26,20.38,toob Ltd (London),EE
+01/13/21,14:00:00,11.90,20.04,Inovedia Outsourcing (London),EE
+01/13/21,14:01:57,6.67,19.71,toob Ltd (London),EE
+01/13/21,14:03:52,31.75,18.28,Inovedia Outsourcing (London),EE
+01/13/21,15:00:00,11.05,17.08,toob Ltd (London),EE
+01/13/21,15:01:56,10.21,18.71,Inovedia Outsourcing (London),EE
+01/13/21,15:03:50,13.39,22.11,toob Ltd (London),EE
+01/13/21,16:00:00,12.09,14.52,toob Ltd (London),EE
+01/13/21,16:01:58,13.16,25.43,toob Ltd (London),EE
+01/13/21,16:03:53,13.54,24.32,toob Ltd (London),EE
+01/13/21,17:00:00,12.26,17.99,toob Ltd (London),EE
+01/13/21,17:02:01,11.96,14.93,Inovedia Outsourcing (London),EE
+01/13/21,17:04:01,9.82,21.67,toob Ltd (London),EE
+01/13/21,18:00:00,11.56,20.93,toob Ltd (London),EE
+01/13/21,18:02:02,13.35,12.87,toob Ltd (London),EE
+01/13/21,18:03:58,12.77,16.97,Inovedia Outsourcing (London),EE
+01/13/21,19:00:00,5.25,14.12,toob Ltd (London),EE
+01/13/21,19:01:56,9.53,16.49,toob Ltd (London),EE
+01/13/21,19:03:44,0,0,none,none
+01/13/21,20:00:01,15.31,23.66,toob Ltd (London),EE
+01/13/21,20:01:57,17.38,23.38,toob Ltd (London),EE
+01/13/21,20:03:54,11.99,15.32,toob Ltd (London),EE
+01/13/21,21:00:00,6.53,10.43,toob Ltd (London),EE
+01/13/21,21:01:59,13.64,18.62,toob Ltd (London),EE
+01/13/21,21:03:59,13.27,20.67,Inovedia Outsourcing (London),EE
+01/13/21,22:00:01,0,0,none,none
+01/13/21,22:00:31,0,0,none,none
+01/13/21,22:01:01,0,0,none,none
+01/13/21,23:00:00,0,0,none,none
+01/13/21,23:00:30,0,0,none,none
+01/13/21,23:01:00,0,0,none,none
+01/14/21,00:00:00,0,0,none,none
+01/14/21,00:00:30,0,0,none,none
+01/14/21,00:01:01,0,0,none,none
+01/14/21,01:00:00,0,0,none,none
+01/14/21,01:00:30,0,0,none,none
+01/14/21,01:01:01,0,0,none,none
+01/14/21,04:00:00,0,0,none,none
+01/14/21,04:00:30,0,0,none,none
+01/14/21,04:01:00,0,0,none,none
+01/14/21,10:00:00,16.61,19.91,Community Fibre Limited,EE
+01/14/21,10:00:25,19.38,18.52,Redraw Internet (London),EE
+01/14/21,10:00:49,17.33,24.14,toob Ltd (London),EE
+01/14/21,11:00:00,14.74,21.55,Structured Communications (London),EE
+01/14/21,11:00:25,15.58,19.16,toob Ltd (London),EE
+01/14/21,11:00:53,18.03,14.93,Community Fibre Limited,EE
+01/14/21,12:00:01,13.06,17.43,Structured Communications (London),EE
+01/14/21,12:00:30,13.80,19.36,Inovedia Outsourcing (London),EE
+01/14/21,12:00:59,12.87,19.15,Inovedia Outsourcing (London),EE
+01/14/21,13:00:01,10.22,12.56,Community Fibre Limited,EE
+01/14/21,13:00:36,15.39,14.93,Inovedia Outsourcing (London),EE
+01/14/21,13:01:03,14.09,17.48,Inovedia Outsourcing (London),EE
+01/14/21,14:00:01,13.37,16.92,Community Fibre Limited,EE
+01/14/21,14:00:27,14.17,20.51,Community Fibre Limited,EE
+01/14/21,14:00:53,14.70,20.15,toob Ltd (London),EE
+01/14/21,15:00:01,15.32,23.97,toob Ltd (London),EE
+01/14/21,15:00:26,13.62,25.51,toob Ltd (London),EE
+01/14/21,15:00:51,16.68,22.82,Community Fibre Limited,EE
+01/14/21,16:00:00,15.09,14.65,Community Fibre Limited,EE
+01/14/21,16:00:25,11.21,19.32,toob Ltd (London),EE
+01/14/21,16:00:48,11.61,17.12,Structured Communications (London),EE
+01/14/21,17:00:01,20.25,9.81,Community Fibre Limited,EE
+01/14/21,17:00:26,19.72,22.21,Structured Communications (London),EE
+01/14/21,17:00:51,27.61,31.61,Structured Communications (London),EE
+01/14/21,18:00:00,13.98,12.85,Community Fibre Limited,EE
+01/14/21,18:00:28,12.53,15.67,Inovedia Outsourcing (London),EE
+01/14/21,18:00:54,10.91,16.11,Structured Communications (London),EE
+01/14/21,19:00:00,12.94,15.89,Community Fibre Limited,EE
+01/14/21,19:00:31,14.53,17.92,toob Ltd (London),EE
+01/14/21,19:01:01,11.60,16.06,Inovedia Outsourcing (London),EE
+01/14/21,20:00:00,14.51,26.41,Structured Communications (London),EE
+01/14/21,20:00:34,15.17,26.89,Inovedia Outsourcing (London),EE
+01/14/21,20:01:06,12.96,21.74,Inovedia Outsourcing (London),EE
+01/14/21,21:00:00,10.47,13.21,Cybersmart Pty Ltd,EE
+01/14/21,21:01:26,10.49,18.90,toob Ltd (London),EE
+01/14/21,21:02:50,15.07,9.54,Cybersmart Pty Ltd,EE
+01/14/21,22:00:00,7.59,10.68,Inovedia Outsourcing (London),EE
+01/14/21,22:01:26,10.26,18.78,toob Ltd (London),EE
+01/14/21,22:02:53,10.49,13.09,toob Ltd (London),EE
+01/14/21,23:00:00,15.80,15.22,toob Ltd (London),EE
+01/14/21,23:01:26,19.10,20.90,Inovedia Outsourcing (London),EE
+01/14/21,23:02:52,17.95,17.93,Inovedia Outsourcing (London),EE
+01/15/21,00:00:00,17.39,21.75,toob Ltd (London),EE
+01/15/21,00:01:27,9.68,17.82,Inovedia Outsourcing (London),EE
+01/15/21,00:02:51,13.42,23.07,Inovedia Outsourcing (London),EE
+01/15/21,01:00:00,18.19,27.30,Inovedia Outsourcing (London),EE
+01/15/21,01:01:28,19.97,24.54,toob Ltd (London),EE
+01/15/21,01:02:53,20.55,13.88,Inovedia Outsourcing (London),EE
+01/15/21,09:00:00,13.22,27.71,toob Ltd (London),EE
+01/15/21,09:01:27,12.28,30.66,toob Ltd (London),EE
+01/15/21,09:02:52,11.13,23.26,toob Ltd (London),EE
+01/15/21,10:00:00,14.45,23.83,Inovedia Outsourcing (London),EE
+01/15/21,10:01:24,17.62,29.40,toob Ltd (London),EE
+01/15/21,10:02:49,15.93,27.03,toob Ltd (London),EE
+01/15/21,11:00:00,4.23,5.74,m:tel doo (Podgorica),EE
+01/15/21,11:00:26,13.19,24.41,Telemach d.o.o. (Podgorica),EE
+01/15/21,11:00:51,8.75,17.94,Most Net ISP,EE
+01/15/21,12:00:01,16.11,15.44,GMCHosting LLC (London),EE
+01/15/21,12:02:11,16.31,20.91,GMCHosting LLC (London),EE
+01/15/21,12:04:23,13.96,18.91,GMCHosting LLC (London),EE
+01/15/21,13:00:00,16.16,22.36,toob Ltd (London),EE
+01/15/21,13:01:24,14.80,19.53,toob Ltd (London),EE
+01/15/21,13:02:49,15.29,17.17,Inovedia Outsourcing (London),EE
+01/15/21,14:00:00,25.27,22.30,toob Ltd (London),EE
+01/15/21,14:01:26,56.29,15.37,toob Ltd (London),EE
+01/15/21,14:02:50,38.86,17.52,Inovedia Outsourcing (London),EE
+01/15/21,15:00:00,16.60,13.95,Proxar IT Consulting,EE
+01/15/21,15:01:28,13.33,18.25,Inovedia Outsourcing (London),EE
+01/15/21,15:02:53,14.99,16.46,Inovedia Outsourcing (London),EE
+01/15/21,16:00:00,16.70,12.88,toob Ltd (London),EE
+01/15/21,16:01:25,9.38,19.68,Inovedia Outsourcing (London),EE
+01/15/21,16:02:49,13.63,7.87,Inovedia Outsourcing (London),EE
+01/15/21,17:00:01,13.27,12.54,toob Ltd (London),EE
+01/15/21,17:01:53,11.68,10.21,Inovedia Outsourcing (London),EE
+01/15/21,17:03:35,12.76,13.66,toob Ltd (London),EE
+01/15/21,18:00:00,11.00,20.96,toob Ltd (London),EE
+01/15/21,18:01:29,14.22,12.79,Proxar IT Consulting,EE
+01/15/21,18:02:54,13.06,17.43,Proxar IT Consulting,EE
+01/15/21,19:00:00,13.46,13.41,Proxar IT Consulting,EE
+01/15/21,19:01:30,12.68,16.35,Proxar IT Consulting,EE
+01/15/21,19:02:59,12.67,14.84,Proxar IT Consulting,EE
+01/15/21,20:00:00,10.03,23.55,toob Ltd (London),EE
+01/15/21,20:01:29,8.74,11.87,Inovedia Outsourcing (London),EE
+01/15/21,20:02:58,10.50,19.92,Inovedia Outsourcing (London),EE
+01/15/21,21:00:00,10.79,12.76,toob Ltd (London),EE
+01/15/21,21:01:26,15.70,16.22,Proxar IT Consulting,EE
+01/15/21,21:02:52,8.68,14.77,toob Ltd (London),EE
+01/15/21,22:00:00,9.77,19.05,Inovedia Outsourcing (London),EE
+01/15/21,22:01:26,9.30,22.83,toob Ltd (London),EE
+01/15/21,22:02:51,10.77,20.89,toob Ltd (London),EE
+01/15/21,23:00:00,12.33,18.37,Optel Telekom (Arandjelovac),EE
+01/15/21,23:00:28,11.98,25.30,Serbia BroadBand (Belgrade),EE
+01/15/21,23:00:54,11.99,17.42,Orion Telekom (Belgrade),EE
+01/16/21,00:00:00,16.76,17.08,Proxar IT Consulting,EE
+01/16/21,00:01:28,20.57,22.15,toob Ltd (London),EE
+01/16/21,00:02:53,25.29,17.52,Proxar IT Consulting,EE
+01/16/21,01:00:01,18.27,26.04,toob Ltd (London),EE
+01/16/21,01:01:27,16.24,26.44,Inovedia Outsourcing (London),EE
+01/16/21,01:02:51,21.16,25.26,toob Ltd (London),EE
+01/16/21,02:00:00,16.75,22.47,Proxar IT Consulting,EE
+01/16/21,02:01:28,16.66,25.95,Inovedia Outsourcing (London),EE
+01/16/21,02:02:55,22.88,27.66,toob Ltd (London),EE
+01/16/21,03:00:00,23.55,20.42,toob Ltd (London),EE
+01/16/21,03:01:26,20.91,28.32,Inovedia Outsourcing (London),EE
+01/16/21,03:02:51,22.71,23.56,Inovedia Outsourcing (London),EE
+01/16/21,04:00:00,25.19,26.66,Inovedia Outsourcing (London),EE
+01/16/21,04:01:26,26.52,30.52,toob Ltd (London),EE
+01/16/21,04:02:50,23.51,27.26,toob Ltd (London),EE
+01/16/21,11:00:01,0,0,none,none
+01/16/21,11:00:31,0,0,none,none
+01/16/21,11:01:01,0,0,none,none
+01/16/21,12:00:00,0,0,none,none
+01/16/21,12:00:30,0,0,none,none
+01/16/21,12:01:00,0,0,none,none
+01/16/21,13:00:00,0,0,none,none
+01/16/21,13:00:30,0,0,none,none
+01/16/21,13:01:00,0,0,none,none
+01/16/21,14:00:00,0,0,none,none
+01/16/21,14:00:30,0,0,none,none
+01/16/21,14:01:00,0,0,none,none
+01/16/21,15:00:00,0,0,none,none
+01/16/21,15:00:30,0,0,none,none
+01/16/21,15:01:00,0,0,none,none
+01/16/21,16:00:01,0,0,none,none
+01/16/21,16:00:31,0,0,none,none
+01/16/21,16:01:01,0,0,none,none
+01/16/21,19:00:01,0,0,none,none
+01/16/21,19:00:31,0,0,none,none
+01/16/21,19:01:01,0,0,none,none
+01/16/21,20:00:00,0,0,none,none
+01/16/21,20:00:30,0,0,none,none
+01/16/21,20:01:00,0,0,none,none
+01/16/21,21:00:00,0,0,none,none
+01/16/21,21:00:30,0,0,none,none
+01/16/21,21:17:10,15.48,28.82,Community Fibre Limited,EE
+01/16/21,22:00:00,0,0,none,none
+01/16/21,22:00:30,0,0,none,none
+01/16/21,22:01:00,0,0,none,none
+01/17/21,01:00:11,0,0,none,none
+01/17/21,01:00:42,0,0,none,none
+01/17/21,01:01:12,0,0,none,none
+01/17/21,02:00:00,0,0,none,none
+01/17/21,02:00:30,0,0,none,none
+01/17/21,02:01:00,0,0,none,none
+01/17/21,03:00:00,0,0,none,none
+01/17/21,03:00:30,0,0,none,none
+01/17/21,03:01:00,0,0,none,none
+01/17/21,04:00:00,0,0,none,none
+01/17/21,04:00:30,0,0,none,none
+01/17/21,04:01:00,0,0,none,none
+01/17/21,14:00:00,0,0,none,none
+01/17/21,14:00:30,0,0,none,none
+01/17/21,14:01:00,0,0,none,none
+01/17/21,15:00:00,0,0,none,none
+01/17/21,15:00:30,0,0,none,none
+01/17/21,15:01:00,0,0,none,none
+01/17/21,16:00:01,0,0,none,none
+01/17/21,16:00:31,0,0,none,none
+01/17/21,16:01:01,0,0,none,none
+01/17/21,17:00:00,0,0,none,none
+01/17/21,17:00:30,0,0,none,none
+01/17/21,17:01:00,0,0,none,none
+01/17/21,18:00:01,25.42,21.22,Proxar IT Consulting,EE
+01/17/21,18:00:26,23.37,21.44,Inovedia Outsourcing (London),EE
+01/17/21,18:00:50,19.52,19.78,Structured Communications (London),EE
+01/17/21,20:00:00,0,0,none,none
+01/17/21,20:00:30,0,0,none,none
+01/17/21,20:01:00,0,0,none,none
+01/17/21,21:00:00,0,0,none,none
+01/17/21,21:00:30,0,0,none,none
+01/17/21,21:01:01,0,0,none,none
+01/17/21,22:00:00,0,0,none,none
+01/17/21,22:00:30,0,0,none,none
+01/17/21,22:01:00,0,0,none,none
+01/17/21,23:00:00,0,0,none,none
+01/17/21,23:00:30,0,0,none,none
+01/17/21,23:01:00,0,0,none,none
+01/18/21,00:00:00,0,0,none,none
+01/18/21,00:00:30,0,0,none,none
+01/18/21,00:01:00,0,0,none,none
+01/18/21,01:00:00,0,0,none,none
+01/18/21,01:00:30,0,0,none,none
+01/18/21,01:01:00,0,0,none,none
+01/18/21,02:00:01,0,0,none,none
+01/18/21,02:00:31,0,0,none,none
+01/18/21,02:01:01,0,0,none,none
+01/18/21,03:00:01,0,0,none,none
+01/18/21,03:00:31,0,0,none,none
+01/18/21,03:01:01,0,0,none,none
+01/18/21,04:00:01,0,0,none,none
+01/18/21,04:00:31,0,0,none,none
+01/18/21,04:01:01,0,0,none,none
+01/18/21,05:00:00,0,0,none,none
+01/18/21,05:00:30,0,0,none,none
+01/18/21,05:01:00,0,0,none,none
+01/18/21,06:00:01,0,0,none,none
+01/18/21,06:00:31,0,0,none,none
+01/18/21,06:01:01,0,0,none,none
+01/18/21,09:00:00,39.49,13.24,toob Ltd (London),EE
+01/18/21,09:01:28,48.68,13.97,Inovedia Outsourcing (London),EE
+01/18/21,09:02:54,42.81,13.42,Inovedia Outsourcing (London),EE
+01/18/21,10:00:00,54.47,28.31,toob Ltd (London),EE
+01/18/21,10:01:32,40.87,25.34,toob Ltd (London),EE
+01/18/21,10:03:01,40.55,20.49,Inovedia Outsourcing (London),EE
+01/18/21,11:00:01,62.61,29.42,toob Ltd (London),EE
+01/18/21,11:01:30,45.78,29.15,toob Ltd (London),EE
+01/18/21,11:03:00,34.48,27.86,toob Ltd (London),EE
+01/18/21,12:00:00,37.62,20.06,Proxar IT Consulting,EE
+01/18/21,12:01:27,24.60,22.62,Inovedia Outsourcing (London),EE
+01/18/21,12:02:55,64.38,25.21,Inovedia Outsourcing (London),EE
+01/18/21,13:00:00,35.62,14.92,toob Ltd (London),EE
+01/18/21,13:01:26,40.37,19.06,Inovedia Outsourcing (London),EE
+01/18/21,13:02:50,46.69,19.24,Inovedia Outsourcing (London),EE
+01/18/21,14:00:00,50.67,18.00,toob Ltd (London),EE
+01/18/21,14:01:26,31.70,26.44,toob Ltd (London),EE
+01/18/21,14:02:51,41.89,26.83,toob Ltd (London),EE
+01/18/21,15:00:00,42.87,20.40,toob Ltd (London),EE
+01/18/21,15:01:30,41.07,19.85,Inovedia Outsourcing (London),EE
+01/18/21,15:02:59,42.54,21.84,toob Ltd (London),EE
+01/18/21,16:00:00,33.71,11.28,Proxar IT Consulting,EE
+01/18/21,16:01:32,48.95,10.53,Proxar IT Consulting,EE
+01/18/21,16:03:02,57.25,13.39,Inovedia Outsourcing (London),EE
+01/18/21,17:00:00,45.90,16.22,toob Ltd (London),EE
+01/18/21,17:01:28,50.22,17.66,Proxar IT Consulting,EE
+01/18/21,17:02:53,31.68,20.44,toob Ltd (London),EE
+01/18/21,18:00:00,0,0,none,none
+01/18/21,18:00:31,0,0,none,none
+01/18/21,18:01:01,27.80,16.06,Proxar IT Consulting,EE
+01/18/21,19:00:00,0,0,none,none
+01/18/21,19:00:30,0,0,none,none
+01/18/21,19:01:01,0,0,none,none
+01/18/21,20:00:00,0,0,none,none
+01/18/21,20:00:30,0,0,none,none
+01/18/21,20:01:00,0,0,none,none
+01/18/21,21:00:00,28.50,22.81,toob Ltd (London),EE
+01/18/21,21:00:26,25.73,10.63,Proxar IT Consulting,EE
+01/18/21,21:00:53,22.85,17.72,toob Ltd (London),EE
+01/18/21,22:00:00,0,0,none,none
+01/18/21,22:00:30,0,0,none,none
+01/18/21,22:01:00,0,0,none,none
+01/18/21,23:00:00,0,0,none,none
+01/18/21,23:00:30,0,0,none,none
+01/18/21,23:01:00,0,0,none,none
+01/19/21,00:00:00,0,0,none,none
+01/19/21,00:00:30,0,0,none,none
+01/19/21,00:01:00,0,0,none,none
+01/19/21,01:00:00,67.65,28.32,toob Ltd (London),EE
+01/19/21,01:00:29,36.36,27.39,Structured Communications (London),EE
+01/19/21,01:00:54,28.27,27.11,Structured Communications (London),EE
+01/19/21,02:00:00,0,0,none,none
+01/19/21,02:00:30,0,0,none,none
+01/19/21,02:01:00,0,0,none,none
+01/19/21,03:00:00,0,0,none,none
+01/19/21,03:00:31,0,0,none,none
+01/19/21,03:01:01,0,0,none,none
+01/19/21,04:00:01,0,0,none,none
+01/19/21,04:00:31,0,0,none,none
+01/19/21,04:01:01,0,0,none,none
+01/19/21,05:00:00,0,0,none,none
+01/19/21,05:00:30,0,0,none,none
+01/19/21,05:01:00,0,0,none,none
+01/19/21,06:00:00,0,0,none,none
+01/19/21,06:00:30,0,0,none,none
+01/19/21,06:01:00,0,0,none,none
+01/19/21,07:00:00,0,0,none,none
+01/19/21,07:00:30,0,0,none,none
+01/19/21,07:01:00,0,0,none,none
+01/19/21,10:00:00,71.20,23.16,Proxar IT Consulting,EE
+01/19/21,10:01:26,24.90,33.41,Inovedia Outsourcing (London),EE
+01/19/21,10:02:51,42.15,25.22,Proxar IT Consulting,EE
+01/19/21,11:00:00,41.07,23.10,Proxar IT Consulting,EE
+01/19/21,11:01:55,51.10,26.97,Inovedia Outsourcing (London),EE
+01/19/21,11:03:49,44.28,19.75,Inovedia Outsourcing (London),EE
+01/19/21,12:00:00,53.26,27.41,Proxar IT Consulting,EE
+01/19/21,12:02:00,54.77,21.42,Proxar IT Consulting,EE
+01/19/21,12:03:59,33.92,27.87,Inovedia Outsourcing (London),EE
+01/19/21,13:00:00,32.90,23.20,Proxar IT Consulting,EE
+01/19/21,13:01:58,43.70,26.38,Inovedia Outsourcing (London),EE
+01/19/21,13:03:55,39.88,22.36,Proxar IT Consulting,EE
+01/19/21,14:00:00,54.59,16.88,Proxar IT Consulting,EE
+01/19/21,14:02:01,30.65,29.58,Inovedia Outsourcing (London),EE
+01/19/21,14:04:00,39.86,26.90,Proxar IT Consulting,EE
+01/19/21,15:00:00,52.81,25.14,Proxar IT Consulting,EE
+01/19/21,15:01:59,30.91,23.01,Inovedia Outsourcing (London),EE
+01/19/21,15:03:57,16.18,19.53,Inovedia Outsourcing (London),EE
+01/19/21,16:00:00,45.22,23.20,Proxar IT Consulting,EE
+01/19/21,16:02:01,45.68,23.43,Inovedia Outsourcing (London),EE
+01/19/21,16:04:03,39.15,26.34,Inovedia Outsourcing (London),EE
+01/19/21,17:00:00,32.93,25.93,Inovedia Outsourcing (London),EE
+01/19/21,17:01:55,41.37,26.25,Inovedia Outsourcing (London),EE
+01/19/21,17:03:49,48.74,16.71,Inovedia Outsourcing (London),EE
+01/19/21,18:00:00,18.11,19.48,Inovedia Outsourcing (London),EE
+01/19/21,18:01:56,14.88,24.02,Inovedia Outsourcing (London),EE
+01/19/21,18:03:51,30.25,16.05,Inovedia Outsourcing (London),EE
+01/19/21,19:00:00,26.17,12.74,Proxar IT Consulting,EE
+01/19/21,19:01:55,34.75,26.23,Inovedia Outsourcing (London),EE
+01/19/21,19:03:50,27.53,15.02,Inovedia Outsourcing (London),EE
+01/19/21,20:00:01,29.65,16.02,Proxar IT Consulting,EE
+01/19/21,20:01:59,33.93,14.35,Proxar IT Consulting,EE
+01/19/21,20:03:56,37.66,25.90,Proxar IT Consulting,EE
+01/19/21,21:00:00,29.07,17.38,Proxar IT Consulting,EE
+01/19/21,21:01:55,26.74,19.63,Proxar IT Consulting,EE
+01/19/21,21:03:50,30.88,19.57,Inovedia Outsourcing (London),EE
+01/19/21,22:00:00,25.71,29.86,Inovedia Outsourcing (London),EE
+01/19/21,22:01:58,21.39,17.62,Inovedia Outsourcing (London),EE
+01/19/21,22:03:53,22.13,19.40,Inovedia Outsourcing (London),EE
+01/19/21,23:00:00,27.08,23.00,Proxar IT Consulting,EE
+01/19/21,23:01:57,44.29,27.05,Inovedia Outsourcing (London),EE
+01/19/21,23:03:51,55.44,18.52,Proxar IT Consulting,EE
+01/20/21,00:00:00,25.37,30.03,Structured Communications (London),EE
+01/20/21,00:00:26,42.86,31.45,Inovedia Outsourcing (London),EE
+01/20/21,00:00:50,33.80,27.86,Inovedia Outsourcing (London),EE
+01/20/21,01:00:00,31.13,27.87,Redraw Internet (London),EE
+01/20/21,01:00:24,29.17,22.56,Structured Communications (London),EE
+01/20/21,01:00:48,40.90,29.40,Redraw Internet (London),EE
+01/20/21,02:00:00,0,0,none,none
+01/20/21,02:00:30,0,0,none,none
+01/20/21,02:01:00,0,0,none,none
+01/20/21,03:00:00,76.80,28.78,Community Fibre Limited,EE
+01/20/21,03:00:24,59.64,31.35,Redraw Internet (London),EE
+01/20/21,03:00:47,74.49,32.31,Structured Communications (London),EE
+01/20/21,07:00:00,42.52,46.01,Structured Communications (London),EE
+01/20/21,07:00:27,38.95,1.61,Redraw Internet (London),EE
+01/20/21,07:01:16,30.47,33.31,Community Fibre Limited,EE
+01/20/21,08:00:00,70.87,24.93,Proxar IT Consulting,EE
+01/20/21,08:02:00,66.75,44.54,Inovedia Outsourcing (London),EE
+01/20/21,08:03:58,29.26,41.94,Inovedia Outsourcing (London),EE
+01/20/21,09:00:00,35.38,15.19,Inovedia Outsourcing (London),EE
+01/20/21,09:02:01,36.68,37.75,Inovedia Outsourcing (London),EE
+01/20/21,09:04:02,33.83,40.44,Inovedia Outsourcing (London),EE
+01/20/21,10:00:00,41.89,40.26,Inovedia Outsourcing (London),EE
+01/20/21,10:02:01,51.68,35.82,Inovedia Outsourcing (London),EE
+01/20/21,10:04:01,35.84,19.93,Proxar IT Consulting,EE
+01/20/21,11:00:00,29.31,22.04,Proxar IT Consulting,EE
+01/20/21,11:01:26,31.85,32.25,Inovedia Outsourcing (London),EE
+01/20/21,11:02:53,39.10,38.79,Inovedia Outsourcing (London),EE
+01/20/21,12:00:01,44.35,36.55,GMCHosting LLC (London),EE
+01/20/21,12:01:28,38.17,36.61,Inovedia Outsourcing (London),EE
+01/20/21,12:02:55,38.35,35.41,Inovedia Outsourcing (London),EE
+01/20/21,13:00:01,45.62,24.83,GMCHosting LLC (London),EE
+01/20/21,13:01:27,59.60,18.40,Proxar IT Consulting,EE
+01/20/21,13:02:54,44.47,19.72,Proxar IT Consulting,EE
+01/20/21,14:00:00,57.68,15.65,Proxar IT Consulting,EE
+01/20/21,14:01:29,58.34,18.32,Proxar IT Consulting,EE
+01/20/21,14:02:56,53.26,24.89,Inovedia Outsourcing (London),EE
+01/20/21,15:00:01,41.99,16.49,Proxar IT Consulting,EE
+01/20/21,15:01:29,60.11,12.34,Proxar IT Consulting,EE
+01/20/21,15:02:57,30.63,14.95,GMCHosting LLC (London),EE
+01/20/21,16:00:00,51.20,14.32,GMCHosting LLC (London),EE
+01/20/21,16:01:30,33.44,15.10,Inovedia Outsourcing (London),EE
+01/20/21,16:02:58,58.49,14.69,Inovedia Outsourcing (London),EE
+01/20/21,17:00:01,54.10,15.01,Proxar IT Consulting,EE
+01/20/21,17:01:25,42.39,0.00,Inovedia Outsourcing (London),EE
+01/20/21,17:03:11,0,0,none,none
+01/20/21,18:00:00,40.01,15.30,GMCHosting LLC (London),EE
+01/20/21,18:01:25,41.65,17.18,Proxar IT Consulting,EE
+01/20/21,18:02:50,40.24,16.63,Inovedia Outsourcing (London),EE
+01/20/21,19:00:01,0,0,none,none
+01/20/21,19:00:31,0,0,none,none
+01/20/21,19:01:01,0,0,none,none
+01/20/21,20:00:01,0,0,none,none
+01/20/21,20:00:31,0,0,none,none
+01/20/21,20:01:01,0,0,none,none
+01/20/21,21:00:00,0,0,none,none
+01/20/21,21:00:30,0,0,none,none
+01/20/21,21:01:00,0,0,none,none
+01/20/21,22:00:00,0,0,none,none
+01/20/21,22:00:30,0,0,none,none
+01/20/21,22:01:01,0,0,none,none
+01/21/21,03:00:00,0,0,none,none
+01/21/21,03:00:31,0,0,none,none
+01/21/21,03:01:01,0,0,none,none
+01/21/21,04:00:00,0,0,none,none
+01/21/21,04:00:30,0,0,none,none
+01/21/21,04:01:00,0,0,none,none
+01/21/21,05:00:00,0,0,none,none
+01/21/21,05:00:30,0,0,none,none
+01/21/21,05:01:00,0,0,none,none
+01/21/21,06:00:01,0,0,none,none
+01/21/21,06:00:31,0,0,none,none
+01/21/21,06:01:01,0,0,none,none
+01/21/21,07:00:00,0,0,none,none
+01/21/21,07:00:30,0,0,none,none
+01/21/21,07:01:00,0,0,none,none
+01/21/21,09:00:01,0,0,none,none
+01/21/21,09:00:31,0,0,none,none
+01/21/21,09:01:01,0,0,none,none
+01/21/21,10:00:00,42.70,35.47,GMCHosting LLC (London),EE
+01/21/21,10:01:26,39.73,16.63,Proxar IT Consulting,EE
+01/21/21,10:02:50,41.08,21.76,GMCHosting LLC (London),EE
+01/21/21,11:00:00,69.12,37.51,GMCHosting LLC (London),EE
+01/21/21,11:01:29,58.49,30.92,Proxar IT Consulting,EE
+01/21/21,11:02:56,57.85,38.56,Inovedia Outsourcing (London),EE
+01/21/21,12:00:00,70.84,32.22,Proxar IT Consulting,EE
+01/21/21,12:01:29,65.18,34.73,GMCHosting LLC (London),EE
+01/21/21,12:02:57,60.41,27.05,Proxar IT Consulting,EE
+01/21/21,13:00:00,39.84,22.01,Proxar IT Consulting,EE
+01/21/21,13:01:28,28.53,37.79,Inovedia Outsourcing (London),EE
+01/21/21,13:02:55,41.93,25.96,Inovedia Outsourcing (London),EE
+01/21/21,14:00:00,67.64,30.14,Proxar IT Consulting,EE
+01/21/21,14:01:29,28.29,39.29,Inovedia Outsourcing (London),EE
+01/21/21,14:02:53,44.39,23.44,Inovedia Outsourcing (London),EE
+01/21/21,15:00:01,62.04,23.23,GMCHosting LLC (London),EE
+01/21/21,15:01:36,51.07,30.82,Inovedia Outsourcing (London),EE
+01/21/21,15:03:08,55.68,26.63,Inovedia Outsourcing (London),EE
+01/21/21,16:00:00,27.73,24.12,GMCHosting LLC (London),EE
+01/21/21,16:01:31,47.29,18.30,Proxar IT Consulting,EE
+01/21/21,16:03:00,42.00,18.12,Proxar IT Consulting,EE
+01/21/21,17:00:00,28.89,25.12,GMCHosting LLC (London),EE
+01/21/21,17:01:31,32.16,14.73,GMCHosting LLC (London),EE
+01/21/21,17:02:59,42.53,32.94,Inovedia Outsourcing (London),EE
+01/21/21,18:00:01,25.05,32.20,Proxar IT Consulting,EE
+01/21/21,18:01:29,19.03,35.46,Inovedia Outsourcing (London),EE
+01/21/21,18:02:56,23.21,26.68,Inovedia Outsourcing (London),EE
+01/21/21,19:00:00,0,0,none,none
+01/21/21,19:00:30,0,0,none,none
+01/21/21,19:01:00,0,0,none,none
+01/21/21,20:00:00,0,0,none,none
+01/21/21,20:00:30,0,0,none,none
+01/21/21,20:01:00,0,0,none,none
+01/21/21,21:00:00,28.62,33.14,GMCHosting LLC (London),EE
+01/21/21,21:00:24,47.18,34.21,Community Fibre Limited,EE
+01/21/21,21:00:49,35.22,34.36,Structured Communications (London),EE
+01/21/21,22:00:00,0,0,none,none
+01/21/21,22:00:31,0,0,none,none
+01/21/21,22:01:01,0,0,none,none
+01/21/21,23:00:00,47.79,31.16,Community Fibre Limited,EE
+01/21/21,23:00:31,46.38,30.57,Inovedia Outsourcing (London),EE
+01/21/21,23:00:57,37.00,31.14,Proxar IT Consulting,EE
+01/22/21,00:00:00,34.34,25.07,Community Fibre Limited,EE
+01/22/21,00:00:27,21.22,26.82,Structured Communications (London),EE
+01/22/21,00:00:54,50.87,37.03,Community Fibre Limited,EE
+01/22/21,07:00:00,0,0,none,none
+01/22/21,07:54:24,0,0,none,none
+01/22/21,07:54:54,0,0,none,none
+01/22/21,09:01:16,0,0,none,none
+01/22/21,09:06:12,99.64,16.68,toob Ltd (London),EE
+01/22/21,09:07:39,68.36,14.70,Community Fibre Limited,EE
+01/22/21,10:00:00,55.50,25.78,GMCHosting LLC (London),EE
+01/22/21,10:01:56,54.28,31.04,toob Ltd (London),EE
+01/22/21,10:03:50,54.93,28.58,toob Ltd (London),EE
+01/22/21,11:00:00,36.62,18.77,Optel Telekom (Arandjelovac),EE
+01/22/21,11:00:26,42.66,19.04,Serbia BroadBand (Belgrade),EE
+01/22/21,11:00:50,20.56,19.75,Most Net ISP,EE
+01/22/21,12:00:00,45.03,21.78,Mauritius Telecom Ltd,EE
+01/22/21,12:01:55,53.37,21.60,Mauritius Telecom Ltd,EE
+01/22/21,12:03:50,36.83,20.20,Mauritius Telecom Ltd,EE
+01/22/21,13:00:00,47.61,19.84,GMCHosting LLC (London),EE
+01/22/21,13:01:57,45.08,23.77,GMCHosting LLC (London),EE
+01/22/21,13:03:53,55.89,19.88,Mauritius Telecom Ltd,EE
+01/22/21,14:00:01,35.66,15.46,GMCHosting LLC (London),EE
+01/22/21,14:01:57,42.28,25.26,Mauritius Telecom Ltd,EE
+01/22/21,14:03:53,25.38,20.78,GMCHosting LLC (London),EE
+01/22/21,15:00:01,33.20,25.78,GMCHosting LLC (London),EE
+01/22/21,15:01:57,44.22,23.01,GMCHosting LLC (London),EE
+01/22/21,15:03:55,49.10,17.49,Mauritius Telecom Ltd,EE
+01/22/21,16:00:00,20.80,17.87,Mauritius Telecom Ltd,EE
+01/22/21,16:01:57,31.16,15.79,GMCHosting LLC (London),EE
+01/22/21,16:03:53,42.64,25.43,Mauritius Telecom Ltd,EE
+01/22/21,17:00:00,52.98,16.08,Mauritius Telecom Ltd,EE
+01/22/21,17:01:56,40.57,27.51,Mauritius Telecom Ltd,EE
+01/22/21,17:03:50,49.90,29.13,Mauritius Telecom Ltd,EE
+01/22/21,18:00:00,24.89,22.49,Mauritius Telecom Ltd,EE
+01/22/21,18:01:56,19.59,27.52,Mauritius Telecom Ltd,EE
+01/22/21,18:03:50,27.28,22.15,Mauritius Telecom Ltd,EE
+01/22/21,19:00:00,29.94,18.27,GMCHosting LLC (London),EE
+01/22/21,19:02:24,27.48,24.71,GMCHosting LLC (London),EE
+01/22/21,19:04:41,31.01,6.26,Mauritius Telecom Ltd,EE
+01/22/21,20:00:00,17.85,17.12,Optel Telekom (Arandjelovac),EE
+01/22/21,20:00:27,25.30,21.92,Optel Telekom (Arandjelovac),EE
+01/22/21,20:00:52,27.48,20.54,Telenor Montenegro (Podgorica),EE
+01/22/21,21:00:00,36.29,27.02,GMCHosting LLC (London),EE
+01/22/21,21:01:55,28.18,21.90,Mauritius Telecom Ltd,EE
+01/22/21,21:03:50,30.60,24.35,Mauritius Telecom Ltd,EE
+01/22/21,22:00:00,21.75,27.09,Mauritius Telecom Ltd,EE
+01/22/21,22:01:56,20.16,27.21,Mauritius Telecom Ltd,EE
+01/22/21,22:03:51,22.23,33.67,Mauritius Telecom Ltd,EE
+01/22/21,23:00:01,38.46,19.65,GMCHosting LLC (London),EE
+01/22/21,23:02:07,23.85,31.38,Mauritius Telecom Ltd,EE
+01/22/21,23:04:09,24.62,28.77,Mauritius Telecom Ltd,EE
+01/23/21,00:00:00,0,0,none,none
+01/23/21,00:00:30,0,0,none,none
+01/23/21,00:01:00,0,0,none,none
+01/23/21,02:00:00,0,0,none,none
+01/23/21,02:00:30,0,0,none,none
+01/23/21,02:01:00,0,0,none,none
+01/23/21,11:00:00,0,0,none,none
+01/23/21,11:00:30,0,0,none,none
+01/23/21,11:01:01,0,0,none,none
+01/23/21,13:00:00,0,0,none,none
+01/23/21,13:00:31,0,0,none,none
+01/23/21,13:01:01,0,0,none,none
+01/23/21,14:00:00,0,0,none,none
+01/23/21,14:00:30,0,0,none,none
+01/23/21,14:01:00,0,0,none,none
+01/23/21,15:00:00,0,0,none,none
+01/23/21,15:00:30,0,0,none,none
+01/23/21,15:01:00,0,0,none,none
+01/23/21,16:00:00,0,0,none,none
+01/23/21,16:00:30,0,0,none,none
+01/23/21,16:01:00,0,0,none,none
+01/23/21,17:00:00,0,0,none,none
+01/23/21,17:00:30,0,0,none,none
+01/23/21,17:01:00,0,0,none,none
+01/23/21,18:00:00,0,0,none,none
+01/23/21,18:00:30,0,0,none,none
+01/23/21,18:01:00,0,0,none,none
+01/23/21,22:00:00,13.03,28.27,Structured Communications (London),EE
+01/23/21,22:00:29,15.30,24.06,Redraw Internet (London),EE
+01/23/21,22:00:59,13.40,24.22,Mauritius Telecom Ltd,EE
+01/23/21,23:00:01,0,0,none,none
+01/23/21,23:00:31,0,0,none,none
+01/23/21,23:01:01,0,0,none,none
+01/24/21,00:00:00,0,0,none,none
+01/24/21,00:00:30,0,0,none,none
+01/24/21,00:01:00,0,0,none,none
+01/24/21,01:00:00,0,0,none,none
+01/24/21,01:00:30,0,0,none,none
+01/24/21,01:01:00,0,0,none,none
+01/24/21,02:00:00,24.14,28.97,Redraw Internet (London),EE
+01/24/21,02:00:25,26.46,30.68,Community Fibre Limited,EE
+01/24/21,02:00:49,23.29,21.72,Redraw Internet (London),EE
+01/24/21,03:00:00,0,0,none,none
+01/24/21,03:00:30,0,0,none,none
+01/24/21,03:01:00,0,0,none,none
+01/24/21,04:00:00,0,0,none,none
+01/24/21,04:00:30,0,0,none,none
+01/24/21,04:01:00,0,0,none,none
+01/24/21,05:00:00,0,0,none,none
+01/24/21,05:00:30,0,0,none,none
+01/24/21,05:01:00,0,0,none,none
+01/24/21,06:00:01,0,0,none,none
+01/24/21,06:00:31,0,0,none,none
+01/24/21,06:01:01,0,0,none,none
+01/24/21,07:00:00,0,0,none,none
+01/24/21,07:00:30,0,0,none,none
+01/24/21,07:01:01,0,0,none,none
+01/24/21,08:00:00,0,0,none,none
+01/24/21,08:00:30,0,0,none,none
+01/24/21,08:01:00,0,0,none,none
+01/24/21,09:00:01,0,0,none,none
+01/24/21,09:00:31,0,0,none,none
+01/24/21,09:01:01,0,0,none,none
+01/24/21,10:00:00,22.53,16.79,Structured Communications (London),EE
+01/24/21,10:00:28,15.18,17.91,Structured Communications (London),EE
+01/24/21,10:00:56,20.87,14.82,Structured Communications (London),EE
+01/24/21,11:00:00,0,0,none,none
+01/24/21,11:00:30,0,0,none,none
+01/24/21,11:01:01,0,0,none,none
+01/24/21,12:00:00,0,0,none,none
+01/24/21,12:00:31,0,0,none,none
+01/24/21,12:01:01,0,0,none,none
+01/24/21,13:00:00,0,0,none,none
+01/24/21,13:00:30,0,0,none,none
+01/24/21,13:01:00,0,0,none,none
+01/24/21,14:00:00,0,0,none,none
+01/24/21,14:00:30,0,0,none,none
+01/24/21,14:01:01,0,0,none,none
+01/24/21,15:00:00,0,0,none,none
+01/24/21,15:00:30,0,0,none,none
+01/24/21,15:01:00,0,0,none,none
+01/24/21,16:00:00,0,0,none,none
+01/24/21,16:00:30,0,0,none,none
+01/24/21,16:01:00,0,0,none,none
+01/24/21,17:06:00,0,0,none,none
+01/24/21,17:06:30,0,0,none,none
+01/24/21,17:07:01,0,0,none,none
+01/24/21,18:00:00,0,0,none,none
+01/24/21,18:00:30,0,0,none,none
+01/24/21,18:01:00,0,0,none,none
+01/24/21,19:00:01,0,0,none,none
+01/24/21,19:00:31,0,0,none,none
+01/24/21,19:01:01,0,0,none,none
+01/24/21,20:00:00,0,0,none,none
+01/24/21,20:00:30,0,0,none,none
+01/24/21,20:01:00,0,0,none,none
+01/24/21,21:00:00,13.89,26.38,GMCHosting LLC (London),EE
+01/24/21,21:01:57,16.36,27.33,GMCHosting LLC (London),EE
+01/24/21,21:03:52,13.95,27.44,Aonap Hosting (London),EE
+01/24/21,22:00:01,9.03,20.25,GMCHosting LLC (London),EE
+01/24/21,22:01:56,8.11,14.45,Aonap Hosting (London),EE
+01/24/21,22:03:53,6.73,17.38,GMCHosting LLC (London),EE
+01/24/21,23:00:00,0,0,none,none
+01/24/21,23:00:30,0,0,none,none
+01/24/21,23:01:00,0,0,none,none
+01/25/21,00:00:00,7.39,17.69,Structured Communications (London),EE
+01/25/21,00:00:27,7.85,17.85,Community Fibre Limited,EE
+01/25/21,00:00:58,7.75,10.82,Community Fibre Limited,EE
+01/25/21,01:00:00,0,0,none,none
+01/25/21,01:00:31,0,0,none,none
+01/25/21,01:01:01,0,0,none,none
+01/25/21,02:00:00,0,0,none,none
+01/25/21,02:00:30,0,0,none,none
+01/25/21,02:01:00,0,0,none,none
+01/25/21,09:00:00,0,0,none,none
+01/25/21,09:00:30,0,0,none,none
+01/25/21,09:01:00,0,0,none,none
+01/25/21,10:00:00,16.37,28.55,GMCHosting LLC (London),EE
+01/25/21,10:01:57,13.26,24.50,GMCHosting LLC (London),EE
+01/25/21,10:03:52,9.83,26.09,Aonap Hosting (London),EE
+01/25/21,11:00:00,9.00,12.81,GMCHosting LLC (London),EE
+01/25/21,11:01:56,7.85,23.79,GMCHosting LLC (London),EE
+01/25/21,11:03:52,10.90,23.23,ColocationIX 10G (London),EE
+01/25/21,12:00:00,12.64,17.45,GMCHosting LLC (London),EE
+01/25/21,12:01:56,11.10,14.96,GMCHosting LLC (London),EE
+01/25/21,12:03:50,13.45,16.70,GMCHosting LLC (London),EE
+01/25/21,13:00:00,0,0,none,none
+01/25/21,13:00:30,0,0,none,none
+01/25/21,13:01:00,0,0,none,none
+01/25/21,14:00:00,0,0,none,none
+01/25/21,14:00:30,0,0,none,none
+01/25/21,14:01:00,0,0,none,none
+01/25/21,15:00:00,18.19,20.37,Structured Communications (London),EE
+01/25/21,15:00:25,17.31,17.86,Redraw Internet (London),EE
+01/25/21,15:00:51,18.30,20.08,Community Fibre Limited,EE
+01/25/21,16:00:00,0,0,none,none
+01/25/21,16:00:30,0,0,none,none
+01/25/21,16:01:00,0,0,none,none
+01/25/21,17:00:00,15.85,15.65,GMCHosting LLC (London),EE
+01/25/21,17:00:25,13.28,18.27,Redraw Internet (London),EE
+01/25/21,17:00:51,14.09,18.65,Structured Communications (London),EE
+01/25/21,18:00:00,0,0,none,none
+01/25/21,18:00:30,0,0,none,none
+01/25/21,18:01:00,0,0,none,none
+01/25/21,19:00:01,0,0,none,none
+01/25/21,19:00:31,0,0,none,none
+01/25/21,19:01:01,0,0,none,none
+01/25/21,20:00:00,0,0,none,none
+01/25/21,20:00:30,0,0,none,none
+01/25/21,20:01:00,0,0,none,none
+01/25/21,21:00:00,0,0,none,none
+01/25/21,21:00:30,0,0,none,none
+01/25/21,21:01:00,0,0,none,none
+01/25/21,22:00:00,0,0,none,none
+01/25/21,22:00:30,0,0,none,none
+01/25/21,22:01:00,0,0,none,none
+01/25/21,23:00:00,9.46,12.46,Redraw Internet (London),EE
+01/25/21,23:00:27,8.65,19.52,Structured Communications (London),EE
+01/25/21,23:00:55,15.71,14.44,Community Fibre Limited,EE
+01/26/21,00:00:00,0,0,none,none
+01/26/21,00:00:30,0,0,none,none
+01/26/21,00:01:00,0,0,none,none
+01/26/21,01:00:01,0,0,none,none
+01/26/21,01:00:31,0,0,none,none
+01/26/21,01:01:01,0,0,none,none
+01/26/21,02:00:01,0,0,none,none
+01/26/21,02:00:31,0,0,none,none
+01/26/21,02:01:01,0,0,none,none
+01/26/21,03:00:00,18.25,20.99,Community Fibre Limited,EE
+01/26/21,03:00:27,20.38,22.18,Structured Communications (London),EE
+01/26/21,03:00:52,17.70,18.73,Structured Communications (London),EE
+01/26/21,04:00:00,0,0,none,none
+01/26/21,04:00:30,0,0,none,none
+01/26/21,04:01:00,0,0,none,none
+01/26/21,05:00:00,16.91,21.27,Community Fibre Limited,EE
+01/26/21,05:00:27,17.29,22.29,Structured Communications (London),EE
+01/26/21,05:00:52,16.70,19.19,Structured Communications (London),EE
+01/26/21,06:00:01,0,0,none,none
+01/26/21,06:00:31,0,0,none,none
+01/26/21,06:01:01,0,0,none,none
+01/26/21,07:00:00,0,0,none,none
+01/26/21,07:00:30,0,0,none,none
+01/26/21,07:01:00,0,0,none,none
+01/26/21,10:00:00,16.89,12.81,GMCHosting LLC (London),EE
+01/26/21,10:01:57,12.76,15.56,GMCHosting LLC (London),EE
+01/26/21,10:03:52,12.21,12.82,GMCHosting LLC (London),EE
+01/26/21,11:00:00,10.59,16.88,GMCHosting LLC (London),EE
+01/26/21,11:01:57,9.60,12.15,Mauritius Telecom Ltd,EE
+01/26/21,11:03:52,11.63,12.15,Mauritius Telecom Ltd,EE
+01/26/21,12:00:00,13.01,17.71,GMCHosting LLC (London),EE
+01/26/21,12:01:57,18.14,11.97,Mauritius Telecom Ltd,EE
+01/26/21,12:03:51,15.61,9.21,Mauritius Telecom Ltd,EE
+01/26/21,13:00:00,15.95,11.56,GMCHosting LLC (London),EE
+01/26/21,13:01:56,17.09,16.77,Mauritius Telecom Ltd,EE
+01/26/21,13:03:53,18.81,17.66,GMCHosting LLC (London),EE
+01/26/21,14:00:00,13.68,8.38,GMCHosting LLC (London),EE
+01/26/21,14:02:08,12.31,10.17,GMCHosting LLC (London),EE
+01/26/21,14:04:05,14.55,15.14,GMCHosting LLC (London),EE
+01/26/21,15:00:00,16.38,17.80,GMCHosting LLC (London),EE
+01/26/21,15:01:56,8.03,13.80,Mauritius Telecom Ltd,EE
+01/26/21,15:03:50,11.29,19.59,Mauritius Telecom Ltd,EE
+01/26/21,16:00:00,20.19,16.84,GMCHosting LLC (London),EE
+01/26/21,16:01:58,17.21,14.07,GMCHosting LLC (London),EE
+01/26/21,16:03:53,17.33,16.70,Mauritius Telecom Ltd,EE
+01/26/21,17:00:00,14.60,20.30,GMCHosting LLC (London),EE
+01/26/21,17:01:58,13.12,18.25,Mauritius Telecom Ltd,EE
+01/26/21,17:03:54,13.05,17.45,GMCHosting LLC (London),EE
+01/26/21,18:00:00,17.01,12.40,GMCHosting LLC (London),EE
+01/26/21,18:01:57,16.98,13.13,Mauritius Telecom Ltd,EE
+01/26/21,18:03:51,18.20,17.34,Mauritius Telecom Ltd,EE
+01/26/21,20:00:00,25.99,16.14,Community Fibre Limited,Three
+01/26/21,20:00:28,7.50,19.20,Structured Communications (London),Three
+01/26/21,20:00:51,23.64,14.71,Structured Communications (London),Three
+01/26/21,21:00:01,25.64,18.79,Structured Communications (London),Three
+01/26/21,21:00:27,15.06,22.78,Redraw Internet (London),Three
+01/26/21,21:00:53,16.70,35.75,Community Fibre Limited,Three
+01/26/21,22:00:00,18.73,15.82,Redraw Internet (London),Three
+01/26/21,22:00:26,38.45,14.85,Redraw Internet (London),Three
+01/26/21,22:00:53,22.91,8.55,Community Fibre Limited,Three
+01/26/21,23:00:00,23.97,20.39,Redraw Internet (London),Three
+01/26/21,23:00:29,18.67,20.78,Community Fibre Limited,Three
+01/26/21,23:00:58,14.86,34.29,Structured Communications (London),Three
+01/27/21,00:00:00,41.10,13.72,Community Fibre Limited,Three
+01/27/21,00:00:27,12.89,11.61,Hyperoptic Limited (London),Three
+01/27/21,00:00:53,32.42,13.27,Redraw Internet (London),Three
+01/27/21,01:00:00,34.36,11.79,Redraw Internet (London),Three
+01/27/21,01:00:25,42.91,11.07,Structured Communications (London),Three
+01/27/21,01:00:50,44.33,12.19,Community Fibre Limited,Three
+01/27/21,02:00:00,30.14,12.16,Redraw Internet (London),Three
+01/27/21,02:00:25,43.41,11.34,Redraw Internet (London),Three
+01/27/21,02:00:50,35.58,12.86,Redraw Internet (London),Three
+01/27/21,03:00:00,55.61,13.37,GMCHosting LLC (London),Three
+01/27/21,03:00:24,57.11,13.00,Redraw Internet (London),Three
+01/27/21,03:00:48,59.34,13.08,Structured Communications (London),Three
+01/27/21,04:00:00,35.77,13.25,Hyperoptic Limited (London),Three
+01/27/21,04:00:24,47.85,12.14,Redraw Internet (London),Three
+01/27/21,04:00:48,40.84,12.64,Structured Communications (London),Three
+01/27/21,05:00:00,30.56,12.99,Structured Communications (London),Three
+01/27/21,05:00:25,31.39,13.17,Structured Communications (London),Three
+01/27/21,05:00:50,31.81,10.24,Redraw Internet (London),Three
+01/27/21,06:00:00,21.39,8.69,Redraw Internet (London),Three
+01/27/21,06:00:25,23.01,7.60,Redraw Internet (London),Three
+01/27/21,06:00:51,22.49,10.90,Structured Communications (London),Three
+01/27/21,07:00:00,21.41,8.39,Redraw Internet (London),Three
+01/27/21,07:00:26,23.36,9.09,Structured Communications (London),Three
+01/27/21,07:00:50,27.73,13.66,Hyperoptic Limited (London),Three
+01/27/21,08:00:00,37.00,10.86,Hyperoptic Limited (London),Three
+01/27/21,08:00:27,20.13,7.18,Hyperoptic Limited (London),Three
+01/27/21,08:00:52,20.70,8.59,Hyperoptic Limited (London),Three
+01/27/21,09:00:00,28.72,14.94,Community Fibre Limited,Three
+01/27/21,09:00:26,13.06,14.54,Structured Communications (London),Three
+01/27/21,09:00:51,20.17,8.97,Redraw Internet (London),Three
+01/27/21,10:00:00,43.65,25.05,Hyperoptic Limited (London),Three
+01/27/21,10:00:25,41.90,22.03,Redraw Internet (London),Three
+01/27/21,10:00:53,42.96,25.59,Redraw Internet (London),Three
+01/27/21,11:00:00,18.61,19.68,Redraw Internet (London),Three
+01/27/21,11:00:29,16.62,25.65,Structured Communications (London),Three
+01/27/21,11:00:53,13.66,18.19,Hyperoptic Limited (London),Three
+01/27/21,12:00:00,7.56,28.24,Community Fibre Limited,Three
+01/27/21,12:00:26,18.60,26.23,Redraw Internet (London),Three
+01/27/21,12:00:55,17.76,23.97,Community Fibre Limited,Three
+01/27/21,13:00:00,25.94,20.40,Community Fibre Limited,Three
+01/27/21,13:00:25,15.10,27.90,Structured Communications (London),Three
+01/27/21,13:00:50,16.06,28.69,Redraw Internet (London),Three
+01/27/21,14:00:00,4.85,26.63,GMCHosting LLC (London),Three
+01/27/21,14:00:26,12.10,28.11,Community Fibre Limited,Three
+01/27/21,14:00:51,16.60,33.12,Redraw Internet (London),Three
+01/27/21,15:00:00,35.00,19.69,Structured Communications (London),Three
+01/27/21,15:00:31,37.25,28.93,Community Fibre Limited,Three
+01/27/21,15:00:55,33.73,27.52,Redraw Internet (London),Three
+01/27/21,16:00:00,17.58,27.28,Hyperoptic Limited (London),Three
+01/27/21,16:00:25,13.93,24.58,Redraw Internet (London),Three
+01/27/21,16:00:53,33.61,26.53,Structured Communications (London),Three
+01/27/21,17:00:00,23.69,30.29,Community Fibre Limited,Three
+01/27/21,17:00:24,15.21,31.85,Redraw Internet (London),Three
+01/27/21,17:00:51,17.29,22.80,Community Fibre Limited,Three
+01/27/21,18:00:00,20.60,16.93,Redraw Internet (London),Three
+01/27/21,18:00:26,17.64,19.20,Hyperoptic Limited (London),Three
+01/27/21,18:00:55,27.28,18.12,Hyperoptic Limited (London),Three
+01/27/21,19:00:00,7.58,17.45,Redraw Internet (London),Three
+01/27/21,19:00:26,11.71,18.37,Structured Communications (London),Three
+01/27/21,19:00:52,9.59,18.25,Community Fibre Limited,Three
+01/27/21,20:00:00,11.44,34.43,Hyperoptic Limited (London),Three
+01/27/21,20:00:25,15.39,21.67,Redraw Internet (London),Three
+01/27/21,20:01:01,10.84,25.47,Structured Communications (London),Three
+01/27/21,21:00:00,14.25,18.82,Redraw Internet (London),Three
+01/27/21,21:00:25,29.82,21.60,Hyperoptic Limited (London),Three
+01/27/21,21:00:49,27.30,23.43,Community Fibre Limited,Three
+01/27/21,22:00:00,40.41,24.10,GMCHosting LLC (London),Three
+01/27/21,22:00:33,29.62,34.32,Redraw Internet (London),Three
+01/27/21,22:01:01,34.31,26.25,Redraw Internet (London),Three
+01/27/21,23:00:00,24.69,18.76,Community Fibre Limited,Three
+01/27/21,23:00:37,29.41,30.33,Community Fibre Limited,Three
+01/27/21,23:01:04,32.98,21.06,Redraw Internet (London),Three
+01/28/21,00:00:00,10.36,29.43,GMCHosting LLC (London),Three
+01/28/21,00:00:26,15.48,31.20,GMCHosting LLC (London),Three
+01/28/21,00:00:51,33.53,25.35,Community Fibre Limited,Three
+01/28/21,09:00:00,12.80,5.77,GMCHosting LLC (London),Three
+01/28/21,09:00:27,16.01,14.49,Community Fibre Limited,Three
+01/28/21,09:00:52,15.85,12.16,Hyperoptic Limited (London),Three
+01/28/21,10:00:00,8.44,13.37,Community Fibre Limited,EE
+01/28/21,10:00:29,10.44,13.41,Redraw Internet (London),EE
+01/28/21,10:00:55,14.00,17.58,Structured Communications (London),EE
+01/28/21,11:00:01,7.66,18.09,Redraw Internet (London),EE
+01/28/21,11:00:28,9.72,15.18,Redraw Internet (London),EE
+01/28/21,11:00:55,10.25,16.80,Community Fibre Limited,EE
+01/28/21,12:00:00,10.56,12.51,Community Fibre Limited,EE
+01/28/21,12:00:33,11.37,16.95,Structured Communications (London),EE
+01/28/21,12:01:00,9.46,16.78,Community Fibre Limited,EE
+01/28/21,13:00:00,13.53,9.89,Redraw Internet (London),EE
+01/28/21,13:00:32,9.59,18.92,Structured Communications (London),EE
+01/28/21,13:01:02,9.66,20.11,Structured Communications (London),EE
+01/28/21,14:00:00,14.40,15.51,GMCHosting LLC (London),EE
+01/28/21,14:00:29,12.18,19.06,Mauritius Telecom Ltd,EE
+01/28/21,14:00:56,10.07,18.15,Redraw Internet (London),EE
+01/28/21,15:00:00,9.11,15.26,Redraw Internet (London),EE
+01/28/21,15:00:27,7.51,18.39,Redraw Internet (London),EE
+01/28/21,15:00:55,8.05,20.04,Structured Communications (London),EE
+01/28/21,16:00:00,23.21,16.28,Structured Communications (London),EE
+01/28/21,16:00:29,28.86,13.77,Community Fibre Limited,EE
+01/28/21,16:00:56,24.62,15.06,Structured Communications (London),EE
+01/28/21,17:00:00,18.62,18.99,Redraw Internet (London),EE
+01/28/21,17:00:26,26.99,21.83,Mauritius Telecom Ltd,EE
+01/28/21,17:00:50,25.55,16.62,Mauritius Telecom Ltd,EE
+01/28/21,18:00:00,9.28,20.06,Structured Communications (London),EE
+01/28/21,18:00:27,7.57,18.59,Structured Communications (London),EE
+01/28/21,18:00:53,6.48,13.21,Structured Communications (London),EE
+01/28/21,19:00:01,6.67,18.67,Redraw Internet (London),EE
+01/28/21,19:00:28,7.88,18.43,Redraw Internet (London),EE
+01/28/21,19:00:54,9.23,19.20,Community Fibre Limited,EE
+01/28/21,20:00:00,8.30,19.70,Structured Communications (London),EE
+01/28/21,20:00:29,7.74,18.73,Redraw Internet (London),EE
+01/28/21,20:00:57,6.66,17.93,Structured Communications (London),EE
+01/28/21,21:00:00,13.11,20.07,GMCHosting LLC (London),EE
+01/28/21,21:00:26,12.85,16.35,GMCHosting LLC (London),EE
+01/28/21,21:00:52,13.51,17.90,Mauritius Telecom Ltd,EE
+01/28/21,22:00:00,3.32,4.87,m:tel doo (Podgorica),EE
+01/28/21,22:00:27,16.32,13.60,Optel Telekom (Arandjelovac),EE
+01/28/21,22:00:53,20.73,12.84,Optel Telekom (Arandjelovac),EE
+01/28/21,23:00:00,14.95,21.38,Structured Communications (London),EE
+01/28/21,23:00:25,13.21,21.26,Community Fibre Limited,EE
+01/28/21,23:00:48,10.78,16.71,Community Fibre Limited,EE
+01/29/21,00:00:00,0,0,none,none
+01/29/21,00:00:02,11.36,17.86,Community Fibre Limited,EE
+01/29/21,00:00:27,13.72,19.67,Structured Communications (London),EE
+01/29/21,01:00:00,0,0,none,none
+01/29/21,01:00:30,0,0,none,none
+01/29/21,01:01:00,0,0,none,none
+01/29/21,02:00:00,0,0,none,none
+01/29/21,02:00:30,0,0,none,none
+01/29/21,02:01:00,0,0,none,none
+01/29/21,09:00:00,24.52,21.53,Community Fibre Limited,EE
+01/29/21,09:00:25,20.83,21.55,Structured Communications (London),EE
+01/29/21,09:00:49,25.35,22.46,Redraw Internet (London),EE
+01/29/21,10:00:00,12.27,22.97,Inovedia Outsourcing (London),EE
+01/29/21,10:01:56,14.36,24.09,Inovedia Outsourcing (London),EE
+01/29/21,10:03:50,19.34,19.63,Inovedia Outsourcing (London),EE
+01/29/21,11:00:00,10.82,16.75,GMCHosting LLC (London),EE
+01/29/21,11:01:55,16.08,22.66,Inovedia Outsourcing (London),EE
+01/29/21,11:03:50,18.63,20.28,GMCHosting LLC (London),EE
+01/29/21,12:00:00,15.05,15.34,GMCHosting LLC (London),EE
+01/29/21,12:01:56,13.11,24.81,Inovedia Outsourcing (London),EE
+01/29/21,12:03:52,16.59,18.32,GMCHosting LLC (London),EE
+01/29/21,13:00:00,17.24,12.27,GMCHosting LLC (London),EE
+01/29/21,13:01:56,14.30,17.22,Inovedia Outsourcing (London),EE
+01/29/21,13:03:52,15.57,12.27,Inovedia Outsourcing (London),EE
+01/29/21,14:00:00,15.48,17.57,GMCHosting LLC (London),EE
+01/29/21,14:01:59,13.92,18.35,Inovedia Outsourcing (London),EE
+01/29/21,14:03:56,11.04,16.00,Inovedia Outsourcing (London),EE
+01/29/21,15:00:00,14.61,23.91,GMCHosting LLC (London),EE
+01/29/21,15:01:57,19.59,23.97,Inovedia Outsourcing (London),EE
+01/29/21,15:03:53,20.16,16.70,Inovedia Outsourcing (London),EE
+01/29/21,16:00:00,9.74,13.14,Inovedia Outsourcing (London),EE
+01/29/21,16:01:56,11.86,17.12,Inovedia Outsourcing (London),EE
+01/29/21,16:03:50,14.36,12.70,GMCHosting LLC (London),EE
+01/29/21,17:00:00,11.38,9.93,Inovedia Outsourcing (London),EE
+01/29/21,17:01:57,10.49,15.00,Inovedia Outsourcing (London),EE
+01/29/21,17:03:52,14.01,15.13,Inovedia Outsourcing (London),EE
+01/29/21,18:00:00,19.23,20.12,GMCHosting LLC (London),EE
+01/29/21,18:01:56,18.68,15.89,Inovedia Outsourcing (London),EE
+01/29/21,18:03:51,15.08,13.82,Inovedia Outsourcing (London),EE
+01/29/21,20:00:00,12.21,17.25,GMCHosting LLC (London),EE
+01/29/21,20:01:57,15.07,15.95,Inovedia Outsourcing (London),EE
+01/29/21,20:03:53,12.70,11.70,Inovedia Outsourcing (London),EE
+01/29/21,21:00:00,33.47,16.04,GMCHosting LLC (London),EE
+01/29/21,21:01:56,27.82,15.56,Inovedia Outsourcing (London),EE
+01/29/21,21:03:50,38.94,14.11,Inovedia Outsourcing (London),EE
+01/29/21,22:00:00,16.68,16.63,Mauritius Telecom Ltd,EE
+01/29/21,22:01:57,13.41,16.56,Mauritius Telecom Ltd,EE
+01/29/21,22:03:53,13.93,15.66,Inovedia Outsourcing (London),EE
+01/29/21,23:00:00,13.43,18.11,Mauritius Telecom Ltd,EE
+01/29/21,23:01:57,9.38,16.47,Mauritius Telecom Ltd,EE
+01/29/21,23:03:54,12.76,21.96,Mauritius Telecom Ltd,EE
+01/30/21,00:00:01,16.42,26.28,Mauritius Telecom Ltd,EE
+01/30/21,00:01:57,12.68,22.14,Mauritius Telecom Ltd,EE
+01/30/21,00:03:51,16.14,13.17,Inovedia Outsourcing (London),EE
+01/30/21,01:00:00,18.83,12.26,Inovedia Outsourcing (London),EE
+01/30/21,01:00:26,36.09,21.24,Community Fibre Limited,EE
+01/30/21,01:00:50,25.21,28.67,Inovedia Outsourcing (London),EE
+01/30/21,02:00:00,0,0,none,none
+01/30/21,02:00:30,0,0,none,none
+01/30/21,02:01:00,0,0,none,none
+01/30/21,03:00:00,0,0,none,none
+01/30/21,03:00:30,0,0,none,none
+01/30/21,03:01:00,0,0,none,none
+01/30/21,04:00:00,0,0,none,none
+01/30/21,04:00:30,0,0,none,none
+01/30/21,04:01:00,0,0,none,none
+01/30/21,05:00:01,0,0,none,none
+01/30/21,05:00:31,0,0,none,none
+01/30/21,05:01:01,0,0,none,none
+01/30/21,06:00:00,0,0,none,none
+01/30/21,06:00:30,0,0,none,none
+01/30/21,06:01:00,0,0,none,none
+01/30/21,07:00:00,30.48,32.00,Redraw Internet (London),EE
+01/30/21,07:00:26,33.94,34.92,Mauritius Telecom Ltd,EE
+01/30/21,07:00:50,30.05,29.15,Inovedia Outsourcing (London),EE
+01/30/21,08:00:00,0,0,none,none
+01/30/21,08:00:30,0,0,none,none
+01/30/21,08:01:00,0,0,none,none
+01/30/21,09:00:00,0,0,none,none
+01/30/21,09:00:30,0,0,none,none
+01/30/21,09:01:00,0,0,none,none
+01/30/21,10:00:01,24.62,26.76,Structured Communications (London),EE
+01/30/21,10:00:27,32.87,21.42,Community Fibre Limited,EE
+01/30/21,10:00:51,31.49,27.07,Mauritius Telecom Ltd,EE
+01/30/21,11:00:00,0,0,none,none
+01/30/21,11:00:30,0,0,none,none
+01/30/21,11:01:00,,,,
+01/30/21,17:00:01,0,0,none,none
+01/30/21,17:00:31,0,0,none,none
+01/30/21,17:01:01,0,0,none,none
+01/30/21,18:00:00,0,0,none,none
+01/30/21,18:00:30,0,0,none,none
+01/30/21,18:01:00,0,0,none,none
+01/30/21,19:00:00,0,0,none,none
+01/30/21,19:00:30,0,0,none,none
+01/30/21,19:01:00,0,0,none,none
+01/30/21,20:00:00,11.59,14.68,Telxius (London) [5.64,EE
+01/30/21,20:00:25,6.92,15.79,Redraw Internet (London),EE
+01/30/21,20:00:51,14.09,20.30,Telxius (London) [5.64,EE
+01/30/21,21:00:00,0,0,none,none
+01/30/21,21:00:31,0,0,none,none
+01/30/21,21:01:01,0,0,none,none
+01/30/21,23:00:00,0,0,none,none
+01/30/21,23:00:30,0,0,none,none
+01/30/21,23:01:00,0,0,none,none
+01/31/21,00:00:00,0,0,none,none
+01/31/21,00:00:30,0,0,none,none
+01/31/21,00:01:00,0,0,none,none
+01/31/21,01:00:01,0,0,none,none
+01/31/21,01:00:31,0,0,none,none
+01/31/21,01:01:01,0,0,none,none
+01/31/21,02:00:00,0,0,none,none
+01/31/21,02:00:30,0,0,none,none
+01/31/21,02:01:00,0,0,none,none
+01/31/21,03:00:01,0,0,none,none
+01/31/21,03:00:31,0,0,none,none
+01/31/21,03:01:01,0,0,none,none
+01/31/21,04:00:00,0,0,none,none
+01/31/21,04:00:30,0,0,none,none
+01/31/21,04:01:00,0,0,none,none
+01/31/21,05:00:00,0,0,none,none
+01/31/21,05:00:30,0,0,none,none
+01/31/21,05:01:00,0,0,none,none
+01/31/21,06:00:00,0,0,none,none
+01/31/21,06:00:30,0,0,none,none
+01/31/21,06:01:00,0,0,none,none
+01/31/21,07:00:00,0,0,none,none
+01/31/21,07:00:30,0,0,none,none
+01/31/21,07:01:00,0,0,none,none
+01/31/21,08:00:01,0,0,none,none
+01/31/21,08:00:31,0,0,none,none
+01/31/21,08:01:01,0,0,none,none
+01/31/21,09:00:01,12.32,20.66,Redraw Internet (London),EE
+01/31/21,09:00:26,14.50,28.15,Structured Communications (London),EE
+01/31/21,09:00:49,14.91,28.65,Inovedia Outsourcing (London),EE
+01/31/21,10:00:00,13.71,12.36,Community Fibre Limited,EE
+01/31/21,10:00:24,23.51,20.56,Community Fibre Limited,EE
+01/31/21,10:00:48,23.80,25.16,Redraw Internet (London),EE
+01/31/21,11:00:00,4.65,4.91,m:tel doo (Podgorica),EE
+01/31/21,11:00:26,14.77,17.41,Optel Telekom (Arandjelovac),EE
+01/31/21,11:00:52,11.44,25.30,Most Net ISP,EE
+01/31/21,13:00:00,12.91,19.16,Structured Communications (London),EE
+01/31/21,13:00:26,14.77,19.42,Community Fibre Limited,EE
+01/31/21,13:00:50,0,0,none,none
+01/31/21,14:00:00,0,0,none,none
+01/31/21,14:00:30,0,0,none,none
+01/31/21,14:01:00,0,0,none,none
+01/31/21,15:00:00,0,0,none,none
+01/31/21,15:00:30,0,0,none,none
+01/31/21,15:01:00,0,0,none,none
+01/31/21,16:00:00,19.64,15.00,Community Fibre Limited,EE
+01/31/21,16:00:26,25.42,18.36,Redraw Internet (London),EE
+01/31/21,16:00:52,21.82,20.99,Inovedia Outsourcing (London),EE
+01/31/21,18:00:00,0,0,none,none
+01/31/21,18:00:31,0,0,none,none
+01/31/21,18:01:01,0,0,none,none
+01/31/21,19:00:01,0,0,none,none
+01/31/21,19:00:31,0,0,none,none
+01/31/21,19:01:01,0,0,none,none
+01/31/21,21:00:00,0,0,none,none
+01/31/21,21:00:30,0,0,none,none
+01/31/21,21:01:00,0,0,none,none
+01/31/21,22:00:00,16.82,16.49,Community Fibre Limited,EE
+01/31/21,22:00:28,13.37,22.33,Inovedia Outsourcing (London),EE
+01/31/21,22:00:53,18.16,16.70,Inovedia Outsourcing (London),EE
+01/31/21,23:00:00,14.11,20.65,Redraw Internet (London),EE
+01/31/21,23:00:25,9.24,19.70,Inovedia Outsourcing (London),EE
+01/31/21,23:00:49,16.66,18.55,Mauritius Telecom Ltd,EE
+02/01/21,00:00:00,16.59,20.63,Redraw Internet (London),EE
+02/01/21,00:00:25,23.44,19.77,Mauritius Telecom Ltd,EE
+02/01/21,00:00:49,20.48,29.43,Mauritius Telecom Ltd,EE
+02/01/21,01:00:01,25.43,23.66,Redraw Internet (London),EE
+02/01/21,01:00:32,28.60,27.67,Redraw Internet (London),EE
+02/01/21,01:00:56,30.28,30.88,Redraw Internet (London),EE
+02/01/21,02:00:00,0,0,none,none
+02/01/21,02:00:30,0,0,none,none
+02/01/21,02:01:00,0,0,none,none
+02/01/21,03:00:00,33.84,27.19,Community Fibre Limited,EE
+02/01/21,03:00:24,34.63,32.70,Redraw Internet (London),EE
+02/01/21,03:00:48,38.98,38.82,Redraw Internet (London),EE
+02/01/21,04:00:00,0,0,none,none
+02/01/21,04:00:30,0,0,none,none
+02/01/21,04:01:00,0,0,none,none
+02/01/21,05:00:00,0,0,none,none
+02/01/21,05:00:30,0,0,none,none
+02/01/21,05:01:00,0,0,none,none
+02/01/21,06:00:00,0,0,none,none
+02/01/21,06:00:30,0,0,none,none
+02/01/21,06:01:00,0,0,none,none
+02/01/21,07:00:00,0,0,none,none
+02/01/21,07:00:30,0,0,none,none
+02/01/21,07:01:00,0,0,none,none
+02/01/21,11:00:00,51.38,0.04,Redraw Internet (London),EE
+02/01/21,11:04:53,0,0,none,none
+02/01/21,11:05:23,0,0,none,none
+02/01/21,13:00:00,0,0,none,none
+02/01/21,13:00:30,0,0,none,none
+02/01/21,13:01:01,0,0,none,none
+02/01/21,14:00:00,0,0,none,none
+02/01/21,14:00:30,0,0,none,none
+02/01/21,14:01:00,0,0,none,none
+02/01/21,15:00:00,13.18,8.25,Community Fibre Limited,EE
+02/01/21,15:00:33,6.88,16.67,Community Fibre Limited,EE
+02/01/21,15:00:59,11.06,8.56,Mauritius Telecom Ltd,EE
+02/01/21,16:00:01,0,0,none,none
+02/01/21,16:00:31,0,0,none,none
+02/01/21,16:01:01,0,0,none,none
+02/01/21,17:00:00,0,0,none,none
+02/01/21,17:00:30,0,0,none,none
+02/01/21,17:01:00,0,0,none,none
+02/01/21,18:00:01,0,0,none,none
+02/01/21,18:00:31,0,0,none,none
+02/01/21,18:01:01,0,0,none,none
+02/01/21,19:00:00,0,0,none,none
+02/01/21,19:00:30,0,0,none,none
+02/01/21,19:01:00,0,0,none,none
+02/01/21,20:00:00,0,0,none,none
+02/01/21,20:00:30,0,0,none,none
+02/01/21,20:01:00,0,0,none,none
+02/01/21,21:00:01,27.85,12.38,Mauritius Telecom Ltd,EE
+02/01/21,21:00:25,23.05,19.63,Structured Communications (London),EE
+02/01/21,21:00:49,35.15,17.17,Community Fibre Limited,EE
+02/01/21,22:00:00,0,0,none,none
+02/01/21,22:00:30,0,0,none,none
+02/01/21,22:01:00,0,0,none,none
+02/01/21,23:00:00,45.18,22.86,Mauritius Telecom Ltd,EE
+02/01/21,23:00:26,26.44,19.53,Redraw Internet (London),EE
+02/01/21,23:00:51,24.36,22.88,Structured Communications (London),EE
+02/02/21,00:00:00,23.04,21.81,Redraw Internet (London),EE
+02/02/21,00:00:25,39.99,24.44,Redraw Internet (London),EE
+02/02/21,00:00:50,34.13,23.98,Inovedia Outsourcing (London),EE
+02/02/21,01:08:46,0,0,none,none
+02/02/21,01:09:17,0,0,none,none
+02/02/21,01:09:47,0,0,none,none
+02/02/21,02:00:00,0,0,none,none
+02/02/21,02:00:31,0,0,none,none
+02/02/21,02:01:01,0,0,none,none
+02/02/21,03:00:00,0,0,none,none
+02/02/21,03:00:31,0,0,none,none
+02/02/21,03:01:01,0,0,none,none
+02/02/21,04:00:00,0,0,none,none
+02/02/21,04:00:30,0,0,none,none
+02/02/21,04:01:00,0,0,none,none
+02/02/21,05:00:00,0,0,none,none
+02/02/21,05:00:30,0,0,none,none
+02/02/21,05:01:01,0,0,none,none
+02/02/21,06:00:00,0,0,none,none
+02/02/21,06:00:30,0,0,none,none
+02/02/21,06:01:00,0,0,none,none
+02/02/21,07:00:00,0,0,none,none
+02/02/21,07:00:31,0,0,none,none
+02/02/21,07:01:01,0,0,none,none
+02/02/21,11:00:00,0,0,none,none
+02/02/21,11:00:30,0,0,none,none
+02/02/21,11:01:00,0,0,none,none
+02/02/21,12:00:01,0,0,none,none
+02/02/21,12:00:31,0,0,none,none
+02/02/21,12:01:01,0,0,none,none
+02/02/21,13:00:00,0,0,none,none
+02/02/21,13:00:30,0,0,none,none
+02/02/21,13:01:00,0,0,none,none
+02/02/21,14:00:00,0,0,none,none
+02/02/21,14:00:30,0,0,none,none
+02/02/21,14:01:00,0,0,none,none
+02/02/21,15:00:00,0,0,none,none
+02/02/21,15:00:30,0,0,none,none
+02/02/21,15:01:00,0,0,none,none
+02/02/21,16:00:00,0,0,none,none
+02/02/21,16:00:30,0,0,none,none
+02/02/21,16:01:00,0,0,none,none
+02/02/21,17:00:00,0,0,none,none
+02/02/21,17:00:30,0,0,none,none
+02/02/21,17:01:00,0,0,none,none
+02/02/21,18:00:00,0,0,none,none
+02/02/21,18:00:30,34.26,19.74,Inovedia Outsourcing (London),EE
+02/02/21,18:01:25,25.08,14.47,Structured Communications (London),EE
+02/02/21,19:00:00,0,0,none,none
+02/02/21,19:00:30,0,0,none,none
+02/02/21,19:01:00,0,0,none,none
+02/02/21,20:00:00,0,0,none,none
+02/02/21,20:00:30,0,0,none,none
+02/02/21,20:01:00,0,0,none,none
+02/02/21,21:00:00,0,0,none,none
+02/02/21,21:00:30,0,0,none,none
+02/02/21,21:01:01,0,0,none,none
+02/02/21,22:00:00,0,0,none,none
+02/02/21,22:00:30,0,0,none,none
+02/02/21,22:01:00,0,0,none,none
+02/02/21,23:00:00,33.16,26.49,Mauritius Telecom Ltd,EE
+02/02/21,23:00:25,31.07,28.11,Mauritius Telecom Ltd,EE
+02/02/21,23:00:50,34.80,29.00,Structured Communications (London),EE
+02/03/21,01:00:00,0,0,none,none
+02/03/21,01:00:30,0,0,none,none
+02/03/21,01:01:01,0,0,none,none
+02/03/21,02:00:00,0,0,none,none
+02/03/21,02:00:30,0,0,none,none
+02/03/21,02:01:01,0,0,none,none
+02/03/21,03:00:00,94.23,34.75,31173 Services AB,EE
+02/03/21,03:00:24,75.78,33.73,Redraw Internet (London),EE
+02/03/21,03:00:49,109.48,36.75,31173 Services AB,EE
+02/03/21,04:00:00,0,0,none,none
+02/03/21,04:00:30,0,0,none,none
+02/03/21,04:01:00,0,0,none,none
+02/03/21,05:00:00,0,0,none,none
+02/03/21,05:00:30,0,0,none,none
+02/03/21,05:01:00,0,0,none,none
+02/03/21,06:00:00,0,0,none,none
+02/03/21,06:00:30,0,0,none,none
+02/03/21,06:01:00,0,0,none,none
+02/03/21,09:00:01,0,0,none,none
+02/03/21,09:00:31,0,0,none,none
+02/03/21,09:01:01,0,0,none,none
+02/03/21,11:00:00,0,0,none,none
+02/03/21,11:00:30,0,0,none,none
+02/03/21,11:01:00,0,0,none,none
+02/03/21,12:00:00,0,0,none,none
+02/03/21,12:00:30,0,0,none,none
+02/03/21,12:01:00,0,0,none,none
+02/03/21,13:00:00,23.67,12.81,Community Fibre Limited,EE
+02/03/21,13:00:39,42.89,24.78,Inovedia Outsourcing (London),EE
+02/03/21,13:30:11,0,0,none,none
+02/03/21,17:00:00,0,0,none,none
+02/03/21,17:00:30,0,0,none,none
+02/03/21,17:01:00,0,0,none,none
+02/03/21,18:00:01,29.42,17.55,Mauritius Telecom Ltd,EE
+02/03/21,18:00:41,31.38,17.32,Inovedia Outsourcing (London),EE
+02/03/21,18:01:30,0,0,none,none
+02/03/21,19:00:00,37.35,27.29,Structured Communications (London),EE
+02/03/21,19:00:28,33.55,25.51,Community Fibre Limited,EE
+02/03/21,19:00:53,28.47,22.70,Redraw Internet (London),EE
+02/03/21,20:00:01,36.76,18.33,Community Fibre Limited,EE
+02/03/21,20:00:29,25.58,15.01,Community Fibre Limited,EE
+02/03/21,20:00:58,40.45,13.91,Redraw Internet (London),EE
+02/03/21,21:00:00,0,0,none,none
+02/03/21,21:00:30,0,0,none,none
+02/03/21,21:01:00,0,0,none,none
+02/03/21,22:00:00,0,0,none,none
+02/03/21,22:00:30,0,0,none,none
+02/03/21,22:01:00,0,0,none,none
+02/03/21,23:00:00,0,0,none,none
+02/03/21,23:00:30,0,0,none,none
+02/03/21,23:01:00,0,0,none,none
+02/04/21,00:00:00,65.82,21.29,Community Fibre Limited,EE
+02/04/21,00:00:25,50.89,17.76,Structured Communications (London),EE
+02/04/21,00:00:49,60.54,17.72,Redraw Internet (London),EE
+02/04/21,01:00:00,35.94,19.01,Inovedia Outsourcing (London),EE
+02/04/21,01:00:25,66.35,22.69,Community Fibre Limited,EE
+02/04/21,01:00:50,50.88,19.59,Redraw Internet (London),EE
+02/04/21,04:00:00,0,0,none,none
+02/04/21,04:00:30,106.77,15.38,Redraw Internet (London),EE
+02/04/21,05:01:14,56.03,0.04,Structured Communications (London),EE
+02/04/21,07:00:00,0,0,none,none
+02/04/21,07:00:30,0,0,none,none
+02/04/21,07:06:04,0,0,none,none
+02/04/21,10:00:01,60.13,25.08,Mauritius Telecom Ltd,EE
+02/04/21,10:01:56,58.25,22.25,Mauritius Telecom Ltd,EE
+02/04/21,10:03:51,59.04,27.52,Mauritius Telecom Ltd,EE
+02/04/21,11:00:00,28.99,13.46,Mauritius Telecom Ltd,EE
+02/04/21,11:01:56,37.82,18.78,Mauritius Telecom Ltd,EE
+02/04/21,11:03:51,25.44,19.86,Mauritius Telecom Ltd,EE
+02/04/21,12:00:00,23.22,21.29,Mauritius Telecom Ltd,EE
+02/04/21,12:01:56,33.80,28.44,Inovedia Outsourcing (London),EE
+02/04/21,12:03:52,25.01,28.94,Mauritius Telecom Ltd,EE
+02/04/21,13:00:01,20.39,9.69,Inovedia Outsourcing (London),EE
+02/04/21,13:01:57,20.27,11.05,Inovedia Outsourcing (London),EE
+02/04/21,13:03:52,27.74,16.06,Mauritius Telecom Ltd,EE
+02/04/21,14:00:00,31.36,10.59,Inovedia Outsourcing (London),EE
+02/04/21,14:01:59,28.11,12.80,Inovedia Outsourcing (London),EE
+02/04/21,14:03:55,36.47,13.71,Mauritius Telecom Ltd,EE
+02/04/21,15:00:00,21.96,20.89,Mauritius Telecom Ltd,EE
+02/04/21,15:01:56,28.45,19.73,Inovedia Outsourcing (London),EE
+02/04/21,15:03:50,26.76,20.18,Mauritius Telecom Ltd,EE
+02/04/21,16:00:00,17.59,16.29,Mauritius Telecom Ltd,EE
+02/04/21,16:01:57,16.14,15.31,Mauritius Telecom Ltd,EE
+02/04/21,16:03:53,25.99,12.78,Mauritius Telecom Ltd,EE
+02/04/21,17:00:01,44.27,18.74,Mauritius Telecom Ltd,EE
+02/04/21,17:01:55,43.31,15.14,Inovedia Outsourcing (London),EE
+02/04/21,17:03:50,45.43,16.95,Mauritius Telecom Ltd,EE
+02/04/21,18:00:00,40.31,17.38,Mauritius Telecom Ltd,EE
+02/04/21,18:01:57,40.87,13.85,Inovedia Outsourcing (London),EE
+02/04/21,18:03:52,30.08,14.51,Inovedia Outsourcing (London),EE
+02/04/21,19:00:01,0,0,none,none
+02/04/21,19:00:31,0,0,none,none
+02/04/21,19:01:01,0,0,none,none
+02/04/21,21:00:00,0,0,none,none
+02/04/21,21:00:30,0,0,none,none
+02/04/21,21:01:00,0,0,none,none
+02/04/21,22:00:00,0,0,none,none
+02/04/21,22:00:31,0,0,none,none
+02/04/21,22:01:01,0,0,none,none
+02/04/21,23:00:00,24.76,20.95,Redraw Internet (London),EE
+02/04/21,23:00:27,26.07,26.27,Inovedia Outsourcing (London),EE
+02/04/21,23:00:52,18.69,18.79,Mauritius Telecom Ltd,EE
+02/05/21,00:00:00,0,0,none,none
+02/05/21,00:00:30,0,0,none,none
+02/05/21,00:01:00,0,0,none,none
+02/05/21,01:00:00,52.36,28.07,Community Fibre Limited,EE
+02/05/21,01:00:25,47.82,29.69,Inovedia Outsourcing (London),EE
+02/05/21,01:00:50,55.02,30.00,Community Fibre Limited,EE
+02/05/21,02:00:00,77.33,34.74,Structured Communications (London),EE
+02/05/21,02:00:25,60.92,26.83,Community Fibre Limited,EE
+02/05/21,02:00:48,68.74,31.97,Structured Communications (London),EE
+02/05/21,03:00:00,0,0,none,none
+02/05/21,03:00:30,0,0,none,none
+02/05/21,03:01:00,0,0,none,none
+02/05/21,10:00:00,51.85,23.57,Proxar IT Consulting,EE
+02/05/21,10:01:57,47.30,21.83,Proxar IT Consulting,EE
+02/05/21,10:03:51,41.25,23.58,Inovedia Outsourcing (London),EE
+02/05/21,11:00:00,38.39,22.27,Proxar IT Consulting,EE
+02/05/21,11:01:59,51.85,27.33,Proxar IT Consulting,EE
+02/05/21,11:03:56,30.73,14.03,Inovedia Outsourcing (London),EE
+02/05/21,12:00:00,55.14,22.19,Mauritius Telecom Ltd,EE
+02/05/21,12:01:56,39.55,22.73,fdcservers.net (London) [11.07,EE
+02/05/21,12:03:52,32.09,17.36,Mauritius Telecom Ltd,EE
+02/05/21,13:00:00,52.89,15.48,Proxar IT Consulting,EE
+02/05/21,13:01:56,44.73,24.65,Inovedia Outsourcing (London),EE
+02/05/21,13:03:51,42.42,24.66,Inovedia Outsourcing (London),EE
+02/05/21,14:00:00,55.65,20.44,Proxar IT Consulting,EE
+02/05/21,14:02:01,38.35,22.10,Inovedia Outsourcing (London),EE
+02/05/21,14:04:01,28.32,13.55,Proxar IT Consulting,EE
+02/05/21,15:00:00,34.77,13.45,Proxar IT Consulting,EE
+02/05/21,15:01:56,36.61,19.16,Inovedia Outsourcing (London),EE
+02/05/21,15:03:52,34.45,19.19,Inovedia Outsourcing (London),EE
+02/05/21,16:00:01,22.32,20.71,Proxar IT Consulting,EE
+02/05/21,16:02:00,35.75,20.58,Inovedia Outsourcing (London),EE
+02/05/21,16:03:58,42.29,19.77,Inovedia Outsourcing (London),EE
+02/05/21,17:00:00,6.25,17.57,Redraw Internet (London),EE
+02/05/21,17:00:29,8.34,29.78,Redraw Internet (London),EE
+02/05/21,17:00:54,0,0,none,none
+02/05/21,18:00:01,7.46,15.87,Redraw Internet (London),EE
+02/05/21,18:00:32,10.69,15.92,Structured Communications (London),EE
+02/05/21,18:01:00,10.22,16.39,Structured Communications (London),EE
+02/05/21,20:00:00,0,0,none,none
+02/05/21,20:00:30,0,0,none,none
+02/05/21,20:01:00,0,0,none,none
+02/05/21,21:00:01,0,0,none,none
+02/05/21,21:00:31,0,0,none,none
+02/05/21,21:01:01,0,0,none,none
+02/05/21,22:00:00,0,0,none,none
+02/05/21,22:00:30,0,0,none,none
+02/05/21,22:01:00,0,0,none,none
+02/05/21,23:00:00,0,0,none,none
+02/05/21,23:00:30,0,0,none,none
+02/05/21,23:01:00,0,0,none,none
+02/06/21,00:00:00,19.10,22.86,Proxar IT Consulting,EE
+02/06/21,00:01:57,21.20,15.75,Proxar IT Consulting,EE
+02/06/21,00:03:56,17.81,18.13,Proxar IT Consulting,EE
+02/06/21,00:07:52,18.63,23.91,Inovedia Outsourcing (London),EE
+02/06/21,00:21:29,14.62,25.84,Inovedia Outsourcing (London),EE
+02/06/21,00:25:00,0,0,none,none
+02/06/21,00:27:34,0,0,none,none
+02/06/21,00:33:07,25.35,25.50,Redraw Internet (London),EE
+02/06/21,00:41:53,23.68,20.59,Redraw Internet (London),EE
+02/06/21,00:42:41,20.63,20.82,Redraw Internet (London),EE
+02/06/21,00:43:10,19.85,20.03,Structured Communications (London),EE
+02/06/21,00:44:31,26.19,23.34,Redraw Internet (London),EE
