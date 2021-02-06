@@ -3,19 +3,10 @@ import mssql from 'mssql';
 
 const app = express();
 
-var dbconfig = {
-    user: 'admin',
-    password: '123Aghogho',
-    server: 'dbmaster.cycoiftlmkqq.eu-west-2.rds.amazonaws.com', 
-    database: 'speedtest',
-    options:
-    {
-        "enableArithAbort": true
-    }
-};
+const config = require('./config.json');
 
 app.get('/api/data', function (req, res) {
-    mssql.connect(dbconfig, function (err) {
+    mssql.connect(config, function (err) {
         if (err) console.log(err);
 
         var request = new mssql.Request();
