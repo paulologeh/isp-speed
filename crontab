@@ -1,2 +1,1 @@
 0 * * * * cd ~/Repos/Every-Day-Technology/speed_report && ./generate_report.sh
-31 22 * * 6 cd ~/Repos/Every-Day-Technology/speed_report && ./eow_deploy.sh

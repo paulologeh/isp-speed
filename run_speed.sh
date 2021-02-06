@@ -21,6 +21,6 @@ echo "$day:$time Speed test completed" >> event.log
 sqlcmd -U admin -P $AWSPASSWD -S $AWSRDS -d speedtest -Q "$QUERY"
 
 if [ $? == 1 ]; then
-  echo "ERROR!: Database upload failed" >> event.log
+  echo "$day:$time ERROR!: Database upload failed" >> event.log
   exit 1
 fi
