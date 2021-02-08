@@ -10,6 +10,7 @@
   "author": "paul",
   "license": "ISC",
   "dependencies": {
+    "braces": "^3.0.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mssql": "^6.3.1"
