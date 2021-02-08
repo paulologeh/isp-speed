@@ -1,30 +1,35 @@
 import React, { Component } from 'react';
-import { Container, Header, Image, Menu, Dropdown, Segment, Button, Icon } from 'semantic-ui-react';
-import Chart from './Chart';
+import { Sidebar, Menu, Grid, Icon, Button, Segment, Card, Image, Header} from 'semantic-ui-react';
+import './App.css'
+import { propAverage, countToday, normalise, getProviderCummulative, getHostData, dataRecents } from './utils/dataReducer';
+import SpeedChart from './SpeedChart';
+import ProviderCharts from './ProviderCharts';
+import HostPie from './HostChart';
+import ActivityFeed from './ActivityFeed';
 
-const SpeedArticle = () => {
-  return (
-        <p>
-          The struggle for good internet in London is real. Especially if you are in a very densely populated area e.g E1.
-          Since we have all been locked down and a lot of people have transitioned to working from home, reliable internet has become crucial.
-          Unfortunateley for me, this has not been the case. My internet was so unreliable and could barely use it past 12:00.
-          Hence, I decided to schedule jobs to monitor the speed of my connection wheneve my laptop is on and have been collecting this data since June 2019.
-          The chart below will show the download/upload speed of my internet service provider. I have switched between Three, TalkTalk, EE and Vodafone since then.
-        </p>
-  )
+const rootStyle = {
+  height: '100vh',
+  minHeight : '100vh'
 }
-
 
 class App extends Component {
 
   state = {
+    allData: [],
+    dataNorm: [],
     data: [],
-    currentData: [],
+    providerData: [],
+    hostData: [],
+    recents: [],
     activeItem: 'Info',
-    tabColor: 'blue',
     lastUpdateTime: '06-02-2021 20:33:00',
-    dataPoints: 20,
-    cutoff: null
+    showSideBar: true,
+    summary: [
+      { meta: 'Change Since Yesterday: 0 %', header: 'Average Download Speed', description: '0 Mbps' },
+      { meta: 'Change Since Yesterday: 0 %', header: 'Average Upload Speed', description: '0 Mbps' },
+      { meta: 'Change Since Yesterday: 0 %', header: 'Number of Tests Today', description: '0' },
+      { meta: 'Change Since Yesterday: 0 %', header: 'Total Number of Tests', description: '0' }
+    ]
   }
 
   async callAPI() {
@@ -32,8 +37,33 @@ class App extends Component {
     const data = await response.json();
     console.debug('API returned')
     console.debug(data.recordset)
-    this.setState({ data: data.recordset })
-    console.log(data)
+    this.setState({ allData: data.recordset });
+    let summary = [...this.state.summary];
+    let avgDownloadToday = propAverage(data.recordset, 'Download', false);
+    let avgDownloadYesterday = propAverage(data.recordset, 'Download', true);
+    let pctChangeDownload = (avgDownloadToday - avgDownloadYesterday) / avgDownloadYesterday * 100;
+    let avgUploadToday = propAverage(data.recordset, 'Upload', false);
+    let avgUploadYesterday = propAverage(data.recordset, 'Upload', true);
+    let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0;
+    let testsToday = countToday(data.recordset, false);
+    let testsYesterday = countToday(data.recordset, true);
+    let pctChangeTests = testsYesterday ? (testsToday - testsYesterday) / testsYesterday * 100 : 0;
+    let pctChangeTotal = data.recordset.length ? (data.recordset.length - testsToday) / data.recordset.length : 0;
+    summary[0].description = avgDownloadToday + ' Mbps';
+    summary[0].meta = 'Change Since Yesterday: ' + pctChangeDownload.toFixed(1) + ' %';
+    summary[1].description = avgUploadToday + ' Mbps';
+    summary[1].meta = 'Change Since Yesterday: ' + pctChangeUpload.toFixed(1) + ' %';
+    summary[2].description = testsToday;
+    summary[2].meta = 'Change Since Yesterday: ' + pctChangeTests.toFixed(1) + ' %';
+    summary[3].description = data.recordset.length;
+    summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
+    this.setState({ summary: summary });
+    let n = data.recordset.length 
+    this.setState({ data: data.recordset.slice(n - 500, n) })
+    this.setState({ dataNorm: normalise(data.recordset.slice(n - 500, n)) });
+    this.setState({ providerData: getProviderCummulative(data.recordset) });
+    this.setState({ hostData: getHostData(data.recordset) });
+    this.setState({ recents: dataRecents(data.recordset)})
   }
 
   componentDidMount() {
@@ -41,107 +71,88 @@ class App extends Component {
     this.callAPI()
   }
 
-  componentDidUpdate(prevProps, prevState) {
-    if (this.state.activeItem !== prevState.activeItem) {
-      this.handleData();
-    }
-  }
-
-  handleData = () => {
-    if (!this.state.dataPoints) {
-      return;
-    }
-    let newData = [...this.state.data];
-    let n = newData.length - 1;
-    newData = newData.slice(n - this.state.dataPoints, n);
-    newData.forEach(function (v) {
-      delete v.ID;
-      delete v.Host;
-      v.RecordTime = new Date(v.RecordTime).getTime();
-    });
-    console.log('handled data')
-    this.setState({ currentData: newData });
-  }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
-  router() {
-    console.debug(this.state.activeItem)
-    switch (this.state.activeItem) {
-      case 'Data':
-        return <Chart data={this.state.currentData}/>
-      default:
-        return <SpeedArticle  />
-    }
-  }
+  toggleSideBar = () => this.setState((prevState) => ({ showSideBar: !prevState.showSideBar }))
 
   render() {
-    const activeItem = this.state.activeItem;
-
     return (
-      <div>
-        <style>
-          {`
-          html, body {
-            background: #fff;
-          }
-        `}
-        </style>
-        <Container text style={{ marginTop: '2em' }}>
-          <Image src={process.env.PUBLIC_URL + '/speedguage.png'} size={'small'} inline={true}/>
-          <Header as='h1'>ISP Speed Tracker</Header>
-          <p>Making sure ISPs meet their minimum speed commitments</p>
-        </Container>
-        <Container style={{ marginTop: '6em' }}>
-          <Menu
-            pointing
-            secondary
-            attached='top'
-          >
-            <Menu.Item as='a' name='Info' active={activeItem === 'Info'} onClick={this.handleItemClick}>Info</Menu.Item>
-            <Menu.Item as='a' name='Data' active={activeItem === 'Data'} onClick={this.handleItemClick}>Data</Menu.Item>
-            <Menu.Item as='a' name='ISP Performance' active={activeItem === 'ISP Performance'} onClick={this.handleItemClick}>ISP Performance</Menu.Item>
-            <Menu.Item as='a' name='Reports' active={activeItem === 'Reports'} onClick={this.handleItemClick}>Reports</Menu.Item>
-            {activeItem === 'Data' ?
-              <Menu.Menu position='right'>
-                <Dropdown item text='Filter by Duration' >
-                  <Dropdown.Menu>
-                    <Dropdown.Item>Show Last 24 Hours</Dropdown.Item>
-                    <Dropdown.Item>Show Last 7 Days</Dropdown.Item>
-                    <Dropdown.Item>Show Last 30 Days</Dropdown.Item>
-                    <Dropdown.Item>Show All</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown> 
-                <Dropdown item text='Filter by ISP' >
-                  <Dropdown.Menu>
-                    <Dropdown.Item>EE</Dropdown.Item>
-                    <Dropdown.Item>Vodafone</Dropdown.Item>
-                    <Dropdown.Item>Three</Dropdown.Item>
-                    <Dropdown.Item>TalkTalk</Dropdown.Item>
-                    <Dropdown.Item>All</Dropdown.Item>
-                  </Dropdown.Menu>
-                </Dropdown> 
-              </Menu.Menu>
-              : null
-             }
-          </Menu>
-
-          <Segment attached='bottom'>
-            {this.router()}
-          </Segment>
-
-          <Button
-            color='black'
-            href='https://github.com/paulologeh/ISP-Speed'
-          >
+      <div style={rootStyle}>
+      <Grid padded columns={1} style={{ height: '100%' }}>
+        <Sidebar
+          as={Menu}
+          animation='push'
+          icon='labeled'
+          inverted
+          vertical
+          visible={this.state.showSideBar}
+          onHide={()=> this.setState({showSideBar: false})}
+          width='thin'
+        >
+          <Menu.Item as='image'>
+            <Image size='small' circular src={process.env.PUBLIC_URL + '/profile.jpg'} />
+            <br/>
+            <Menu.Header>Welcome Paul!</Menu.Header>
+          </Menu.Item>
+          <Menu.Item as='a'>
+            <Icon name='home' />
+            Home
+          </Menu.Item>
+          <Menu.Item as='a'>
+            <Icon name='edit outline' />
+            Customize
+          </Menu.Item>
+          <Menu.Item as='a'>
+            <Icon name='info' />
+            About
+          </Menu.Item>
+          <Menu.Item as='a' href='https://github.com/paulologeh/ISP-Speed'>
             <Icon name='github' />
             Source Code
-          </Button> 
-
-          </Container>
+          </Menu.Item>
+        </Sidebar>
+          <Grid.Column style={{backgroundColor: '#F0F0F0'}}>
+            <Grid.Row>
+              <Button color='black' icon onClick={() => this.setState({ showSideBar: true })}><Icon name='bars' /></Button>
+              {/* <span><h1 style={{ display: "inline" }}>ISP Monitoring</h1></span> */}
+            </Grid.Row>
+            <Grid.Row centered>
+              <Card.Group centered items={this.state.summary}/>
+            </Grid.Row>
+            <Grid.Row>
+              <br/>
+              <Segment>
+                <Header as='h3' textAlign='center'>Speed Chart</Header>
+                 <SpeedChart data={this.state.dataNorm}/>
+              </Segment>
+            </Grid.Row>
+            <Grid.Row>
+              <br />
+              <Grid columns='equal'>
+                <Grid.Column>
+                  <Segment>
+                    <Header as='h3' textAlign='center'>Avg. Cummulative Speed By Provider</Header>
+                    <ProviderCharts data={this.state.providerData} />
+                  </Segment>    
+                </Grid.Column>
+                <Grid.Column>
+                  <Segment>
+                    <Header as='h3' textAlign='center'>Top 4 Used Hosts</Header>
+                    <HostPie data={this.state.hostData}/>
+                  </Segment>
+                </Grid.Column>
+                <Grid.Column>
+                  <Segment>
+                    <Header as='h3' textAlign='center'>Recent Test Activity</Header>
+                    <ActivityFeed data={this.state.recents} />
+                  </Segment>
+                </Grid.Column>
+              </Grid>
+            </Grid.Row>
+          </Grid.Column>
+        </Grid>
       </div>
     )
   }
 }
+
 
 export default App;

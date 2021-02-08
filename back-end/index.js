@@ -12,7 +12,7 @@ app.get('/api/data', function (req, res) {
         if (err) console.log(err);
 
         var request = new mssql.Request();
-        request.query('SELECT * FROM testresults', function (err, recordset) {
+        request.query('SELECT * FROM testresults ORDER BY ID', function (err, recordset) {
             if (err) console.log(err);
             // send records as a response
             console.log('Successful Request');
