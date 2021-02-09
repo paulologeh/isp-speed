@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Sidebar, Menu, Grid, Checkbox, Icon, Button, Segment, Card, Image, Header, Modal, Form} from 'semantic-ui-react';
 import './App.css'
-import { propAverage, countToday, normalise, getProviderCummulative, getHostData, dataRecents } from './utils/dataReducer';
+import { propAverage, countToday, getProviderCummulative, getHostData, dataRecents, filterTime , normaliseAllData} from './utils/dataReducer';
 import SpeedChart from './components/SpeedChart';
 import ProviderCharts from './components/ProviderCharts';
 import HostPie from './components/HostChart';
@@ -60,15 +60,30 @@ class App extends Component {
     summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
     this.setState({ summary: summary });
     this.setState({ allData: data.recordset })
-    this.setState({ data: normalise(data.recordset) });
+    this.setState({ data: normaliseAllData(data.recordset) });
     this.setState({ providerData: getProviderCummulative(data.recordset) });
     this.setState({ hostData: getHostData(data.recordset) });
-    this.setState({ recents: dataRecents(data.recordset)})
+    this.setState({ recents: dataRecents(data.recordset) })
   }
 
   componentDidMount() {
     console.clear()
     this.callAPI()
+  }
+
+  componentDidUpdate(prevProps, prevState) {
+    if (prevState.timeDuration !== this.state.timeDuration)
+    {
+      if (this.state.timeDuration === 'All Time')
+      {
+          this.setState({ data: normaliseAllData(this.state.allData) });
+      }
+      else
+      {
+        this.setState({ data: filterTime(this.state.allData, this.state.timeDuration)})
+      }
+      
+    }
   }
 
   toggleSideBar = () => this.setState((prevState) => ({ showSideBar: !prevState.showSideBar }))
@@ -109,7 +124,7 @@ class App extends Component {
               <Modal.Content>
                 <Form>
                   <Form.Group>
-                  <Header>Time Filters</Header>
+                  <Header>Speed Chart Time Filters</Header>
                   <Form.Field>
                     <Checkbox
                       radio
@@ -153,14 +168,6 @@ class App extends Component {
                     </Form.Group>
                 </Form>
               </Modal.Content>
-            <Modal.Actions>
-              <Button color='red' onClick={() => this.setState({ open: false })}>
-                <Icon name='remove' /> Cancel
-              </Button>
-              <Button color='black' onClick={() => this.setState({ open: false })}>
-                <Icon name='checkmark' /> Update
-              </Button>
-            </Modal.Actions>
           </Modal>
           <Menu.Item as='a'>
             <Icon name='info' />
@@ -182,7 +189,7 @@ class App extends Component {
               <br/>
               <Segment>
                 <Header as='h3' textAlign='center'>Speed Chart</Header>
-                 <SpeedChart data={this.state.data}/>
+                <SpeedChart timeDuration={this.state.timeDuration} data={this.state.data}/>
               </Segment>
             </Grid.Row>
             <Grid.Row>

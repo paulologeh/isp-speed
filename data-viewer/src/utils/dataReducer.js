@@ -136,7 +136,43 @@ export function countToday(data, yest) {
     return count;
 }
 
-export function normalise(data, type) {
+export function filterTime(data, timeDuration)
+{
+    let new_data = []
+    const today = new Date();
+    for (let i in data)
+    {
+        let refDate = new Date(data[i].RecordTime)
+        if (timeDuration === '30 days')
+        {
+            let diff = (today.getTime() - refDate.getTime()) / (1000 * 60 * 60 * 24)
+            if (diff <= 30)
+            {
+                new_data.push(data[i])    
+            }
+        }
+        else if (timeDuration === '7 days')
+        {
+            let diff = (today.getTime() - refDate.getTime()) / (1000 * 60 * 60 * 24)
+            if (diff <= 7)
+            {
+                new_data.push(data[i])    
+            }
+        }
+        else if (timeDuration === '24 hours')
+        {
+            let diff = (today.getTime() - refDate.getTime()) / (1000 * 60 * 60)
+            if (diff <= 24)
+            {
+                new_data.push(data[i])
+                
+            }
+        }
+    }
+    return new_data
+}
+
+export function normaliseAllData(data) {
     if (data === undefined)
     {
         return null
@@ -147,10 +183,17 @@ export function normalise(data, type) {
         let refDate = new Date(data[i].RecordTime)
         let year = refDate.getFullYear()
         let month = refDate.getMonth() + 1
+        
+        if (isNaN(year) || isNaN(month))
+        {
+            continue;    
+        }
+
         let key = `${year}${month}`
         if (!(key in _data))
         {
             _data[key] = []
+            console.log(key)
         }
         _data[key].push(data[i])
     }
@@ -173,6 +216,7 @@ export function normalise(data, type) {
         newData.push(dataObject)
     }
     newData.sort(compare2)
+    console.log(newData)
     return newData;
 }
 

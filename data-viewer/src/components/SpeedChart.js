@@ -6,15 +6,15 @@ import moment from 'moment'
 import '../App.css'
 
 
-const CustomTooltip = ({ active, payload, label }) => {
+const CustomTooltip = ({ active, payload, label, timeDuration }) => {
     if (active && payload !== undefined && payload !== null) {
         const milliseconds = payload[0].payload.RecordTime
         const dateObject = new Date(milliseconds);
         const humanDateFormat = dateObject.toLocaleString();
     return (
         <div className="custom-tooltip">
-        {/* <p className="desc">Timestamp: {humanDateFormat} </p> */}
-        {/* <p className="desc">Provider: {payload[0].payload.Provider}</p> */}
+        {timeDuration === 'All Time' ? null : <p className="desc">Timestamp: {humanDateFormat} </p> }
+        { timeDuration === 'All Time' ? null: <p className="desc">Provider: {payload[0].payload.Provider}</p>}
         <p className="desc">Download Speed: {payload[0].payload.Download} Mbps</p>
         <p className="desc">Upload Speed: {payload[0].payload.Upload} Mbps</p>
       </div>
@@ -46,8 +46,8 @@ export default class SpeedChart extends PureComponent {
     this.calculateDomain()
   }
 
-  componentDidUpdate(prevState, prevProps) {
-    if (prevProps !== this.props.state)
+  componentDidUpdate(prevProps, prevState) {
+    if (prevProps !== this.props.data)
     {
       this.calculateDomain()  
     }
@@ -67,8 +67,7 @@ export default class SpeedChart extends PureComponent {
                   dataKey="RecordTime"
                   name='Time'
                   domain={['auto', 'auto']}
-                  tickFormatter={(unixTime) => moment(unixTime).format('MMM YY')}
-              // tickFormatter={(unixTime) => moment(unixTime).format('HH:mm Do')}
+                  tickFormatter={this.props.timeDuration === 'All Time' ? (unixTime) => moment(unixTime).format('MMM YY') : (unixTime) => moment(unixTime).format('HH:mm Do')}
               // https://momentjs.com/docs/
               />
               <YAxis  domain={[0, this.state._max]}>
@@ -79,7 +78,7 @@ export default class SpeedChart extends PureComponent {
                   style={{ textAnchor: "middle" }}
                   />
               </YAxis>
-              <Tooltip content={<CustomTooltip />}/>
+             <Tooltip content={<CustomTooltip timeDuration={this.props.timeDuration }/>}/>
               <Legend />
               <Area type="monotone" dataKey="Download" stroke="#8884d8" activeDot={{ r: 8 }} />
               <Area type="monotone" dataKey="Upload" stroke="#82ca9d" />
