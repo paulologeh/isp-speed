@@ -78,7 +78,6 @@ function compare(a, b) {
 
 export function getHostData(data) {
     let hostData = {}
-    // console.log(data)
     for (let i in data)
     {
         let key = data[i].Host
@@ -88,7 +87,6 @@ export function getHostData(data) {
         }
         let idx = key.indexOf('[')
         key = key.slice(0, idx)
-        // console.log(key)
         if (!(key in hostData))
         {
             hostData[key] = {Host: key, Count: 0}
@@ -102,7 +100,6 @@ export function getHostData(data) {
     {
         _data.push(hostData[key]) 
     }
-    // console.log(_data)
     _data.sort(compare)
     let n = _data.length
     return _data.slice(n - 4, n);
@@ -130,15 +127,12 @@ export function countToday(data, yest) {
     if (yest) {
         today.setDate(today.getDate() - 1);
     }
-   
-
     for (let i = data.length - 1; i >= 0; i--){
         let refDate = new Date(data[i].RecordTime)
         if (refDate.getDate() === today.getDate() && refDate.getMonth() === today.getMonth() && refDate.getFullYear() === today.getFullYear()) {
             count++
         }
     }
-    
     return count;
 }
 
@@ -152,10 +146,8 @@ export function normalise(data, type) {
     {
         let refDate = new Date(data[i].RecordTime)
         let year = refDate.getFullYear()
-        let month = refDate.getMonth()
-        let day = refDate.getDate()
-        let hour = refDate.getHours()
-        let key = `${year}${month}${day}${hour}`
+        let month = refDate.getMonth() + 1
+        let key = `${year}${month}`
         if (!(key in _data))
         {
             _data[key] = []
@@ -180,6 +172,16 @@ export function normalise(data, type) {
         dataObject.Upload = dataObject.Upload.toFixed(1)
         newData.push(dataObject)
     }
-    // console.log(newData)
+    newData.sort(compare2)
     return newData;
+}
+
+function compare2(a, b) {
+  let comparison = 0;
+  if (a.RecordTime > b.RecordTime) {
+    comparison = 1;
+  } else if (a.RecordTime < b.RecordTime) {
+    comparison = -1;
+  }
+  return comparison;
 }

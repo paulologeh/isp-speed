@@ -60,10 +60,13 @@ export default class HostPie extends PureComponent {
               }
          
             </Pie>
-            <Legend/>
+            <Legend
+              formatter={(value, entry, index) => (entry.payload.payload.payload.Host.replace('(',''))}
+            />
            <Tooltip content={<CustomTooltip />}/>
               </PieChart>
               </ResponsiveContainer>
     );
   }
 }
+

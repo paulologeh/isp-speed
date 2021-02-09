@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import { Sidebar, Menu, Grid, Icon, Button, Segment, Card, Image, Header} from 'semantic-ui-react';
+import { Sidebar, Menu, Grid, Checkbox, Icon, Button, Segment, Card, Image, Header, Modal, Form} from 'semantic-ui-react';
 import './App.css'
 import { propAverage, countToday, normalise, getProviderCummulative, getHostData, dataRecents } from './utils/dataReducer';
-import SpeedChart from './SpeedChart';
-import ProviderCharts from './ProviderCharts';
-import HostPie from './HostChart';
-import ActivityFeed from './ActivityFeed';
+import SpeedChart from './components/SpeedChart';
+import ProviderCharts from './components/ProviderCharts';
+import HostPie from './components/HostChart';
+import ActivityFeed from './components/ActivityFeed';
 
 const rootStyle = {
   height: '100vh',
   minHeight : '100vh'
 }
+
 
 class App extends Component {
 
@@ -19,11 +20,11 @@ class App extends Component {
     dataNorm: [],
     data: [],
     providerData: [],
+    open: false,
     hostData: [],
     recents: [],
-    activeItem: 'Info',
-    lastUpdateTime: '06-02-2021 20:33:00',
     showSideBar: true,
+    timeDuration: 'All Time',
     summary: [
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Download Speed', description: '0 Mbps' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Upload Speed', description: '0 Mbps' },
@@ -58,9 +59,8 @@ class App extends Component {
     summary[3].description = data.recordset.length;
     summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
     this.setState({ summary: summary });
-    let n = data.recordset.length 
-    this.setState({ data: data.recordset.slice(n - 500, n) })
-    this.setState({ dataNorm: normalise(data.recordset.slice(n - 500, n)) });
+    this.setState({ allData: data.recordset })
+    this.setState({ data: normalise(data.recordset) });
     this.setState({ providerData: getProviderCummulative(data.recordset) });
     this.setState({ hostData: getHostData(data.recordset) });
     this.setState({ recents: dataRecents(data.recordset)})
@@ -73,6 +73,8 @@ class App extends Component {
 
   toggleSideBar = () => this.setState((prevState) => ({ showSideBar: !prevState.showSideBar }))
 
+  handleChange = (e, { timeDuration}) => this.setState({ timeDuration })
+  
   render() {
     return (
       <div style={rootStyle}>
@@ -92,14 +94,74 @@ class App extends Component {
             <br/>
             <Menu.Header>Welcome Paul!</Menu.Header>
           </Menu.Item>
-          <Menu.Item as='a'>
+            <Menu.Item as='a' onClick={() => { window.location = '/';}}>
             <Icon name='home' />
             Home
           </Menu.Item>
-          <Menu.Item as='a'>
-            <Icon name='edit outline' />
-            Customize
-          </Menu.Item>
+          <Modal
+            closeIcon
+            open={this.state.open}
+            trigger={<Menu.Item as='a'><Icon name='edit outline' />Customize</Menu.Item>}
+            onClose={() => this.setState({ open: false })}
+            onOpen={() => this.setState({ open: true })}
+          >
+            <Header icon='edit' content='Customise Data' />
+              <Modal.Content>
+                <Form>
+                  <Form.Group>
+                  <Header>Time Filters</Header>
+                  <Form.Field>
+                    <Checkbox
+                      radio
+                      label='24 hours'
+                      name='checkboxRadioGroup'
+                      timeDuration='24 hours'
+                      checked={this.state.timeDuration === '24 hours'}
+                      onChange={this.handleChange}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Checkbox
+                      radio
+                      label='7 days'
+                      name='checkboxRadioGroup'
+                      timeDuration='7 days'
+                      checked={this.state.timeDuration === '7 days'}
+                      onChange={this.handleChange}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Checkbox
+                      radio
+                      label='30 days'
+                      name='checkboxRadioGroup'
+                      timeDuration='30 days'
+                      checked={this.state.timeDuration === '30 days'}
+                      onChange={this.handleChange}
+                    />
+                  </Form.Field>
+                  <Form.Field>
+                    <Checkbox
+                      radio
+                      label='All Time'
+                      name='checkboxRadioGroup'
+                      timeDuration='All Time'
+                      checked={this.state.timeDuration === 'All Time'}
+                      onChange={this.handleChange}
+                    />
+                    </Form.Field>
+                    </Form.Group>
+                </Form>
+              </Modal.Content>
+            <Modal.Actions>
+              <Button color='red' onClick={() => this.setState({ open: false })}>
+                <Icon name='remove' /> Cancel
+              </Button>
+              <Button color='black' onClick={() => this.setState({ open: false })}>
+                <Icon name='checkmark' /> Update
+              </Button>
+            </Modal.Actions>
+          </Modal>
           <Menu.Item as='a'>
             <Icon name='info' />
             About
@@ -112,7 +174,6 @@ class App extends Component {
           <Grid.Column style={{backgroundColor: '#F0F0F0'}}>
             <Grid.Row>
               <Button color='black' icon onClick={() => this.setState({ showSideBar: true })}><Icon name='bars' /></Button>
-              {/* <span><h1 style={{ display: "inline" }}>ISP Monitoring</h1></span> */}
             </Grid.Row>
             <Grid.Row centered>
               <Card.Group centered items={this.state.summary}/>
@@ -121,7 +182,7 @@ class App extends Component {
               <br/>
               <Segment>
                 <Header as='h3' textAlign='center'>Speed Chart</Header>
-                 <SpeedChart data={this.state.dataNorm}/>
+                 <SpeedChart data={this.state.data}/>
               </Segment>
             </Grid.Row>
             <Grid.Row>
@@ -129,7 +190,7 @@ class App extends Component {
               <Grid columns='equal'>
                 <Grid.Column>
                   <Segment>
-                    <Header as='h3' textAlign='center'>Avg. Cummulative Speed By Provider</Header>
+                    <Header as='h3' textAlign='center'>Average Cummulative Speed By Provider</Header>
                     <ProviderCharts data={this.state.providerData} />
                   </Segment>    
                 </Grid.Column>
@@ -153,6 +214,5 @@ class App extends Component {
     )
   }
 }
-
 
 export default App;
