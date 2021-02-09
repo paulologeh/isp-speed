@@ -5,7 +5,7 @@ import cors from 'cors';
 const app = express();
 app.use(cors());
 
-const config = require('./config.json');
+const config = require('../config.json');
 
 app.get('/api/data', function (req, res) {
     mssql.connect(config, function (err) {
