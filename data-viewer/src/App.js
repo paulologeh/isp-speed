@@ -91,6 +91,8 @@ class App extends Component {
   handleChange = (e, { timeDuration}) => this.setState({ timeDuration })
   
   render() {
+
+    console.log('hello world')
     return (
       <div style={rootStyle}>
       <Grid padded columns={1} style={{ height: '100%' }}>
