@@ -29,7 +29,7 @@ export function getProviderCummulative(data) {
 
 export function dataRecents(data) {
     const now = new Date()
-    let newData = [...data.slice(-5, -1)]
+    let newData = JSON.parse(JSON.stringify(data.slice(Math.max(data.length - 4, 0))))
     newData.reverse()
     for (let i in newData)
     {
@@ -193,7 +193,6 @@ export function normaliseAllData(data) {
         if (!(key in _data))
         {
             _data[key] = []
-            console.log(key)
         }
         _data[key].push(data[i])
     }
@@ -216,7 +215,6 @@ export function normaliseAllData(data) {
         newData.push(dataObject)
     }
     newData.sort(compare2)
-    console.log(newData)
     return newData;
 }
 
