@@ -35,9 +35,13 @@ export function dataRecents(data) {
     {
         let timeLapsed = now.getTime() - new Date(newData[i].RecordTime).getTime()
         timeLapsed /= (1000 * 60 * 60)
-        if (timeLapsed <= 1.5)
+        if (timeLapsed <= 1)
         {
             timeLapsed = 'Less than 1 hour ago'
+        }
+        else if (timeLapsed <= 1.5)
+        {
+            timeLapsed = 'About 1 hour ago'
         }
         else if (timeLapsed > 24)
         {
