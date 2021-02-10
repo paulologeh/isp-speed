@@ -34,7 +34,7 @@ class App extends Component {
   }
 
   async callAPI() {
-    const response = await fetch("http://localhost:3600/api/data");
+    const response = await fetch("https://n4la5x2cx2.execute-api.eu-west-2.amazonaws.com/staging/data");
     const data = await response.json();
     console.debug('API returned')
     console.debug(data.recordset)

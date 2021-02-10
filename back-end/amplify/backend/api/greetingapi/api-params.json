@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/hello",
+            "lambdaFunction": "greetingfunction",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/hello"
+        }
+    ],
+    "resourceName": "greetingapi",
+    "apiName": "greetingapi",
+    "functionArns": [
+        {
+            "lambdaFunction": "greetingfunction"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-amplify4b83688032e64-staging-224404-authRole",
+        "unAuthRoleName": "amplify-amplify4b83688032e64-staging-224404-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "greetingfunction",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
