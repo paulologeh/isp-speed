@@ -1,24 +1,18 @@
-# Scheduled Home Internet Speed Test
+# Internet Speed Monitoring Dashboard
+
+<a href="https://master.dsei5kjb4zhw1.amplifyapp.com/">Click here to Visit Application</a>
 
 ## Background
 My ISP is pretty bad and I have complained about the lagging speeds for weeks.
 The internet seems to experience times where it is just a deadband and then returns to normal function.
-I made these bash scripts to run speed tests every hour to collect data about the speeds for a week. I want to see if I can get more information about the problem or to look for a trend.
+I made a bunch of bash scripts to run speed tests every hour to collect data about the speeds.
 
 ## Implementation
-* The bash script run_speed.sh performs the speed test and is run three times by generate_report.sh 
-* The results are put in a spreadsheet speed_data.csv and the events logged in event.log
-* See crontab for cronjob entry to run the scrip every hour.
-* See `speed_data.csv` for example data.
+* generate_report.sh performs the speed test every hour and inserts the data into a SQL database
+* Application front end is built with React, Recharts and Semantic UI
+* Backend is built with Node.js, Express and SQL database.
+* Front End and Back End are hosted on AWS.
 
-## Results
-After letting the cronjobs run for a few days, the results were as expected.
-* Spontaneous downtime and very low download speeds. 
-* Download speed very unstable and produces wave as opposed to a linear or constant speed (on average)
-* Upload speeds averaged about 8 Mbps and is more stable.
+## Dashboard View
 
-![alt text](./download.png)
-
-![alt text](./upload.png)
-
-* I basically need Virgin Fibre Optic Broadband in my life
+![alt text](./dahsboard.png)

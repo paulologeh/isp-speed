@@ -171,7 +171,7 @@ class App extends Component {
                 </Form>
               </Modal.Content>
           </Modal>
-          <Menu.Item as='a'>
+          <Menu.Item as='a' href='https://github.com/paulologeh/ISP-Speed/blob/master/README.md'>
             <Icon name='info' />
             About
           </Menu.Item>
