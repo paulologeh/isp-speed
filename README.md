@@ -4,7 +4,7 @@
 
 ## Background
 When I started working from home, It became clear to me how bad my internet connection actually was.
-I decided to setup a process for me to monitor the performance of my internet connection while I was experimenting with different ISPs. I have used Three, EE, Vodafone, Talk Talk etc. I developed this application to help me visualise this data.
+I decided to setup a process for me to monitor the performance of my internet connection while I was experimenting with different Internet Service Provider. I have used Three, EE, Vodafone, Talk Talk etc. I developed this application to help me visualise this data and I was able to get back £20 a month back from my Internet Service Provider!
 
 ## Implementation
 * Setup a process as a cron on my laptop that runs every hour and performs a speed test.
