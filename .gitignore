@@ -3,5 +3,5 @@ data-viewer/node_modules
 event.log
 back-end/node_modules
 back-end/config.json
-back-end/amplify/backend/function/dataresultsfunction/config.json
+back-end/amplify/backend/function/dataresultsfunction/src/config.json
 */node_modules
