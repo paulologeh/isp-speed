@@ -11,7 +11,7 @@ I made a bunch of bash scripts to run speed tests every hour to collect data abo
 * generate_report.sh performs the speed test every hour and inserts the data into a SQL database
 * Application front end is built with React, Recharts and Semantic UI
 * Backend is built with Node.js, Express and SQL database.
-* Front End and Back End are hosted on AWS.
+* Front End and Back End are hosted on AWS and communicate with REST API
 
 ## Dashboard View
 
