@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Sidebar, Menu, Grid, Checkbox, Icon, Button, Segment, Card, Image, Header, Modal, Form} from 'semantic-ui-react';
+import { Sidebar, Menu, Grid, Checkbox, Icon, Button, Segment, Card, Image, Header, Modal, Form, Dimmer, Loader} from 'semantic-ui-react';
 import './App.css'
 import { propAverage, countToday, getProviderCummulative, getHostData, dataRecents, filterTime , normaliseAllData} from './utils/dataReducer';
 import SpeedChart from './components/SpeedChart';
@@ -25,6 +25,7 @@ class App extends Component {
     recents: [],
     showSideBar: true,
     timeDuration: 'All Time',
+    loading: true,
     summary: [
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Download Speed', description: '0 Mbps' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Upload Speed', description: '0 Mbps' },
@@ -64,11 +65,13 @@ class App extends Component {
     this.setState({ providerData: getProviderCummulative(data.recordset) });
     this.setState({ hostData: getHostData(data.recordset) });
     this.setState({ recents: dataRecents(data.recordset) })
+    this.setState({loading: false})
   }
 
   componentDidMount() {
     console.clear()
     this.callAPI()
+    
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -95,6 +98,9 @@ class App extends Component {
     console.log('hello world')
     return (
       <div style={rootStyle}>
+      <Dimmer active={this.state.loading}>
+          <Loader />
+      </Dimmer>
       <Grid padded columns={1} style={{ height: '100%' }}>
         <Sidebar
           as={Menu}
@@ -218,7 +224,7 @@ class App extends Component {
               </Grid>
             </Grid.Row>
           </Grid.Column>
-        </Grid>
+          </Grid>
       </div>
     )
   }
