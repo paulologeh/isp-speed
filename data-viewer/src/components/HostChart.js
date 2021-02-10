@@ -42,11 +42,8 @@ export default class HostPie extends PureComponent {
       <PieChart>
         <Pie
           data={this.props.data}
-          // cx={200}
-          // cy={200}
           labelLine={false}
           label={renderCustomizedLabel}
-        //   outerRadius={"50%"}
           fill="#8884d8"
           dataKey="Count"
         >

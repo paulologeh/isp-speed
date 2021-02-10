@@ -89,7 +89,6 @@ export function getHostData(data) {
         {
             continue;    
         }
-        console.log(data[i])
         let idx = key.indexOf('[')
         key = key.slice(0, idx)
         if (!(key in hostData))
