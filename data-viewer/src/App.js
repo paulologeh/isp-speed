@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Sidebar, Menu, Grid, Checkbox, Icon, Button, Segment, Card, Image, Header, Modal, Form, Dimmer, Loader} from 'semantic-ui-react';
 import './App.css'
-import { propAverage, countToday, getProviderCummulative, getHostData, dataRecents, filterTime , normaliseAllData} from './utils/dataReducer';
+import { applyfilters, getProviderCummulative, getHostData, dataRecents, filterTime , normaliseAllData} from './utils/dataReducer';
 import SpeedChart from './components/SpeedChart';
 import ProviderCharts from './components/ProviderCharts';
 import HostPie from './components/HostChart';
@@ -40,24 +40,7 @@ class App extends Component {
     const data = await response.json();
     this.setState({ allData: data.recordset });
     let summary = [...this.state.summary];
-    let avgDownloadToday = propAverage(data.recordset, 'Download', false);
-    let avgDownloadYesterday = propAverage(data.recordset, 'Download', true);
-    let pctChangeDownload = (avgDownloadToday - avgDownloadYesterday) / avgDownloadYesterday * 100;
-    let avgUploadToday = propAverage(data.recordset, 'Upload', false);
-    let avgUploadYesterday = propAverage(data.recordset, 'Upload', true);
-    let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0;
-    let testsToday = countToday(data.recordset, false);
-    let testsYesterday = countToday(data.recordset, true);
-    let pctChangeTests = testsYesterday ? (testsToday - testsYesterday) / testsYesterday * 100 : 0;
-    let pctChangeTotal = data.recordset.length ? (data.recordset.length - testsToday) / data.recordset.length : 0;
-    summary[0].description = avgDownloadToday + ' Mbps';
-    summary[0].meta = 'Change Since Yesterday: ' + pctChangeDownload.toFixed(1) + ' %';
-    summary[1].description = avgUploadToday + ' Mbps';
-    summary[1].meta = 'Change Since Yesterday: ' + pctChangeUpload.toFixed(1) + ' %';
-    summary[2].description = testsToday;
-    summary[2].meta = 'Change Since Yesterday: ' + pctChangeTests.toFixed(1) + ' %';
-    summary[3].description = data.recordset.length;
-    summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
+    summary = applyfilters(summary, data.recordset)
     this.setState({ summary: summary });
     this.setState({ allData: data.recordset })
     this.setState({ data: normaliseAllData(data.recordset) });
@@ -78,11 +61,13 @@ class App extends Component {
     {
       if (this.state.timeDuration === 'All Time')
       {
-          this.setState({ data: normaliseAllData(this.state.allData) });
+        this.callAPI()
       }
       else
       {
-        this.setState({ data: filterTime(this.state.allData, this.state.timeDuration)})
+        let newdata = filterTime(this.state.allData, this.state.timeDuration)
+        let newSummary = applyfilters(this.state.summary, newdata)
+        this.setState({ summary: newSummary, data: newdata })
       }
       
     }
@@ -134,7 +119,7 @@ class App extends Component {
                 <Modal.Content>
                   <Form>
                     <Form.Group>
-                    <Header>Speed Chart Time Filters</Header>
+                    <Header>Duration Filters</Header>
                     <Form.Field>
                       <Checkbox
                         radio

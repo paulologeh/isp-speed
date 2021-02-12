@@ -1,3 +1,25 @@
+export function applyfilters(summary, data)
+{
+    let avgDownloadToday = propAverage(data, 'Download', false);
+    let avgDownloadYesterday = propAverage(data, 'Download', true);
+    let pctChangeDownload = (avgDownloadToday - avgDownloadYesterday) / avgDownloadYesterday * 100;
+    let avgUploadToday = propAverage(data, 'Upload', false);
+    let avgUploadYesterday = propAverage(data, 'Upload', true);
+    let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0;
+    let testsToday = countToday(data, false);
+    let testsYesterday = countToday(data, true);
+    let pctChangeTests = testsYesterday ? (testsToday - testsYesterday) / testsYesterday * 100 : 0;
+    let pctChangeTotal = data.length ? (data.length - testsToday) / data.length : 0;
+    summary[0].description = avgDownloadToday + ' Mbps';
+    summary[0].meta = 'Change Since Yesterday: ' + pctChangeDownload.toFixed(1) + ' %';
+    summary[1].description = avgUploadToday + ' Mbps';
+    summary[1].meta = 'Change Since Yesterday: ' + pctChangeUpload.toFixed(1) + ' %';
+    summary[2].description = testsToday;
+    summary[2].meta = 'Change Since Yesterday: ' + pctChangeTests.toFixed(1) + ' %';
+    summary[3].description = data.length;
+    summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
+    return summary
+}
 export function getProviderCummulative(data) {
     let providerData = {}
     for (let i in data)
