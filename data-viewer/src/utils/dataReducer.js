@@ -1,4 +1,4 @@
-export function applyfilters(summary, data)
+export function applyfilters(summary, data, minimumDownload, minimumUpload)
 {
     let avgDownloadToday = propAverage(data, 'Download', false);
     let avgDownloadYesterday = propAverage(data, 'Download', true);
@@ -18,6 +18,37 @@ export function applyfilters(summary, data)
     summary[2].meta = 'Change Since Yesterday: ' + pctChangeTests.toFixed(1) + ' %';
     summary[3].description = data.length;
     summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
+    let count = 0
+    for (let i in data)
+    {
+        if (data[i].Download >= minimumDownload || data[i].Upload >= minimumUpload)
+        {
+            count++;
+        }
+    }
+    let threshold = count / data.length * 100
+    threshold = threshold.toFixed(0)
+    summary[4].description = `${threshold}%`
+    if (threshold >= 90)
+    {
+        summary[4].meta = 'Excellent Service!'    
+    }
+    else if (threshold >= 80)
+    {
+        summary[4].meta = 'Good Service'    
+    }
+    else if (threshold >= 50)
+    {
+        summary[4].meta = 'So So Service'    
+    }
+    else if (threshold >= 30)
+    {
+        summary[4].meta = 'Bad Service'    
+    }
+    else 
+    {
+        summary[4].meta = 'What the hell?'
+    }
     return summary
 }
 

@@ -26,11 +26,14 @@ class App extends Component {
     showSideBar: true,
     timeDuration: 'All Time',
     loading: true,
+    minimumDownload: 18,
+    minimumUpload: 9,
     summary: [
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Download Speed', description: '0 Mbps' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Upload Speed', description: '0 Mbps' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Number of Tests Today', description: '0' },
-      { meta: 'Change Since Yesterday: 0 %', header: 'Total Number of Tests', description: '0' }
+      { meta: 'Change Since Yesterday: 0 %', header: 'Total Number of Tests', description: '0' },
+      { meta: '', header: '% Above Threshold', description: '0'}
     ]
   }
 
@@ -39,7 +42,7 @@ class App extends Component {
     const data = await response.json();
     this.setState({ allData: data.recordset });
     let summary = [...this.state.summary];
-    summary = applyfilters(summary, data.recordset)
+    summary = applyfilters(summary, data.recordset, this.state.minimumDownload, this.state.minimumUpload)
     this.setState({ summary: summary });
     this.setState({ allData: data.recordset })
     this.setState({ data: normaliseAllData(data.recordset) });
@@ -65,19 +68,26 @@ class App extends Component {
       else
       {
         let newdata = filterTime(this.state.allData, this.state.timeDuration)
-        let newSummary = applyfilters(this.state.summary, newdata)
+        let newSummary = applyfilters(this.state.summary, newdata, this.state.minimumDownload, this.state.minimumUpload)
         this.setState({ summary: newSummary, data: newdata })
       }
       
+    }
+    console.log(prevState.minimumDownload, this.state.minimumDownload)
+    if (prevState.minimumDownload !== this.state.minimumDownload || prevState.minimumUpload !== this.state.minimumUpload)
+    {
+        let newSummary = applyfilters(this.state.summary, this.state.data, this.state.minimumDownload, this.state.minimumUpload)
+        this.setState({ summary: newSummary})
     }
   }
 
   toggleSideBar = () => this.setState((prevState) => ({ showSideBar: !prevState.showSideBar }))
 
-  handleChange = (e, { timeDuration}) => this.setState({ timeDuration })
+  handleChange = (e, { timeDuration }) => this.setState({ timeDuration })
+  handleMinDownload = (event) =>this.setState({ minimumDownload: event.target.value })
+  handleMinUpload = (event) => this.setState({ minimumUpload: event.target.value})
   
   render() {
-
     return (
       <div style={rootStyle}>
         <Dimmer active={this.state.loading} page>
@@ -103,10 +113,7 @@ class App extends Component {
                 <Menu.Header>Welcome Paul!</Menu.Header>
               </Menu.Item>
             }
-              <Menu.Item as='a' onClick={() => { window.location = '/';}}>
-              <Icon name='home' />
-              Home
-            </Menu.Item>
+              <Menu.Item as='a' onClick={() => { window.location = '/';}}><Icon name='home' />Home</Menu.Item>
             <Modal
               closeIcon
               open={this.state.open}
@@ -159,7 +166,12 @@ class App extends Component {
                         onChange={this.handleChange}
                       />
                       </Form.Field>
-                      </Form.Group>
+                      </Form.Group> 
+                    <Form.Group>
+                      <Header>Speed Thresholds</Header>
+                      <Form.Input key='in1' label='Minimum Download' type='number' value={this.state.minimumDownload} onChange={this.handleMinDownload} />
+                      <Form.Input key='in2' label='Minimum Upload'type='number'value={this.state.minimumUpload} onChange={this.handleMinUpload}/>
+                  </Form.Group>
                   </Form>
                 </Modal.Content>
             </Modal>
