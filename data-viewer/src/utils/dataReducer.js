@@ -1,13 +1,34 @@
-export function applyfilters(summary, data, minimumDownload, minimumUpload)
+function yesterdayData(data)
 {
+    let yestData = [];
+    const yesterday = new Date()
+    yesterday.setDate(yesterday.getDate() - 1);
+    for (let i = 0; i < data.length; i++)
+    {
+        let refDate = new Date(data[i].RecordTime);
+        if (refDate.getDate() === yesterday.getDate() && refDate.getMonth() === yesterday.getMonth() && refDate.getFullYear() === yesterday.getFullYear())
+        {
+            yestData.push(data[i])
+        }
+    }
+    return yestData;
+}
+
+export function applyfilters(summary, data, minimumDownload, minimumUpload, moreData)
+{
+    let yestData = data;
+    if (moreData !== null)
+    {
+        yestData = yesterdayData(moreData)
+    }
     let avgDownloadToday = propAverage(data, 'Download', false);
-    let avgDownloadYesterday = propAverage(data, 'Download', true);
+    let avgDownloadYesterday = propAverage(yestData, 'Download', true);
     let pctChangeDownload = (avgDownloadToday - avgDownloadYesterday) / avgDownloadYesterday * 100;
     let avgUploadToday = propAverage(data, 'Upload', false);
-    let avgUploadYesterday = propAverage(data, 'Upload', true);
+    let avgUploadYesterday = propAverage(yestData, 'Upload', true);
     let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0;
     let testsToday = countToday(data, false);
-    let testsYesterday = countToday(data, true);
+    let testsYesterday = countToday(yestData, true);
     let pctChangeTests = testsYesterday ? (testsToday - testsYesterday) / testsYesterday * 100 : 0;
     let pctChangeTotal = data.length ? (data.length - testsToday) / data.length : 0;
     summary[0].description = avgDownloadToday + ' Mbps';
@@ -21,7 +42,7 @@ export function applyfilters(summary, data, minimumDownload, minimumUpload)
     let count = 0
     for (let i in data)
     {
-        if (data[i].Download >= minimumDownload || data[i].Upload >= minimumUpload)
+        if (data[i].Download >= minimumDownload && data[i].Upload >= minimumUpload)
         {
             count++;
         }
@@ -175,16 +196,18 @@ export function getHostData(data) {
 export function propAverage(data, prop, yest) {
     const today = new Date()
     let avg = 0;
+    let N = data.length;
     for (let i = 0; i < data.length; i++) {
         if (yest) {
             let refDate = new Date(data[i].RecordTime);
             if (refDate.getDate() === today.getDate() && refDate.getMonth() === today.getMonth() && refDate.getFullYear() === today.getFullYear()) {
+                N--;
                 continue;
              }
         }
         avg += data[i][prop]
     }
-    avg = avg / data.length;
+    avg = avg / N;
     return avg.toFixed(1);
 }
 

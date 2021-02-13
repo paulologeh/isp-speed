@@ -42,7 +42,7 @@ class App extends Component {
     const data = await response.json();
     this.setState({ allData: data.recordset });
     let summary = [...this.state.summary];
-    summary = applyfilters(summary, data.recordset, this.state.minimumDownload, this.state.minimumUpload)
+    summary = applyfilters(summary, data.recordset, this.state.minimumDownload, this.state.minimumUpload, null)
     this.setState({ summary: summary });
     this.setState({ allData: data.recordset })
     this.setState({ data: normaliseAllData(data.recordset) });
@@ -59,6 +59,7 @@ class App extends Component {
   }
 
   componentDidUpdate(prevProps, prevState) {
+    const moreData =  this.state.timeDuration === '24 hours' ? this.state.allData : null
     if (prevState.timeDuration !== this.state.timeDuration)
     {
       if (this.state.timeDuration === 'All Time')
@@ -68,16 +69,17 @@ class App extends Component {
       else
       {
         let newdata = filterTime(this.state.allData, this.state.timeDuration)
-        let newSummary = applyfilters(this.state.summary, newdata, this.state.minimumDownload, this.state.minimumUpload)
-        this.setState({ summary: newSummary, data: newdata })
+        let summary = [...this.state.summary];
+        summary = applyfilters(this.state.summary, newdata, this.state.minimumDownload, this.state.minimumUpload, moreData)
+        this.setState({ summary: summary, data: newdata })
       }
       
     }
-    console.log(prevState.minimumDownload, this.state.minimumDownload)
     if (prevState.minimumDownload !== this.state.minimumDownload || prevState.minimumUpload !== this.state.minimumUpload)
     {
-        let newSummary = applyfilters(this.state.summary, this.state.data, this.state.minimumDownload, this.state.minimumUpload)
-        this.setState({ summary: newSummary})
+        let summary = [...this.state.summary];
+        summary = applyfilters(this.state.summary, this.state.data, this.state.minimumDownload, this.state.minimumUpload, moreData)
+        this.setState({ summary: summary})
     }
   }
 
