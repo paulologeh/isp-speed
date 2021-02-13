@@ -38,7 +38,7 @@ export default class HostPie extends PureComponent {
 
   render() {
       return (
-          <ResponsiveContainer width={"100%"} height={300}>
+          <ResponsiveContainer width={"100%"} minHeight={300}>
       <PieChart>
         <Pie
           data={this.props.data}

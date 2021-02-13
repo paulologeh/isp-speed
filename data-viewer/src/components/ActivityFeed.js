@@ -7,7 +7,7 @@ import { isMobile } from '../utils/helpers';
 const ActivityFeed = (props) =>
 {
     return (
-        <ResponsiveContainer centered width={"100%"} height={300}>
+        <ResponsiveContainer centered width={"100%"} minHeight={300}>
             <Feed events={props.data} size={isMobile() ? 'small' : null}/>
         </ResponsiveContainer>
         

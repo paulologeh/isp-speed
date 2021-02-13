@@ -20,26 +20,36 @@ export function applyfilters(summary, data)
     summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
     return summary
 }
+
+const providers = ['EE', 'BT', 'TalkTalk', 'Three', 'Vodafone']
+
 export function getProviderCummulative(data) {
     let providerData = {}
     for (let i in data)
     {
-        if (!(data[i].Provider in providerData))
+        let provider = data[i].Provider
+        if (provider === null)
         {
-            providerData[data[i].Provider] = { Provider: data[i].Provider, Upload: 0, Download: 0, Count: 0}
-        }
-        providerData[data[i].Provider].Upload += data[i].Upload
-        providerData[data[i].Provider].Download += data[i].Download
-        providerData[data[i].Provider].Count += 1
-    }
-    let _data = []
-    let ignore = ['WorldStream', 'Total', 'Performive', null]
-    for (const key in providerData)
-    {
-        if (ignore.includes(providerData[key].Provider)) 
-        {
+            console.log('null provider')
+            console.log(data[i])
             continue;    
         }
+        if (!(provider in providerData))
+        {
+            if (!providers.includes(data[i].Provider))
+            {
+                provider = 'VPN'
+            }
+            providerData[provider] = { Provider: provider, Upload: 0, Download: 0, Count: 0}
+        }
+        providerData[provider].Upload += data[i].Upload
+        providerData[provider].Download += data[i].Download
+        providerData[provider].Count += 1
+    }
+    let _data = []
+    
+    for (const key in providerData)
+    {
         providerData[key].Upload /= providerData[key].Count;
         providerData[key].Upload = providerData[key].Upload.toFixed(2)
         providerData[key].Download /= providerData[key].Count;

@@ -55,7 +55,7 @@ export default class SpeedChart extends PureComponent {
 
   render() {
     return (
-       <ResponsiveContainer width={"100%"} height={200}>
+       <ResponsiveContainer width={"100%"} minHeight={250}>
         <AreaChart
             data={this.props.data}
             margin={{

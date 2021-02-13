@@ -33,7 +33,7 @@ export default class ProviderChart extends PureComponent {
 
   render() {
     return (
-      <ResponsiveContainer width={"100%"} height={300}>
+      <ResponsiveContainer width={"100%"} minHeight={300}>
         <ComposedChart
           layout="vertical"
             data={this.props.data}
@@ -42,11 +42,11 @@ export default class ProviderChart extends PureComponent {
           }}
         >
         <XAxis type="number" domain={[0, this.state._max]}/>
-          <YAxis dataKey="Provider" type="category" padding={{ bottom: 15 }} />
+          <YAxis dataKey="Provider" type="category" padding={{ bottom: 25 }} />
           <Tooltip/>
         <Legend />
-        <Bar dataKey="Download" barSize={10} fill="#413ea0" />
-        <Bar dataKey="Upload" barSize={10} fill="#ff7300" />
+        <Bar dataKey="Download" barSize={20} fill="#413ea0" />
+        <Bar dataKey="Upload" barSize={20} fill="#ff7300" />
         </ComposedChart>
       </ResponsiveContainer>
     );

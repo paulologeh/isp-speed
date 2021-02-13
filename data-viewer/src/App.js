@@ -13,7 +13,6 @@ const rootStyle = {
   minHeight : '100vh'
 }
 
-
 class App extends Component {
 
   state = {
@@ -81,7 +80,7 @@ class App extends Component {
 
     return (
       <div style={rootStyle}>
-        <Dimmer active={this.state.loading}>
+        <Dimmer active={this.state.loading} page>
             <Loader />
         </Dimmer>
         <Grid padded columns={1} style={{ height: '100%' }}>
@@ -169,7 +168,7 @@ class App extends Component {
           </Sidebar>
           <Grid.Column style={{backgroundColor: '#F0F0F0'}}>
             <Grid.Row>
-              <Button floated='right' color='black' icon onClick={() => this.setState({ showSideBar: true })}><Icon name='bars' /></Button>
+              <Button floated='left' color='black' icon onClick={() => this.setState({ showSideBar: true })}><Icon name='bars' /></Button>
             </Grid.Row>
             <Grid.Row centered>
               <Card.Group centered items={this.state.summary}/>
@@ -190,7 +189,7 @@ class App extends Component {
                     <ProviderCharts data={this.state.providerData} />
                   </Segment>    
                 </Grid.Column>
-                <Grid.Column>
+                <Grid.Column> 
                   <Segment>
                     <Header as='h3' textAlign='center'>Top 4 Used Hosts</Header>
                     <HostPie data={this.state.hostData}/>
