@@ -24,6 +24,34 @@ const CustomTooltip = ({ active, payload, label, timeDuration }) => {
   return null;
 };
 
+function calculateInterval(data, timeDuration)
+{
+  if (timeDuration === '7 days' || timeDuration === '30 days')
+  {
+    let interval = (data.length / 7).toFixed(0)
+    return timeDuration === '7 days' ? parseInt(interval) - 1 : parseInt(interval)
+  }
+  return 'preserveEnd' 
+}
+
+
+function xAxisTicks(duration, unixTime)
+{
+  switch (duration)
+  {
+    case 'All Time':
+      return moment(unixTime).format('MMM YY') 
+    case '24 hours':
+      return moment(unixTime).format('HH:mm') 
+    case '7 days':
+      return moment(unixTime).format('D MMM') 
+    case '30 days':
+      return moment(unixTime).format('D MMM') 
+    default:
+      return null
+  }
+}
+
 
 export default class SpeedChart extends PureComponent {
 
@@ -67,8 +95,8 @@ export default class SpeedChart extends PureComponent {
                   dataKey="RecordTime"
                   name='Time'
                   domain={['auto', 'auto']}
-                  tickFormatter={this.props.timeDuration === 'All Time' ? (unixTime) => moment(unixTime).format('MMM YY') : (unixTime) => moment(unixTime).format('HH:mm Do')}
-              // https://momentjs.com/docs/
+                  interval={calculateInterval(this.props.data, this.props.timeDuration)}
+                  tickFormatter={ (unixTime) => xAxisTicks(this.props.timeDuration, unixTime)}// https://momentjs.com/docs/
               />
               <YAxis  domain={[0, this.state._max]}>
                 <Label
