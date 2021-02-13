@@ -28,17 +28,17 @@ export function applyfilters(summary, data, minimumDownload, minimumUpload, more
     let avgUploadYesterday = propAverage(yestData, 'Upload', true);
     let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0;
     let testsToday = countToday(data, false);
-    let testsYesterday = countToday(yestData, true);
-    let pctChangeTests = testsYesterday ? (testsToday - testsYesterday) / testsYesterday * 100 : 0;
+    // let testsYesterday = countToday(yestData, true);
+    // let pctChangeTests = testsYesterday ? (testsToday - testsYesterday) / testsYesterday * 100 : 0;
     let pctChangeTotal = data.length ? (data.length - testsToday) / data.length : 0;
     summary[0].description = avgDownloadToday + ' Mbps';
     summary[0].meta = 'Change Since Yesterday: ' + pctChangeDownload.toFixed(1) + ' %';
     summary[1].description = avgUploadToday + ' Mbps';
     summary[1].meta = 'Change Since Yesterday: ' + pctChangeUpload.toFixed(1) + ' %';
-    summary[2].description = testsToday;
-    summary[2].meta = 'Change Since Yesterday: ' + pctChangeTests.toFixed(1) + ' %';
-    summary[3].description = data.length;
-    summary[3].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
+    // summary[2].description = testsToday;
+    // summary[2].meta = 'Change Since Yesterday: ' + pctChangeTests.toFixed(1) + ' %';
+    summary[2].description = data.length;
+    summary[2].meta = 'Change Since Yesterday: ' + pctChangeTotal.toFixed(1) + ' %';
     let count = 0
     for (let i in data)
     {
@@ -49,26 +49,26 @@ export function applyfilters(summary, data, minimumDownload, minimumUpload, more
     }
     let threshold = count / data.length * 100
     threshold = threshold.toFixed(0)
-    summary[4].description = `${threshold}%`
+    summary[3].description = `${threshold}%`
     if (threshold >= 90)
     {
-        summary[4].meta = 'Excellent Service!'    
+        summary[3].meta = 'Excellent Service!'    
     }
     else if (threshold >= 80)
     {
-        summary[4].meta = 'Good Service'    
+        summary[3].meta = 'Good Service'    
     }
     else if (threshold >= 50)
     {
-        summary[4].meta = 'So So Service'    
+        summary[3].meta = 'So So Service'    
     }
     else if (threshold >= 30)
     {
-        summary[4].meta = 'Bad Service'    
+        summary[3].meta = 'Bad Service'    
     }
     else 
     {
-        summary[4].meta = 'What the hell?'
+        summary[3].meta = 'What the hell?'
     }
     return summary
 }

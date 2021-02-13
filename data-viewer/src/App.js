@@ -31,9 +31,9 @@ class App extends Component {
     summary: [
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Download Speed', description: '0 Mbps' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Upload Speed', description: '0 Mbps' },
-      { meta: 'Change Since Yesterday: 0 %', header: 'Number of Tests Today', description: '0' },
+      // { meta: 'Change Since Yesterday: 0 %', header: 'Number of Tests Today', description: '0' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Total Number of Tests', description: '0' },
-      { meta: '', header: '% Above Threshold', description: '0'}
+      { meta: '', header: '% of Results Above Threshold', description: '0'}
     ]
   }
 
