@@ -18,7 +18,6 @@ class App extends Component {
 
   state = {
     allData: [],
-    dataNorm: [],
     data: [],
     providerData: [],
     hostData: [],
@@ -69,17 +68,16 @@ class App extends Component {
       }
       else
       {
-        let newdata = filterTime(this.state.allData, duration)
+        let newData = filterTime(this.state.allData, duration)
         let summary = [...this.state.summary];
-        summary = getSummary(summary, newdata, this.state.minimumDownload, this.state.minimumUpload, moreData)
-        this.setState({ summary: summary, data: newdata })
+        summary = getSummary(summary, newData, this.state.minimumDownload, this.state.minimumUpload, moreData)
+        this.setState({ summary: summary, data: newData })
       }
       
     }
     if (prevState.minimumDownload !== this.state.minimumDownload || prevState.minimumUpload !== this.state.minimumUpload)
     {
       let summary = [...this.state.summary];
-      console.log('updating summary')
       const data = duration === 'All Time' ? this.state.allData : this.state.data
       summary = getSummary(summary, data, this.state.minimumDownload, this.state.minimumUpload, moreData)
       this.setState({ summary: summary })
@@ -105,7 +103,7 @@ class App extends Component {
             handleSidebar={(value) => this.setState({ sidebar: value })}
             customise={this.state.customise}
             handleModal={(value) => this.setState({ customise: value })}
-            currentDuration={this.state.duration}
+            currentDuration={duration}
             handleDuration={this.handleChange}
             minDownload={this.state.minimumDownload}
             minUpload={this.state.minimumUpload}

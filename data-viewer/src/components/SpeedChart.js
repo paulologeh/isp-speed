@@ -4,7 +4,7 @@ import moment from 'moment'
 import '../App.css'
 
 
-const CustomTooltip = ({ active, payload, label, duration }) => {
+const CustomTooltip = ({ active, payload, duration }) => {
     if (active && payload !== undefined && payload !== null) {
         const milliseconds = payload[0].payload.RecordTime
         const dateObject = new Date(milliseconds);
@@ -54,7 +54,7 @@ function xAxisTicks(duration, unixTime)
 export default class SpeedChart extends PureComponent {
 
   state = {
-    _max: 0
+    yMax: 0
   }
 
   calculateDomain() {
@@ -65,7 +65,7 @@ export default class SpeedChart extends PureComponent {
       dataMax = parseFloat(this.props.data[i].Upload) > dataMax ? parseFloat(this.props.data[i].Upload) : dataMax;
     }
     dataMax = parseInt(Math.ceil((dataMax + 10) / 10) * 10)
-    this.setState({ _max: dataMax })
+    this.setState({ yMax: dataMax })
   }
 
   componentDidMount() {
@@ -96,7 +96,7 @@ export default class SpeedChart extends PureComponent {
                   interval={calculateInterval(this.props.data, this.props.duration)}
                   tickFormatter={ (unixTime) => xAxisTicks(this.props.duration, unixTime)}// https://momentjs.com/docs/
               />
-              <YAxis  domain={[0, this.state._max]}>
+              <YAxis  domain={[0, this.state.yMax]}>
                 <Label
                   value={"Speed (Mbps)"}
                   position="left"

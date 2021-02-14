@@ -3,7 +3,7 @@ import {ComposedChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,Legend} f
 
 export default class ProviderChart extends PureComponent {
     state = {
-      _max: 0
+      xMax: 0
     }
 
   calculateDomain() {
@@ -14,7 +14,7 @@ export default class ProviderChart extends PureComponent {
       dataMax = parseFloat(this.props.data[i].Upload) > dataMax ? parseFloat(this.props.data[i].Upload) : dataMax;
     }
     dataMax = parseInt(dataMax + 1)
-    this.setState({ _max: dataMax })
+    this.setState({ xMax: dataMax })
   }
 
     componentDidMount() {
@@ -38,7 +38,7 @@ export default class ProviderChart extends PureComponent {
             top: 20, right: 20, bottom: 20, left: 20,
           }}
         >
-        <XAxis type="number" domain={[0, this.state._max]}/>
+        <XAxis type="number" domain={[0, this.state.xMax]}/>
           <YAxis dataKey="Provider" type="category" padding={{ bottom: 25 }} />
           <Tooltip/>
         <Legend />

@@ -13,7 +13,7 @@ export function getAllTimeData(data) {
     {
         return null
     }
-    let _data = []
+    let dataNew = []
     for (let i = 0; i < data.length; i++)
     {
         let refDate = new Date(data[i].RecordTime)
@@ -26,26 +26,26 @@ export function getAllTimeData(data) {
         }
 
         let key = `${year}${month}`
-        if (!(key in _data))
+        if (!(key in dataNew))
         {
-            _data[key] = []
+            dataNew[key] = []
         }
-        _data[key].push(data[i])
+        dataNew[key].push(data[i])
     }
 
     let newData = []
-    for (const key in _data)
+    for (const key in dataNew)
     {
         const dataObject = { Download: 0, Upload: 0, Provider: null, RecordTime: null }
-        dataObject.RecordTime = _data[key][0].RecordTime;
-        dataObject.Provider = _data[key][0].Provider;
-        for (let value in _data[key])
+        dataObject.RecordTime = dataNew[key][0].RecordTime;
+        dataObject.Provider = dataNew[key][0].Provider;
+        for (let value in dataNew[key])
         {
-            dataObject.Download += _data[key][value].Download;
-            dataObject.Upload += _data[key][value].Upload;
+            dataObject.Download += dataNew[key][value].Download;
+            dataObject.Upload += dataNew[key][value].Upload;
         }
-        dataObject.Download /= _data[key].length;
-        dataObject.Upload /= _data[key].length;
+        dataObject.Download /= dataNew[key].length;
+        dataObject.Upload /= dataNew[key].length;
         dataObject.Download = dataObject.Download.toFixed(1)
         dataObject.Upload = dataObject.Upload.toFixed(1)
         newData.push(dataObject)
