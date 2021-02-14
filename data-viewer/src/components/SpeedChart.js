@@ -94,7 +94,7 @@ export default class SpeedChart extends PureComponent {
               top: 5, right: 20, left: 20, bottom: 5,
             }}
           >
-            <CartesianGrid />
+            {/* <CartesianGrid /> */}
               <XAxis
                   dataKey="RecordTime"
                   name='Time'
