@@ -4,15 +4,15 @@ import moment from 'moment'
 import '../App.css'
 
 
-const CustomTooltip = ({ active, payload, label, timeDuration }) => {
+const CustomTooltip = ({ active, payload, label, duration }) => {
     if (active && payload !== undefined && payload !== null) {
         const milliseconds = payload[0].payload.RecordTime
         const dateObject = new Date(milliseconds);
         const humanDateFormat = dateObject.toLocaleString();
     return (
         <div className="custom-tooltip">
-        {timeDuration === 'All Time' ? null : <p className="desc">Timestamp: {humanDateFormat} </p> }
-        { timeDuration === 'All Time' ? null: <p className="desc">Provider: {payload[0].payload.Provider}</p>}
+        {duration === 'All Time' ? null : <p className="desc">Timestamp: {humanDateFormat} </p> }
+        { duration === 'All Time' ? null: <p className="desc">Provider: {payload[0].payload.Provider}</p>}
         <p className="desc">Download Speed: {payload[0].payload.Download} Mbps</p>
         <p className="desc">Upload Speed: {payload[0].payload.Upload} Mbps</p>
       </div>
@@ -22,12 +22,12 @@ const CustomTooltip = ({ active, payload, label, timeDuration }) => {
   return null;
 };
 
-function calculateInterval(data, timeDuration)
+function calculateInterval(data, duration)
 {
-  if (timeDuration === '7 days' || timeDuration === '30 days')
+  if (duration === '7 days' || duration === '30 days')
   {
     let interval = (data.length / 7).toFixed(0)
-    return timeDuration === '7 days' ? parseInt(interval) - 1 : parseInt(interval)
+    return duration === '7 days' ? parseInt(interval) - 1 : parseInt(interval)
   }
   return 'preserveEnd' 
 }
@@ -93,8 +93,8 @@ export default class SpeedChart extends PureComponent {
                   dataKey="RecordTime"
                   name='Time'
                   domain={['auto', 'auto']}
-                  interval={calculateInterval(this.props.data, this.props.timeDuration)}
-                  tickFormatter={ (unixTime) => xAxisTicks(this.props.timeDuration, unixTime)}// https://momentjs.com/docs/
+                  interval={calculateInterval(this.props.data, this.props.duration)}
+                  tickFormatter={ (unixTime) => xAxisTicks(this.props.duration, unixTime)}// https://momentjs.com/docs/
               />
               <YAxis  domain={[0, this.state._max]}>
                 <Label
@@ -104,7 +104,7 @@ export default class SpeedChart extends PureComponent {
                   style={{ textAnchor: "middle" }}
                   />
               </YAxis>
-             <Tooltip content={<CustomTooltip timeDuration={this.props.timeDuration }/>}/>
+             <Tooltip content={<CustomTooltip duration={this.props.duration }/>}/>
               <Legend />
               <Area type="monotone" dataKey="Download" stroke="#8884d8" activeDot={{ r: 8 }} />
               <Area type="monotone" dataKey="Upload" stroke="#82ca9d" />
