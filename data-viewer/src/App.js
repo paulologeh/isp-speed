@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
 import { Sidebar, Menu, Grid, Checkbox, Icon, Button, Segment, Card, Image, Header, Modal, Form, Dimmer, Loader} from 'semantic-ui-react';
-import './App.css'
 import { applyfilters, getProviderCummulative, getHostData, dataRecents, filterTime , normaliseAllData} from './utils/dataReducer';
 import SpeedChart from './components/SpeedChart';
 import ProviderChart from './components/ProviderChart';
 import HostPie from './components/TopHosts';
 import ActivityFeed from './components/ActivityFeed';
 import { isMobile } from './utils/helpers';
+import './App.css'
 
-const rootStyle = {
-  height: '100vh',
-  minHeight : '100vh'
-}
+const rootStyle = { minHeight: '100vh' }
+const durations = ['24 hours', '7 days', '30 days', 'All Time']
 
 class App extends Component {
 
@@ -31,7 +29,6 @@ class App extends Component {
     summary: [
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Download Speed', description: '0 Mbps' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Average Upload Speed', description: '0 Mbps' },
-      // { meta: 'Change Since Yesterday: 0 %', header: 'Number of Tests Today', description: '0' },
       { meta: 'Change Since Yesterday: 0 %', header: 'Total Number of Tests', description: '0' },
       { meta: '', header: '% of Results Above Threshold', description: '0'}
     ]
@@ -84,7 +81,6 @@ class App extends Component {
   }
 
   toggleSideBar = () => this.setState((prevState) => ({ showSideBar: !prevState.showSideBar }))
-
   handleChange = (e, { timeDuration }) => this.setState({ timeDuration })
   handleMinDownload = (event) =>this.setState({ minimumDownload: event.target.value })
   handleMinUpload = (event) => this.setState({ minimumUpload: event.target.value})
@@ -128,52 +124,23 @@ class App extends Component {
                   <Form>
                     <Form.Group>
                     <Header>Duration Filters</Header>
-                    <Form.Field>
-                      <Checkbox
-                        radio
-                        label='24 hours'
-                        name='checkboxRadioGroup'
-                        timeDuration='24 hours'
-                        checked={this.state.timeDuration === '24 hours'}
-                        onChange={this.handleChange}
-                      />
-                    </Form.Field>
-                    <Form.Field>
-                      <Checkbox
-                        radio
-                        label='7 days'
-                        name='checkboxRadioGroup'
-                        timeDuration='7 days'
-                        checked={this.state.timeDuration === '7 days'}
-                        onChange={this.handleChange}
-                      />
-                    </Form.Field>
-                    <Form.Field>
-                      <Checkbox
-                        radio
-                        label='30 days'
-                        name='checkboxRadioGroup'
-                        timeDuration='30 days'
-                        checked={this.state.timeDuration === '30 days'}
-                        onChange={this.handleChange}
-                      />
-                    </Form.Field>
-                    <Form.Field>
-                      <Checkbox
-                        radio
-                        label='All Time'
-                        name='checkboxRadioGroup'
-                        timeDuration='All Time'
-                        checked={this.state.timeDuration === 'All Time'}
-                        onChange={this.handleChange}
-                      />
-                      </Form.Field>
-                      </Form.Group> 
+                    {durations.map((duration, i) =>
+                      <Form.Field>
+                        <Checkbox
+                          radio
+                          label={duration}
+                          name='checkboxRadioGroup'
+                          timeDuration={duration}
+                          checked={this.state.timeDuration === duration}
+                          onChange={this.handleChange}
+                        />
+                      </Form.Field>)}
+                    </Form.Group> 
                     <Form.Group>
                       <Header>Speed Thresholds</Header>
                       <Form.Input key='in1' label='Minimum Download' type='number' value={this.state.minimumDownload} onChange={this.handleMinDownload} />
                       <Form.Input key='in2' label='Minimum Upload'type='number'value={this.state.minimumUpload} onChange={this.handleMinUpload}/>
-                  </Form.Group>
+                    </Form.Group>
                   </Form>
                 </Modal.Content>
             </Modal>
