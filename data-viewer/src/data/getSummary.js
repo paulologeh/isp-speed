@@ -57,8 +57,6 @@ export function getSummary(summary, data, minimumDownload, minimumUpload, moreDa
     let avgDownloadToday = propAverage(data, 'Download', false);
     let avgDownloadYesterday = propAverage(yestData, 'Download', true);
     let pctChangeDownload = (avgDownloadToday - avgDownloadYesterday) / avgDownloadYesterday * 100;
-    // console.log(avgDownloadToday, avgDownloadYesterday)
-    console.log(data)
     let avgUploadToday = propAverage(data, 'Upload', false);
     let avgUploadYesterday = propAverage(yestData, 'Upload', true);
     let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0;
@@ -100,6 +98,5 @@ export function getSummary(summary, data, minimumDownload, minimumUpload, moreDa
     {
         summary[3].meta = 'Unusable'
     }
-    console.log(summary)
     return summary
 }

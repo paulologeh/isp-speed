@@ -11,7 +11,7 @@ import Metrics from './components/Metrics';
 import { getRecentTests, getHostData, filterTime, getProviderCummulative, getAllTimeData, getSummary} from './data/index'
 
 
-const rootStyle = { minHeight: '100vh' }
+const rootStyle = { minHeight: '100vh', backgroundColor: '#F0F0F0' }
 
 
 class App extends Component {
@@ -110,7 +110,7 @@ class App extends Component {
             handleDownload={this.handleMinDownload}
             handleUpload={this.handleMinUpload}
           />
-          <Grid.Column style={{backgroundColor: '#F0F0F0'}}>
+          <Grid.Column>
             <Grid.Row>
               <Button floated='left' color='black' icon onClick={() => this.setState({ sidebar: true })}><Icon name='bars' /></Button>
             </Grid.Row>
