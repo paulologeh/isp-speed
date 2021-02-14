@@ -24,11 +24,17 @@ const CustomTooltip = ({ active, payload, duration }) => {
 
 function calculateInterval(data, duration)
 {
-  if (duration === '7 days' || duration === '30 days')
+  if (duration === '7 days')
   {
     let interval = (data.length / 7).toFixed(0)
-    return duration === '7 days' ? parseInt(interval) - 1 : parseInt(interval)
+    return parseInt(interval) - 1
   }
+  else if (duration === '30 days')
+  {
+    let interval = (data.length / 7).toFixed(0)
+    return parseInt(interval)
+  }
+  
   return 'preserveEnd' 
 }
 
@@ -94,7 +100,8 @@ export default class SpeedChart extends PureComponent {
                   name='Time'
                   domain={['auto', 'auto']}
                   interval={calculateInterval(this.props.data, this.props.duration)}
-                  tickFormatter={ (unixTime) => xAxisTicks(this.props.duration, unixTime)}// https://momentjs.com/docs/
+                  tickFormatter={(unixTime) => xAxisTicks(this.props.duration, unixTime)}// https://momentjs.com/docs/
+                  tickLine={false}
               />
               <YAxis  domain={[0, this.state.yMax]}>
                 <Label
