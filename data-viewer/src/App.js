@@ -3,8 +3,8 @@ import { Sidebar, Menu, Grid, Checkbox, Icon, Button, Segment, Card, Image, Head
 import './App.css'
 import { applyfilters, getProviderCummulative, getHostData, dataRecents, filterTime , normaliseAllData} from './utils/dataReducer';
 import SpeedChart from './components/SpeedChart';
-import ProviderCharts from './components/ProviderCharts';
-import HostPie from './components/HostChart';
+import ProviderChart from './components/ProviderChart';
+import HostPie from './components/TopHosts';
 import ActivityFeed from './components/ActivityFeed';
 import { isMobile } from './utils/helpers';
 
@@ -200,7 +200,7 @@ class App extends Component {
                 <Grid.Column>
                   <Segment>
                     <Header as='h3' textAlign='center'>Average Cummulative Speed By Provider</Header>
-                    <ProviderCharts data={this.state.providerData} />
+                    <ProviderChart data={this.state.providerData} />
                   </Segment>    
                 </Grid.Column>
                 <Grid.Column> 

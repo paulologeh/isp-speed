@@ -146,6 +146,10 @@ export function dataRecents(data) {
         {
             newData[i].image = process.env.PUBLIC_URL + '/Three.png';    
         }
+        else
+        {
+            newData[i].image = process.env.PUBLIC_URL + '/vpn.png';
+        }
         delete newData[i].RecordTime;
         delete newData[i].Provider;
         delete newData[i].Download;

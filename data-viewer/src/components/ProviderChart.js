@@ -1,13 +1,10 @@
 import React, { PureComponent } from 'react';
-import {
-  ComposedChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,Legend,
-} from 'recharts';
+import {ComposedChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer,Legend} from 'recharts';
 
 export default class ProviderChart extends PureComponent {
-
     state = {
-    _max: 0
-  }
+      _max: 0
+    }
 
   calculateDomain() {
     let dataMax = 0

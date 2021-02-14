@@ -1,7 +1,5 @@
 import React, { PureComponent } from 'react';
-import {
-   ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label
-} from 'recharts';
+import {ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Label} from 'recharts';
 import moment from 'moment'
 import '../App.css'
 
