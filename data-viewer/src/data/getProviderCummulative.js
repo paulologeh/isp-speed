@@ -1,5 +1,5 @@
 export function getProviderCummulative(data) {
-    const providers = ['EE', 'BT', 'TalkTalk', 'Three', 'Vodafone']
+    const providers = ['EE', 'BT', 'TalkTalk', 'Three', 'Vodafone','Virgin']
     let providerData = {}
     for (let i in data)
     {

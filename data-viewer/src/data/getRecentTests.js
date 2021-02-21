@@ -33,6 +33,10 @@ export function getRecentTests(data) {
         {
             newData[i].image = process.env.PUBLIC_URL + '/Three.png';    
         }
+        else if (newData[i].Provider === 'Virgin')
+        {
+            newData[i].image = process.env.PUBLIC_URL + '/virginfibre.png';    
+        }
         else
         {
             newData[i].image = process.env.PUBLIC_URL + '/vpn.png';
