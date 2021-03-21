@@ -41,7 +41,7 @@ class App extends Component {
     const data = await response.json();
     this.setState({ allData: data.recordset });
     let summary = [...this.state.summary];
-    summary = getSummary(summary, data.recordset, this.state.minimumDownload, this.state.minimumUpload, null)
+    summary = getSummary(summary, data.recordset, this.state.minimumDownload, this.state.minimumUpload, data.recordset)
     this.setState({ summary: summary });
     this.setState({ allData: data.recordset })
     this.setState({ data: getAllTimeData(data.recordset) });
@@ -59,7 +59,8 @@ class App extends Component {
 
   componentDidUpdate(prevProps, prevState) {
     const duration = this.state.duration;
-    const moreData =  duration === '24 hours' ? this.state.allData : null
+    const allData = this.state.allData;
+
     if (prevState.duration !== duration)
     {
       if (duration === 'All Time')
@@ -70,7 +71,7 @@ class App extends Component {
       {
         let newData = filterTime(this.state.allData, duration)
         let summary = [...this.state.summary];
-        summary = getSummary(summary, newData, this.state.minimumDownload, this.state.minimumUpload, moreData)
+        summary = getSummary(summary, newData, this.state.minimumDownload, this.state.minimumUpload, allData)
         this.setState({ summary: summary, data: newData })
       }
       
@@ -78,8 +79,8 @@ class App extends Component {
     if (prevState.minimumDownload !== this.state.minimumDownload || prevState.minimumUpload !== this.state.minimumUpload)
     {
       let summary = [...this.state.summary];
-      const data = duration === 'All Time' ? this.state.allData : this.state.data
-      summary = getSummary(summary, data, this.state.minimumDownload, this.state.minimumUpload, moreData)
+      const data = duration === 'All Time' ? allData : this.state.data
+      summary = getSummary(summary, data, this.state.minimumDownload, this.state.minimumUpload, allData)
       this.setState({ summary: summary })
     }
   }

@@ -1,7 +1,12 @@
 export function getRecentTests(data) {
     const now = new Date()
-    let newData = JSON.parse(JSON.stringify(data.slice(Math.max(data.length - 4, 0))))
-    newData.reverse()
+    let newData = []
+    
+    for (let i = data.length - 1; i > data.length - 5; i--)
+    {
+        newData.push({ ...data[i]})
+    }
+
     for (let i in newData)
     {
         let timeLapsed = now.getTime() - new Date(newData[i].RecordTime).getTime()
@@ -25,6 +30,7 @@ export function getRecentTests(data) {
         newData[i].date = timeLapsed
         newData[i].meta = newData[i].Host;
         newData[i].summary = `Download: ${newData[i].Download} Mbps   Upload: ${newData[i].Upload} Mbps`
+
         if (newData[i].Provider === 'EE')
         {
             newData[i].image = process.env.PUBLIC_URL + '/EE.jpg';    

@@ -1,8 +1,9 @@
-function yesterdayData(data)
+function getYesterdaysData(data)
 {
     let yestData = [];
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1);
+    if (data === undefined) return
     for (let i = 0; i < data.length; i++)
     {
         let refDate = new Date(data[i].RecordTime);
@@ -14,30 +15,19 @@ function yesterdayData(data)
     return yestData;
 }
 
-function propAverage(data, prop, yest) {
-    const today = new Date()
+function propAverage(data, prop) {
     let avg = 0;
     let N = data.length;
     for (let i = 0; i < data.length; i++) {
-        if (yest) {
-            let refDate = new Date(data[i].RecordTime);
-            if (refDate.getDate() === today.getDate() && refDate.getMonth() === today.getMonth() && refDate.getFullYear() === today.getFullYear()) {
-                N--;
-                continue;
-             }
-        }
         avg += data[i][prop]
     }
     avg = avg / N;
     return avg.toFixed(1);
 }
 
-function countToday(data, yest) {
+function countTestsToday(data) {
     let count = 0;
     const today = new Date();
-    if (yest) {
-        today.setDate(today.getDate() - 1);
-    }
     for (let i = data.length - 1; i >= 0; i--){
         let refDate = new Date(data[i].RecordTime)
         if (refDate.getDate() === today.getDate() && refDate.getMonth() === today.getMonth() && refDate.getFullYear() === today.getFullYear()) {
@@ -47,20 +37,26 @@ function countToday(data, yest) {
     return count;
 }
 
-export function getSummary(summary, data, minimumDownload, minimumUpload, moreData)
+export function getSummary(summary, data, minimumDownload, minimumUpload, allData)
 {
-    let yestData = JSON.parse(JSON.stringify(data));
-    if (moreData !== null)
-    {
-        yestData = JSON.parse(JSON.stringify(yesterdayData(moreData)))
-    }
-    let avgDownloadToday = propAverage(data, 'Download', false);
-    let avgDownloadYesterday = propAverage(yestData, 'Download', true);
-    let pctChangeDownload = (avgDownloadToday - avgDownloadYesterday) / avgDownloadYesterday * 100;
-    let avgUploadToday = propAverage(data, 'Upload', false);
-    let avgUploadYesterday = propAverage(yestData, 'Upload', true);
-    let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0;
-    let testsToday = countToday(data, false);
+    let yestData = getYesterdaysData(allData)
+    if (yestData === undefined) return
+
+    let avgDownloadToday = propAverage(data, 'Download');
+    avgDownloadToday = isNaN(avgDownloadToday) ? 0: avgDownloadToday
+    let avgDownloadYesterday = propAverage(yestData, 'Download');
+    avgDownloadYesterday = isNaN(avgDownloadYesterday) ? 0: avgDownloadYesterday
+    let pctChangeDownload = avgDownloadYesterday ? (avgDownloadToday - avgDownloadYesterday) / avgDownloadYesterday * 100 : 0
+    pctChangeDownload = isNaN(pctChangeDownload) ? 0 : pctChangeDownload
+    let avgUploadToday = propAverage(data, 'Upload');
+    avgUploadToday = isNaN(avgUploadToday) ? 0 : avgUploadToday
+    let avgUploadYesterday = propAverage(yestData, 'Upload');
+    avgUploadYesterday = isNaN(avgUploadYesterday) ? 0 : avgUploadYesterday
+    let pctChangeUpload = avgUploadYesterday ? (avgUploadToday - avgUploadYesterday) / avgUploadYesterday * 100 : 0
+    pctChangeUpload = isNaN(pctChangeUpload) ? 0 : pctChangeUpload
+    let testsToday = countTestsToday(data);
+    testsToday = isNaN(testsToday) ? 0 : testsToday
+
     summary[0].description = avgDownloadToday + ' Mbps';
     summary[0].meta = 'Change Since Yesterday: ' + pctChangeDownload.toFixed(1) + ' %';
     summary[1].description = avgUploadToday + ' Mbps';

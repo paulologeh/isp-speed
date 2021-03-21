@@ -6,18 +6,22 @@ echo "$day:$time Attempting speed test" >> event.log
 FILE=result.txt
 speedtest-cli > $FILE
 
-if [ $? == 1 ]; then
-  echo "$day:$time Internet connection down" >> event.log
-  exit 1
-fi
+sleep 5
 
 download=`grep 'Download' $FILE | awk '{print $2}'`
 upload=`grep 'Upload' $FILE | awk '{print $2}'`
 host=`grep 'Hosted' $FILE | awk '{print $3,$4,$5}'`
 provider=`grep 'Testing from' $FILE | awk '{print $3}'`
+
+if test -z $download; then
+   echo "$day:$time Internet connection down" >> event.log
+   exit 1
+fi
+
+
 echo $day,$time,$download,$upload,$host,$provider >> speed_data.csv
+echo $day,$time,$download,$upload,$host,$provider
 QUERY="INSERT INTO testresults(RecordTime,Download,Upload,Host,Provider)VALUES ('$day $time',$download,$upload,'$host','$provider');"
-echo "$day:$time Speed test completed" >> event.log
 sqlcmd -U admin -P $AWSPASSWD -S $AWSRDS -d speedtest -Q "$QUERY"
 
 if [ $? == 1 ]; then

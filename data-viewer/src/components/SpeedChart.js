@@ -87,36 +87,37 @@ export default class SpeedChart extends PureComponent {
 
   render() {
     return (
-       <ResponsiveContainer width={"100%"} minHeight={250}>
-        <AreaChart
+      <ResponsiveContainer width={"100%"} minHeight={250}>
+          <AreaChart
             data={this.props.data}
             margin={{
               top: 5, right: 20, left: 20, bottom: 5,
             }}
           >
             {/* <CartesianGrid /> */}
-              <XAxis
-                  dataKey="RecordTime"
-                  name='Time'
-                  domain={['auto', 'auto']}
-                  interval={calculateInterval(this.props.data, this.props.duration)}
-                  tickFormatter={(unixTime) => xAxisTicks(this.props.duration, unixTime)}// https://momentjs.com/docs/
-                  tickLine={false}
+            <XAxis
+              dataKey="RecordTime"
+              name='Time'
+              domain={['auto', 'auto']}
+              interval={calculateInterval(this.props.data, this.props.duration)}
+              tickFormatter={(unixTime) => xAxisTicks(this.props.duration, unixTime)}// https://momentjs.com/docs/
+              tickLine={false}
+            />
+            <YAxis domain={[0, this.state.yMax]}>
+              <Label
+                value={"Speed (Mbps)"}
+                position="left"
+                angle={-90}
+                style={{ textAnchor: "middle" }}
               />
-              <YAxis  domain={[0, this.state.yMax]}>
-                <Label
-                  value={"Speed (Mbps)"}
-                  position="left"
-                  angle={-90}
-                  style={{ textAnchor: "middle" }}
-                  />
-              </YAxis>
-             <Tooltip content={<CustomTooltip duration={this.props.duration }/>}/>
-              <Legend />
-              <Area type="monotone" dataKey="Download" stroke="#8884d8" activeDot={{ r: 8 }} />
-              <Area type="monotone" dataKey="Upload" stroke="#82ca9d" />
+            </YAxis>
+            <Tooltip content={<CustomTooltip duration={this.props.duration} />} />
+            <Legend />
+            <Area type="monotone" dataKey="Download" stroke="#8884d8" activeDot={{ r: 8 }} />
+            <Area type="monotone" dataKey="Upload" stroke="#82ca9d" />
           </AreaChart>
         </ResponsiveContainer>
     );
   }
+
 }
