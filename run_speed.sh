@@ -18,9 +18,8 @@ if test -z $download; then
    exit 1
 fi
 
+echo $day,$time,$download,$upload,$host,$provider >> event.log
 
-echo $day,$time,$download,$upload,$host,$provider >> speed_data.csv
-echo $day,$time,$download,$upload,$host,$provider
 QUERY="INSERT INTO testresults(RecordTime,Download,Upload,Host,Provider)VALUES ('$day $time',$download,$upload,'$host','$provider');"
 sqlcmd -U admin -P $AWSPASSWD -S $AWSRDS -d speedtest -Q "$QUERY"
 
@@ -28,3 +27,5 @@ if [ $? == 1 ]; then
   echo "$day:$time ERROR!: Database upload failed" >> event.log
   exit 1
 fi
+
+echo $day,$time,$download,$upload,$host,$provider >> speed_data.csv
