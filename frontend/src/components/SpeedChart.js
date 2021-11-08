@@ -13,9 +13,8 @@ import moment from "moment";
 import "../App.css";
 
 const CustomTooltip = ({ active, payload, duration }) => {
-  console.log(`payload ->`, payload);
   if (active && payload !== undefined && payload !== null) {
-    const milliseconds = payload[0].payload.utc_time;
+    const milliseconds = payload[0].payload.utc_time * 1000;
     const dateObject = new Date(milliseconds);
     const humanDateFormat = dateObject.toLocaleString();
     return (
@@ -125,7 +124,7 @@ export default class SpeedChart extends PureComponent {
               style={{ textAnchor: "middle" }}
             />
           </YAxis>
-          {/* <Tooltip content={<CustomTooltip duration={this.props.duration} />} /> */}
+          <Tooltip content={<CustomTooltip duration={this.props.duration} />} />
           <Legend />
           <Area
             type="monotone"

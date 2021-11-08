@@ -2,7 +2,7 @@ export function filterTime(data, timeDuration) {
   let new_data = [];
   const today = new Date();
   for (let i in data) {
-    let refDate = new Date(data[i].utc_time);
+    let refDate = new Date(data[i].utc_time * 1000);
     if (timeDuration === "30 days") {
       let diff = (today.getTime() - refDate.getTime()) / (1000 * 60 * 60 * 24);
       if (diff <= 30) {

@@ -82,8 +82,8 @@ export function getSummary(
   let count = 0;
   for (let i in data) {
     if (
-      data[i].Download >= minimumDownload &&
-      data[i].Upload >= minimumUpload
+      data[i].download >= minimumDownload &&
+      data[i].upload >= minimumUpload
     ) {
       count++;
     }

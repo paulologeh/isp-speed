@@ -14,7 +14,7 @@ export function getAllTimeData(data) {
   }
   let dataNew = [];
   for (let i = 0; i < data.length; i++) {
-    let refDate = new Date(data[i].utc_time);
+    let refDate = new Date(data[i].utc_time * 1000);
     let year = refDate.getFullYear();
     let month = refDate.getMonth() + 1;
 
@@ -37,7 +37,7 @@ export function getAllTimeData(data) {
       provider: null,
       utc_time: null,
     };
-    dataObject.utc_time = dataNew[key][0].utc_time;
+    dataObject.utc_time = dataNew[key][0].utc_time * 1000;
     dataObject.provider = dataNew[key][0].provider;
     for (let value in dataNew[key]) {
       dataObject.download += dataNew[key][value].download;
