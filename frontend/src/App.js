@@ -26,6 +26,7 @@ import {
 } from "./data/index";
 
 const rootStyle = { minHeight: "100vh", backgroundColor: "#F0F0F0" };
+const BACK_END_URI = process.env.REACT_APP_BACK_END_URI;
 
 class App extends Component {
   state = {
@@ -61,7 +62,7 @@ class App extends Component {
   };
 
   async callAPI() {
-    const response = await fetch("http://127.0.0.1:5000/testresults/upload");
+    const response = await fetch(`${BACK_END_URI}/testresults/upload`);
     const data = await response.json();
     console.log(data);
     this.setState({ allData: data.recordset });
