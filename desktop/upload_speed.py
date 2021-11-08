@@ -1,11 +1,14 @@
+import os
+from dotenv import load_dotenv
 from datetime import datetime
 from time import time
 from speedtest import Speedtest
 from pymongo import MongoClient
 
 
+load_dotenv()
 # database
-client = MongoClient('mongodb://127.0.0.1:27017/')
+client = MongoClient(os.environ["MONGO_CLIENT"])
 db = client['isp-speed']
 collection = db['tests-data']
 
