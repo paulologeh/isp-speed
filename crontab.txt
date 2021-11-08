@@ -1,0 +1,1 @@
+0 * * * * cd ~/repos/ISP-Speed/desktop && ./test.sh
