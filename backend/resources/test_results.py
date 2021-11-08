@@ -1,9 +1,12 @@
-from flask import request
+import os
+from dotenv import load_dotenv
 from pymongo import MongoClient
 from flask_restful import Resource
 
+
+load_dotenv()
 # database
-client = MongoClient('mongodb://127.0.0.1:27017/')
+client = MongoClient(os.environ["MONGO_CLIENT"])
 db = client['isp-speed']
 collection = db['tests-data']
 
