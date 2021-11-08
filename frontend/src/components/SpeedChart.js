@@ -26,9 +26,12 @@ const CustomTooltip = ({ active, payload, duration }) => {
           <p className="desc">Provider: {payload[0].payload.provider}</p>
         )}
         <p className="desc">
-          Download Speed: {payload[0].payload.download} Mbps
+          Download Speed: {parseFloat(payload[0].payload.download).toFixed(2)}{" "}
+          Mbps
         </p>
-        <p className="desc">Upload Speed: {payload[0].payload.upload} Mbps</p>
+        <p className="desc">
+          Upload Speed: {parseFloat(payload[0].payload.upload).toFixed(2)} Mbps
+        </p>
       </div>
     );
   }
